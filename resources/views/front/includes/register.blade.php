@@ -424,19 +424,19 @@
         const submitButton = document.getElementById("submitButton");
         const dialogSubmitButton = document.getElementById("dialogSubmitButton");
 
-        registerForm.addEventListener("submit", (event) => {
-            if (radio2.checked) {
-                event.preventDefault();
-                dialogWrapper.classList.add("active");
-            }
-
-            dialogSubmitButton.addEventListener("click", () => {
-                document.forms.registerForm.submit();
-            });
-            closeDialog.addEventListener("click", function () {
-                dialogWrapper.classList.remove("active");
-            });
-        });
+        // registerForm.addEventListener("submit", (event) => {
+        //     if (radio2.checked) {
+        //         event.preventDefault();
+        //         dialogWrapper.classList.add("active");
+        //     }
+        //
+        //     dialogSubmitButton.addEventListener("click", () => {
+        //         document.forms.registerForm.submit();
+        //     });
+        //     closeDialog.addEventListener("click", function () {
+        //         dialogWrapper.classList.remove("active");
+        //     });
+        // });
     </script>
     <script src="{{ asset('assets/js/main.js') }}"></script>
 
