@@ -29,7 +29,7 @@
                         <h4 class="text-white text-xl md:text-2xl text-center max-w-5xl">
                             {{ __('ift.main_title2') }}
                             {{--International Forum on Attracting Investments to the Private--}}
-                            Sector
+                            {{--Sector--}}
                         </h4>
                         <p class="text-white text-base md:text-lg font-semibold text-center max-w-5xl">
                             {{ __('ift.main_address') }}
