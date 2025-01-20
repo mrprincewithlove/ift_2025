@@ -51,7 +51,9 @@ config/broadcasting.php
 config/websockets.php
 resources/js/bootstrap.js
 resources/local_info/feedback.json
+/resources/local_info/feedback.json
 resources/local_info/registration.json
+/resources/local_info/registration.json
 /public/js/app.js
 /public/js/chatapp.js
 /public/mix-manifest.json
