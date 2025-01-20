@@ -151,7 +151,7 @@ class FrontController extends Controller
             Mail::send('mail.register_response1', $data1, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
                     ->subject('Thank you for registration');
-                $message->from('maslovsaparmyrat@gmail.com', 'TIF administration');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
             });
         }
         catch (\Throwable $th) {
@@ -172,7 +172,7 @@ class FrontController extends Controller
             Mail::send('mail.register_report1', $data2, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
                     ->subject('Taze registrasia geldi');
-                $message->from('maslovsaparmyrat@gmail.com', 'Maslow Saparmyrat');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
 //                if(isset($img)){
 //                $message->attach(public_path('/'.$img));
 //                }
@@ -232,7 +232,7 @@ class FrontController extends Controller
             Mail::send('mail.feedback_response1', $data1, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
                     ->subject('Thank you for feedback');
-                $message->from('maslovsaparmyrat@gmail.com', 'TIF administration');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
             });
         }
         catch (\Throwable $th) {
@@ -243,14 +243,14 @@ class FrontController extends Controller
             $to_name = 'Hormatly Tif administratory';
 
 //            $to_email = 'ereshjumayew@gmail.com';
-            $to_email = 'yusuph0206@gmail.com';
+            $to_email = 'yusup@ucyap.com';
 
             $title = 'Tif new feedback report';
             $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
             Mail::send('mail.feedback_report1', $data2, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
                     ->subject('Taze feedback geldi');
-                $message->from('maslovsaparmyrat@gmail.com', 'Maslow Saparmyrat');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
             });
         }
         catch (\Throwable $th) {

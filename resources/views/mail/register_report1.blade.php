@@ -154,7 +154,7 @@
   </div>
   <div class="footer">
     <div class="inner-container">
-      <h2>maslovsaparmyrat.gmail.com</h2>
+      <h2>ift2025turkmenistan@gmail.com</h2>
     </div>
   </div>
 </section>
