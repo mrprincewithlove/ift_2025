@@ -24,9 +24,9 @@ return [
     'all_right_reserved'               => 'All rights reserved',
 
     //    coming soon page translates
-    'coming_soon'               => 'Coming soon',
+    'coming_soon'               => 'We are preparing something exciting for you!',
     'back_to_home'               => 'Back to home',
-    'coming_soon_text'               => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero repellat nam dolorem exercitationem consequatur, accusantium aspernatur iusto provident repudiandae, quam natus perferendis! Voluptatem, suscipit?',
+    'coming_soon_text'               => 'This section of the website is currently under development, but very soon it will feature useful information and unique opportunities. Stay tuned and don’t miss out!',
 
     //    register page translates
 

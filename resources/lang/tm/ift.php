@@ -24,9 +24,11 @@ return [
     'all_right_reserved'               => 'Ähli hukuklar goralan',
 
 //    coming soon page translates
-    'coming_soon'               => 'Ýakynda',
-    'back_to_home'               => 'Esasy sahyp dolan',
-    'coming_soon_text'               => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero repellat nam dolorem exercitationem consequatur, accusantium aspernatur iusto provident repudiandae, quam natus perferendis! Voluptatem, suscipit?',
+    'coming_soon'               => 'Biz siz üçin gyzykly birzat taýýarlaýarys',
+    'back_to_home'               => 'Baş sahypa dolan',
+    'coming_soon_text'               => 'Saýtyñ bu böleginiñ üstünde entek işlenilýär, ýöne ýakyn
+                wagtlarda bu ýerde peýdaly maglumatlar we giñ mümkinçilikler
+                peýda bolar. Elden gidirmezlik üçin biz bilen galyñ!',
 
 
     //    register page translates

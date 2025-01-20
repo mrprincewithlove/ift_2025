@@ -24,9 +24,11 @@ return [
     'all_right_reserved'               => 'Все права защищены',
 
     //    coming soon page translates
-    'coming_soon'               => 'Вскоре',
-    'back_to_home'               => 'Вернуться домой',
-    'coming_soon_text'               => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum vero repellat nam dolorem exercitationem consequatur, accusantium aspernatur iusto provident repudiandae, quam natus perferendis! Voluptatem, suscipit?',
+    'coming_soon'               => 'Мы готовим для вас что-то интересное!',
+    'back_to_home'               => 'Вернуться на главную страницу',
+    'coming_soon_text'               => 'Этот раздел сайта пока находится в разработке, но совсем скоро
+                здесь появится полезная информация и уникальные возможности.
+                Оставайтесь с нами, чтобы не пропустить!',
 
     //    register page translates
 
