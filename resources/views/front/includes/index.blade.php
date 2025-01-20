@@ -659,7 +659,7 @@
                             </h1>
 
                             <div class="flex items-center flex-wrap gap-4 mt-5">
-                                <a href="tel:+99312753638" class="text-textColor text-base md:text-lg flex items-center gap-2 font-semibold hover:text-primary transition-all>
+                                <a href="tel:+99312753638" class="text-textColor text-base md:text-lg flex items-center gap-2 font-semibold hover:text-primary transition-all">
                                     <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24"
