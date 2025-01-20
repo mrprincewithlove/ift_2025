@@ -163,7 +163,8 @@ class FrontController extends Controller
             $to_name = 'Hormatly Tif administratory';
 
 //            $to_email = 'ereshjumayew@gmail.com';
-            $to_email = 'yusuph0206@gmail.com';
+//            $to_email = 'yusuph0206@gmail.com';
+            $to_email = 'info@tmt.tm';
 
             $title = 'Tif new registration report';
 //            $img = $data['photo'];
@@ -243,7 +244,8 @@ class FrontController extends Controller
             $to_name = 'Hormatly Tif administratory';
 
 //            $to_email = 'ereshjumayew@gmail.com';
-            $to_email = 'yusup@ucyap.com';
+//            $to_email = 'yusup@ucyap.com';
+            $to_email = 'info@tmt.tm';
 
             $title = 'Tif new feedback report';
             $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
