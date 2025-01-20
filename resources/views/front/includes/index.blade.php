@@ -550,14 +550,14 @@
                             <div class="swiper-slide hover:scale-105 transition-all">
                                 <a href="" class="">
                                     <div class="h-[80px] flex items-center justify-center">
-                                        <img src="/assets/images/partner1.svg" alt="" class="h-full block object-contain"/>
+                                        <img src="/assets/images/partner3.png" alt="" class="h-full block object-contain"/>
                                     </div>
                                 </a>
                             </div>
                             <div class="swiper-slide hover:scale-105 transition-all">
                                 <a href="" class="">
                                     <div class="h-[80px] flex items-center justify-center">
-                                        <img src="/assets/images/partner2.png" alt="" class="h-full block object-contain"/>
+                                        <img src="/assets/images/partner4.jpg" alt="" class="h-full block object-contain"/>
                                     </div>
                                 </a>
                             </div>
@@ -565,14 +565,7 @@
                             <div class="swiper-slide hover:scale-105 transition-all">
                                 <a href="" class="">
                                     <div class="h-[80px] flex items-center justify-center">
-                                        <img src="/assets/images/partner1.svg" alt="" class="h-full block object-contain"/>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide hover:scale-105 transition-all">
-                                <a href="" class="">
-                                    <div class="h-[80px] flex items-center justify-center">
-                                        <img src="/assets/images/partner2.png" alt="" class="h-full block object-contain"/>
+                                        <img src="/assets/images/partner5.jpg" alt="" class="h-full block object-contain"/>
                                     </div>
                                 </a>
                             </div>
