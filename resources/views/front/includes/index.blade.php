@@ -11,7 +11,7 @@
         <section class="relative">
             <div class="h-screen w-full">
                 <video
-                        src="{{ asset('assets/video1.mp4') }}"
+                        src="{{ asset('assets/video.mp4') }}"
                         class="w-full h-full object-cover"
                         autoplay
                         loop
