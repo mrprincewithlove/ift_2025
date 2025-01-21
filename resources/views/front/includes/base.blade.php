@@ -406,21 +406,21 @@
                                     class="text-white text-lg font-semibold hover:text-textColor transition-all"
                             >
                                 {{ __('ift.meetings') }}
-                                Meetings
+                                {{--Meetings--}}
                             </a>
                             <a
                                     href="{{ route('front.coming_soon') }}"
                                     class="text-white text-lg font-semibold hover:text-textColor transition-all"
                             >
                                 {{ __('ift.speakers') }}
-                                Speakers
+                                {{--Speakers--}}
                             </a>
                             <a
                                     href="{{ route('front.coming_soon') }}"
                                     class="text-white text-lg font-semibold hover:text-textColor transition-all"
                             >
                                 {{ __('ift.sponsors') }}
-                                Sponsors
+                                {{--Sponsors--}}
                             </a>
                         </div>
                     </div>
