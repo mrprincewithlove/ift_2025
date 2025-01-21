@@ -55,7 +55,7 @@
                         <form action="{{ route('front.register.send') }}" method="POST" enctype="multipart/form-data" id="registerForm" class="w-full grid grid-cols-2 gap-5">
                             @csrf
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="name" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="name" class="required w-fit {{ $errors->has('name') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.name') }}
                                     {{--First Name--}}
                                 </label>
@@ -63,12 +63,12 @@
                                         type="text"
                                         name="name"
                                         id="name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
-                                        value="{{ old('name') }}"
+                                        class="border-2 {{ $errors->has('name') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        value="{{ old('name') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="surname" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="surname" class="required w-fit {{ $errors->has('surname') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.surname') }}
                                     {{--Last Name--}}
                                 </label>
@@ -76,12 +76,12 @@
                                         type="text"
                                         name="surname"
                                         id="surname"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
-                                        value="{{ old('surname') }}"
+                                        class="border-2 {{ $errors->has('surname') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        value="{{ old('surname') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="middle_name" class="w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="middle_name" class="w-fit {{ $errors->has('middle_name') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.middle_name') }}
                                     {{--Middle Name--}}
                                 </label>
@@ -89,12 +89,12 @@
                                         type="text"
                                         name="middle_name"
                                         id="middle_name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        class="border-2 {{ $errors->has('middle_name') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
                                         value="{{ old('middle_name') }}"
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="company_name" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="company_name" class="required w-fit {{ $errors->has('company_name') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.company_name') }}
                                     {{--Organization Name--}}
                                 </label>
@@ -102,12 +102,12 @@
                                         type="text"
                                         name="company_name"
                                         id="company_name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
-                                        value="{{ old('company_name') }}"
+                                        class="border-2 {{ $errors->has('company_name') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        value="{{ old('company_name') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="job" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="job" class="required w-fit {{ $errors->has('job') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.job') }}
                                     {{--Position--}}
                                 </label>
@@ -115,12 +115,12 @@
                                         type="text"
                                         name="job"
                                         id="job"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
-                                        value="{{ old('job') }}"
+                                        class="border-2 {{ $errors->has('job') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        value="{{ old('job') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="country" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="country" class="required w-fit {{ $errors->has('country') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.country') }}
                                     {{--Country--}}
                                 </label>
@@ -128,15 +128,17 @@
                                 <select
                                         name="country"
                                         id="country"
-                                        class="js-example-basic-single w-full border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        class="js-example-basic-single w-full border-2 {{ $errors->has('country') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        required
                                 >
+                                    <option value="">{{ __('ift.select_one') }}</option>
                                     @foreach($countries as $country)
                                         <option value="{{$country['id']}}" {{ old('country') == $country['id']? 'selected': '' }}>{{ $country['name_'.app()->currentLocale()] }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="number" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="number" class="required w-fit {{ $errors->has('number') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.number') }}
                                     {{--Phone Number--}}
                                 </label>
@@ -144,12 +146,12 @@
                                         type="text"
                                         name="number"
                                         id="number"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
-                                        value="{{ old('number') }}"
+                                        class="border-2 {{ $errors->has('number') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        value="{{ old('number') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="emergency_number" class="w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="emergency_number" class="w-fit {{ $errors->has('emergency_number') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.emergency_number') }}
                                     {{--Emergency Contact Number in Whatsup, Telegram, Skype,--}}
                                     {{--WeChat--}}
@@ -158,12 +160,12 @@
                                         type="text"
                                         name="emergency_number"
                                         id="emergency_number"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        class="border-2 {{ $errors->has('emergency_number') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
                                         value="{{ old('emergency_number') }}"
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="email" class="w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="email" class="required w-fit {{ $errors->has('email') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.email') }}
                                     {{--Email Address--}}
                                 </label>
@@ -171,12 +173,12 @@
                                         type="email"
                                         name="email"
                                         id="email"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
-                                        value="{{ old('email') }}"
+                                        class="border-2 {{ $errors->has('email') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        value="{{ old('email') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="website" class="w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="website" class="w-fit {{ $errors->has('website') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.website') }}
                                     {{--Company Website--}}
                                 </label>
@@ -184,20 +186,22 @@
                                         type="url"
                                         name="website"
                                         id="website"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        class="border-2 {{ $errors->has('website') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
                                         value="{{ old('website') }}"
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="status" class="w-fit text-textColor text-base md:text-lg font-semibold">
-                                    {{ __('ift.name') }}
+                                <label for="status" class="required w-fit {{ $errors->has('status') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.status') }}
                                     {{--Participation Status (select one)--}}
                                 </label>
                                 <select
                                         name="status"
                                         id="status"
-                                        class="js-example-basic-single w-full border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        class="js-example-basic-single w-full border-2 {{ $errors->has('status') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                        required
                                 >
+                                    <option value="">{{ __('ift.select_one') }}</option>
                                     <option value="Delegate">{{ __('ift.delegate') }}</option>
                                     <option value="Media">{{ __('ift.media') }}</option>
                                     <option value="Speaker">{{ __('ift.speaker') }}</option>
@@ -206,7 +210,7 @@
                                 </select>
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="visa" class="text-textColor text-base md:text-lg font-semibold">
+                                <label for="visa" class="required {{ $errors->has('visa') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.visa') }}
                                     {{--Do you require a visa to enter Turkmenistan?--}}
                                 </label>
@@ -218,7 +222,8 @@
                                                 type="radio"
                                                 name="visa"
                                                 class="hidden"
-                                                value="yes"
+                                                value="yes" required
+                                                {{ old('visa') == 'yes'? 'checked': 'checked' }}
                                         />
                                         <label for="radio1" class="flex items-center cursor-pointer text-textColor text-base md:text-lg">
                                             <span class="w-6 h-6 inline-block mr-2 rounded-full border border-textColor flex-no-shrink"></span>
@@ -232,7 +237,8 @@
                                                 type="radio"
                                                 name="visa"
                                                 class="hidden"
-                                                value="no"
+                                                value="no" required
+                                                {{ old('visa') == 'no'? 'checked': '' }}
                                         />
                                         <label for="radio2" class="flex items-center cursor-pointer text-textColor text-base md:text-lg">
                                             <span class="w-6 h-6 inline-block mr-2 rounded-full border border-textColor flex-no-shrink"></span>

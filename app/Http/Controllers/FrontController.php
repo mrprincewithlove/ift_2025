@@ -73,7 +73,7 @@ class FrontController extends Controller
         $rules = [
             'name' => 'required|string|max:255',
             'surname' => 'required|string|max:255',
-            'middle_name' => 'required|string|max:255',
+            'middle_name' => 'nullable|string|max:255',
             'company_name' => 'required|string|max:255',
             'job' => 'required|string|max:255',
             'country' => 'required|integer|min:1|max:194',
@@ -82,7 +82,7 @@ class FrontController extends Controller
                 'regex:/^\+[0-9]{6,15}$/',
             ],
             'emergency_number' => [
-                'required',
+                'nullable',
                 'regex:/^\+[0-9]{6,15}$/',
             ],
             'email' => 'required|email|max:255',
@@ -164,7 +164,8 @@ class FrontController extends Controller
 
 //            $to_email = 'ereshjumayew@gmail.com';
 //            $to_email = 'yusuph0206@gmail.com';
-            $to_email = 'info@tmt.tm';
+//            $to_email = 'info@tmt.tm';
+            $to_email = 'tmt.group.web@gmail.com';
 
             $title = 'Tif new registration report';
 //            $img = $data['photo'];
@@ -245,7 +246,8 @@ class FrontController extends Controller
 
 //            $to_email = 'ereshjumayew@gmail.com';
 //            $to_email = 'yusup@ucyap.com';
-            $to_email = 'info@tmt.tm';
+//            $to_email = 'info@tmt.tm';
+            $to_email = 'tmt.group.web@gmail.com';
 
             $title = 'Tif new feedback report';
             $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);

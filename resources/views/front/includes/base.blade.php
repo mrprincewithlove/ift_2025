@@ -18,7 +18,7 @@
         <div class="container">
             <div class="w-full px-5 md:px-10 py-1 flex items-center justify-between gap-4">
                 <div class="flex items-center justify-start gap-4">
-                    <a href="tel:+99312753638" class="text-white text-sm flex items-center gap-2 font-semibold hover:text-textColor transition-all">
+                    <a href="tel:+99312753648" class="text-white text-sm flex items-center gap-2 font-semibold hover:text-textColor transition-all">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -31,7 +31,7 @@
                                     clip-rule="evenodd"
                             />
                         </svg>
-                        +993 12 753638
+                        +993 12 753648
                     </a>
                     <span class="w-[2px] h-5 bg-white"></span>
                     <a
@@ -69,7 +69,7 @@
                             />
                         </svg>
                     </a>
-                    <a href="https://www.linkedin.com/company" class="text-white hover:text-textColor transition-all">
+                    <a href="https://www.linkedin.com/company/tmt-consulting-group" class="text-white hover:text-textColor transition-all">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -149,218 +149,218 @@
                                 />
                             </svg>
                         </button>
-                        <div id="mobileMenu" class="fixed top-0 left-0 z-50 w-full h-screen bg-white flex md:hidden flex-col items-center justify-start gap-5 p-5">
-                            <div class="w-full flex items-center justify-start gap-2 border-b-2 border-headerColor pb-5">
-                                <button id="closeMobileMenu" class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-white active:bg-secondary transition-all">
-                                    <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            fill="currentColor"
-                                            class="size-6"
-                                    >
-                                        <path
-                                                fill-rule="evenodd"
-                                                d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
-                                                clip-rule="evenodd"
-                                        />
-                                    </svg>
-                                </button>
-                                <h4 class="text-xl text-headerColor font-semibold">{{ __('ift.menu') }}</h4>
-                            </div>
-                            <div class="w-full h-[calc(100vh-132px)] flex flex-col items-center justify-start gap-5 overflow-y-auto">
-                                <div class="flex items-center justify-end gap-5">
-                                    <a href="https://tstb.gov.tm/" class="size-16">
-                                        <img
-                                                src="/assets/images/logo1.png"
-                                                alt=""
-                                                class="w-full h-full object-contain"
-                                        />
-                                    </a>
-                                    <span class="w-[2px] h-16 bg-headerColor"></span>
-                                    <a href="https://cci.gov.tm/" class="size-16">
-                                        <img
-                                                src="/assets/images/logo2.png"
-                                                alt=""
-                                                class="w-full h-full object-contain"
-                                        />
-                                    </a>
-                                    <span class="w-[2px] h-16 bg-headerColor"></span>
-                                    <a href="https://tmt.tm" class="size-16">
-                                        <img
-                                                src="/assets/images/logo3.png"
-                                                alt=""
-                                                class="w-full h-full object-contain"
-                                        />
-                                    </a>
-                                </div>
-                                <!-- active lang class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-secondary text-white text-base font-semibold" -->
-                                <!-- dropdown -->
-                                <details name="dropdown" class="w-full">
-                                    <summary
-                                            class="w-full p-4 rounded-xl flex items-center justify-between gap-5 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                    >
-                                        {{ __('ift.about_ift') }}
+                        <div id="mobileMenu" class="fixed top-0 left-0 z-50 w-full h-screen bg-white flex md:hidden ">
+                            <div class="relative w-full h-screen flex flex-col items-center justify-start gap-5 px-5 overflow-y-auto">
+                                <div class="w-full bg-white sticky top-0 flex items-center justify-start gap-2 border-b-2 border-headerColor py-5">
+                                    <button id="closeMobileMenu" class="w-10 h-10 flex items-center justify-center rounded-xl bg-primary text-white active:bg-secondary transition-all">
                                         <svg
                                                 xmlns="http://www.w3.org/2000/svg"
                                                 viewBox="0 0 24 24"
                                                 fill="currentColor"
-                                                class="size-6 transition-all"
+                                                class="size-6"
                                         >
                                             <path
                                                     fill-rule="evenodd"
-                                                    d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                                    d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
                                                     clip-rule="evenodd"
                                             />
                                         </svg>
-                                    </summary>
-                                    <div class="w-full flex flex-col gap-5 mt-4">
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                    </button>
+                                    <h4 class="text-xl text-headerColor font-semibold">{{ __('ift.menu') }}</h4>
+                                </div>
+                                <div class="w-full flex flex-col items-center justify-start gap-5">
+                                    <div class="flex items-center justify-end gap-5">
+                                        <a href="https://tstb.gov.tm/" class="size-16">
+                                            <img
+                                                    src="/assets/images/logo1.png"
+                                                    alt=""
+                                                    class="w-full h-full object-contain"
+                                            />
+                                        </a>
+                                        <span class="w-[2px] h-16 bg-headerColor"></span>
+                                        <a href="https://cci.gov.tm/" class="size-16">
+                                            <img
+                                                    src="/assets/images/logo2.png"
+                                                    alt=""
+                                                    class="w-full h-full object-contain"
+                                            />
+                                        </a>
+                                        <span class="w-[2px] h-16 bg-headerColor"></span>
+                                        <a href="https://tmt.tm" class="size-16">
+                                            <img
+                                                    src="/assets/images/logo3.png"
+                                                    alt=""
+                                                    class="w-full h-full object-contain"
+                                            />
+                                        </a>
+                                    </div>
+                                    <!-- active lang class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-secondary text-white text-base font-semibold" -->
+                                    <!-- dropdown -->
+                                    <details name="dropdown" class="w-full">
+                                        <summary
+                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-5 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
                                         >
                                             {{ __('ift.about_ift') }}
-                                            {{--About IFT 2025--}}
-                                        </a>
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.guide_investor') }}
-                                            {{--Guide for investors--}}
-                                        </a>
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.meetings') }}
-                                            {{--Meetings--}}
-                                        </a>
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.speakers') }}
-                                            {{--Speakers--}}
-                                        </a>
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.sponsors') }}
-                                            {{--Sponsors--}}
-                                        </a>
-                                    </div>
-                                </details>
-                                <!-- link -->
-                                <a
-                                        href="{{ route('front.coming_soon') }}"
-                                        class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                >
-                                    {{ __('ift.agenda_ift') }}
-                                    {{--Agenda IFT 2025--}}
-                                </a>
-                                <!-- dropdown -->
-                                <details name="dropdown" class="w-full">
-                                    <summary
-                                            class="w-full p-4 rounded-xl flex items-center justify-between gap-5 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="size-6 transition-all"
+                                            >
+                                                <path
+                                                        fill-rule="evenodd"
+                                                        d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                                        clip-rule="evenodd"
+                                                />
+                                            </svg>
+                                        </summary>
+                                        <div class="w-full flex flex-col gap-5 mt-4">
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.about_ift') }}
+                                                {{--About IFT 2025--}}
+                                            </a>
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.guide_investor') }}
+                                                {{--Guide for investors--}}
+                                            </a>
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.meetings') }}
+                                                {{--Meetings--}}
+                                            </a>
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.speakers') }}
+                                                {{--Speakers--}}
+                                            </a>
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.sponsors') }}
+                                                {{--Sponsors--}}
+                                            </a>
+                                        </div>
+                                    </details>
+                                    <!-- link -->
+                                    <a
+                                            href="{{ route('front.coming_soon') }}"
+                                            class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
                                     >
-                                        {{ __('ift.media_center') }}
-                                        {{--Media center--}}
-                                        <svg
-                                                xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
-                                                fill="currentColor"
-                                                class="size-6 transition-all"
+                                        {{ __('ift.agenda_ift') }}
+                                        {{--Agenda IFT 2025--}}
+                                    </a>
+                                    <!-- dropdown -->
+                                    <details name="dropdown" class="w-full">
+                                        <summary
+                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-5 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
                                         >
-                                            <path
-                                                    fill-rule="evenodd"
-                                                    d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                                                    clip-rule="evenodd"
-                                            />
-                                        </svg>
-                                    </summary>
-                                    <div class="w-full flex flex-col gap-5 mt-4">
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.media') }}
-                                            {{--Media--}}
-                                        </a>
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.press_release') }}
-                                            {{--Press Release--}}
-                                        </a>
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.post_show_reports') }}
-                                            {{--Post show reports--}}
-                                        </a>
-                                        <a
-                                                href="{{ route('front.coming_soon') }}"
-                                                class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                        >
-                                            {{ __('ift.photo_gallery') }}
-                                            {{--Photo Gallery--}}
-                                        </a>
-                                    </div>
-                                </details>
-                                <a
-                                        href="{{ route('front.coming_soon') }}"
-                                        class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                >
-                                    {{ __('ift.news') }}
-                                    {{--News--}}
-                                </a>
-                                <a
-                                        href="{{ route('front.coming_soon') }}"
-                                        class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
-                                >
-                                    {{ __('ift.contact_us') }}
-                                    {{--Contact us--}}
-                                </a>
-                            </div>
-                            <div
-                                    class="w-full flex items-center justify-between gap-5 pt-5 border-t-2 border-headerColor"
-                            >
+                                            {{ __('ift.media_center') }}
+                                            {{--Media center--}}
+                                            <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 0 24 24"
+                                                    fill="currentColor"
+                                                    class="size-6 transition-all"
+                                            >
+                                                <path
+                                                        fill-rule="evenodd"
+                                                        d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                                                        clip-rule="evenodd"
+                                                />
+                                            </svg>
+                                        </summary>
+                                        <div class="w-full flex flex-col gap-5 mt-4">
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.media') }}
+                                                {{--Media--}}
+                                            </a>
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.press_release') }}
+                                                {{--Press Release--}}
+                                            </a>
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.post_show_reports') }}
+                                                {{--Post show reports--}}
+                                            </a>
+                                            <a
+                                                    href="{{ route('front.coming_soon') }}"
+                                                    class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                            >
+                                                {{ __('ift.photo_gallery') }}
+                                                {{--Photo Gallery--}}
+                                            </a>
+                                        </div>
+                                    </details>
+                                    <a
+                                            href="{{ route('front.coming_soon') }}"
+                                            class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                    >
+                                        {{ __('ift.news') }}
+                                        {{--News--}}
+                                    </a>
+                                    <a
+                                            href="{{ route('front.coming_soon') }}"
+                                            class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
+                                    >
+                                        {{ __('ift.contact_us') }}
+                                        {{--Contact us--}}
+                                    </a>
+                                </div>
+                                <div class="w-full flex items-center justify-between gap-5 py-5 border-t-2 border-headerColor">
 
-                                @foreach(config('app.supported_languages') as $key=>$locale)
-                                    @if($key != app()->currentLocale())
-                                        <a href="{{ route('front.locale', $key) }}" class="w-full capitalize rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all">
-                                            {{$key}}
-                                        </a>
-                                    @else
-                                        <a href="{{ route('front.locale', $key) }}" class="w-full capitalize rounded-xl p-3 text-white text-base font-semibold text-center bg-secondary">
-                                            {{$key}}
-                                        </a>
-                                    @endif
-                                @endforeach
+                                    @foreach(config('app.supported_languages') as $key=>$locale)
+                                        @if($key != app()->currentLocale())
+                                            <a href="{{ route('front.locale', $key) }}" class="w-full capitalize rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all">
+                                                {{$key}}
+                                            </a>
+                                        @else
+                                            <a href="{{ route('front.locale', $key) }}" class="w-full capitalize rounded-xl p-3 text-white text-base font-semibold text-center bg-secondary">
+                                                {{$key}}
+                                            </a>
+                                        @endif
+                                    @endforeach
 
 
-                            <!-- active lang class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-secondary" -->
-                                {{--<a--}}
-                                        {{--href=""--}}
-                                        {{--class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all"--}}
-                                {{-->--}}
-                                    {{--Tm--}}
-                                {{--</a>--}}
-                                {{--<a--}}
-                                        {{--href=""--}}
-                                        {{--class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all"--}}
-                                {{-->--}}
-                                    {{--Ru--}}
-                                {{--</a>--}}
-                                {{--<a--}}
-                                        {{--href=""--}}
-                                        {{--class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all"--}}
-                                {{-->--}}
-                                    {{--En--}}
-                                {{--</a>--}}
+                                <!-- active lang class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-secondary" -->
+                                    {{--<a--}}
+                                            {{--href=""--}}
+                                            {{--class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all"--}}
+                                    {{-->--}}
+                                        {{--Tm--}}
+                                    {{--</a>--}}
+                                    {{--<a--}}
+                                            {{--href=""--}}
+                                            {{--class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all"--}}
+                                    {{-->--}}
+                                        {{--Ru--}}
+                                    {{--</a>--}}
+                                    {{--<a--}}
+                                            {{--href=""--}}
+                                            {{--class="w-full rounded-xl p-3 text-white text-base font-semibold text-center bg-primary active:bg-secondary transition-all"--}}
+                                    {{-->--}}
+                                        {{--En--}}
+                                    {{--</a>--}}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -578,7 +578,7 @@
                                 />
                             </svg>
                         </a>
-                        <a href="https://www.linkedin.com/company" class="text-white active:text-textColor md:hover:text-textColor transition-all">
+                        <a href="https://www.linkedin.com/company/tmt-consulting-group" class="text-white active:text-textColor md:hover:text-textColor transition-all">
                             <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -624,7 +624,7 @@
                         {{ __('ift.contact_us') }}
                         {{--Contact us--}}
                     </h4>
-                    <a href="tel:+99312753638" class="text-white text-base md:text-lg flex items-center gap-2 hover:text-textColor transition-all">
+                    <a href="tel:+99312753648" class="text-white text-base md:text-lg flex items-center gap-2 hover:text-textColor transition-all">
                         <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox="0 0 24 24"
@@ -637,7 +637,7 @@
                                     clip-rule="evenodd"
                             />
                         </svg>
-                        +993 12 753638
+                        +993 12 753648
                     </a>
                     <a href="tel:+99312753644" class="text-white text-base md:text-lg flex items-center gap-2 hover:text-textColor transition-all">
                         <svg

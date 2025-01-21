@@ -45,6 +45,7 @@ return [
     'email'               => 'Email Address',
     'website'               => 'Company Website',
     'status'               => 'Participation Status (select one)',
+    'select_one'               => 'Select one',
 
     'delegate'               => 'Delegate',
     'media'               => 'Media',
@@ -60,14 +61,14 @@ return [
 //    main section
     'main_title'               => 'IFT 2025 «Investment in the Future of Turkmenistan»',
     'main_title2'               => 'International Forum on Attracting Investments to the Private Sector',
-    'main_address'               => '18.03.2024 Asghabat, Turkmenistan',
+    'main_address'               => '18.03.2025 Asghabat, Turkmenistan',
     'registration'               => 'Registration',
 
 //    About IFT 2025 section
 
     'about_ift_section_title'               => 'About IFT 2025',
     'about_ift_section_text'               => 'In 2025, Turkmenistan has declared the “International Year of
-                            Peace and Trust”, which emphasizes the country&#39;s aspiration
+                            Peace and Trust”, which emphasizes the countries aspiration
                             to strengthen international cooperation, promote the ideas of
                             peace and mutual trust between peoples. Accordingly, in March
                             this year, Turkmenistan will for the first time become a venue

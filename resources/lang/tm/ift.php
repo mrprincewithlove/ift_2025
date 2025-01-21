@@ -11,7 +11,7 @@ return [
     'meetings'               => 'Duşuşyklar',
     'speakers'               => 'Çykyş edýänler',
     'sponsors'               => 'Hemaýatkärler',
-    'agenda_ift'               => 'IFT 2025-nji ýylyň Maksatnamasy',
+    'agenda_ift'               => 'IFT 2025 Maksatnamasy',
 
     'media_center'               => 'Maglumat merkezi',
     'media'               => 'Media',
@@ -48,6 +48,7 @@ return [
     'email'               => 'E-mail adres',
     'website'               => 'Guramanyň web-sahypasy:',
     'status'               => 'Gatnaşmak ýagdaýy',
+    'select_one'               => 'Birini saýlaň',
 
     'delegate'               => 'Delegat',
     'media'               => 'Media',
@@ -108,7 +109,7 @@ return [
     'WHY JOIN IFT 2025?'               => 'NÄME ÜÇIN IFT 2025-e GATNAŞMALY?',
     'An impressive experience'               => 'Täsir galdyryjy tejribe',
     'Rich business and cultural program'               => 'Baý işewürlik we medeni maksatnamasy',
-    'Space for business communication and networking'               => 'Işewürlik aragatnaşygy we networking üçin giňişlik',
+    'Space for business communication and networking'               => 'Işewürlik aragatnaşygy we arabaglanyşyk üçin giňişlik',
     'Exhibitions introducing the latest technologies'               => 'Iň täze tehnologiýalar bilen tanyşdyrýan sergiler',
 
 
