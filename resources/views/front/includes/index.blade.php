@@ -710,40 +710,40 @@
                         <form action="{{ route('front.feedback.send') }}" method="POST" class="w-full grid grid-cols-2 gap-5">
                             @csrf
                             <div class="col-span-2 sm:col-span-1 flex flex-col">
-                                <label for="name" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="name" class="required w-fit {{ $errors->has('name') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.name') }}
                                     {{--Имя--}}
                                 </label>
-                                <input type="text" name="name" id="name" class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"  value="{{ old('name') }}"/>
+                                <input type="text" name="name" id="name" class="border-2 {{ $errors->has('name') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"  value="{{ old('name') }}"/>
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="surname" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="surname" class="required w-fit {{ $errors->has('surname') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.surname') }}
                                     {{--Фамилия--}}
                                 </label>
-                                <input type="text" name="surname" id="surname" class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"  value="{{ old('surname') }}"/>
+                                <input type="text" name="surname" id="surname" class="border-2 {{ $errors->has('surname') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"  value="{{ old('surname') }}"/>
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col">
-                                <label for="email" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="email" class="required w-fit {{ $errors->has('email') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.email') }}
                                     {{--Адрес электронной почты--}}
                                 </label>
-                                <input type="email" name="email" id="email" class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none" value="{{ old('email') }}"/>
+                                <input type="email" name="email" id="email" class="border-2 {{ $errors->has('email') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none" value="{{ old('email') }}"/>
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col">
-                                <label for="number" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="number" class="required w-fit {{ $errors->has('number') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.number') }}
                                     {{--Номер телефона--}}
                                 </label>
-                                <input type="text" name="number" id="number" class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none" value="{{ old('number') }}"/>
+                                <input type="text" name="number" id="number" class="border-2 {{ $errors->has('number') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none" value="{{ old('number') }}"/>
                             </div>
                             <div class="col-span-2 flex flex-col">
-                                <label for="message" class="required w-fit text-textColor text-base md:text-lg font-semibold">
+                                <label for="message" class="required w-fit {{ $errors->has('message') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.message') }}
                                     {{--Cобщение--}}
                                 </label>
 
-                                <textarea name="message" id="message" cols="30" rows="5" class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none resize-none"
+                                <textarea name="message" id="message" cols="30" rows="5" class="border-2 {{ $errors->has('message') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none resize-none"
                                 >{{ old('message') }}</textarea>
                             </div>
                             <button type="submit" class="col-span-2 p-3 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">

@@ -148,7 +148,7 @@ class FrontController extends Controller
             $user_details = "Thank you for registration";
 
             $data1 = array('name'=>$to_name, 'body' => $user_details);
-            Mail::send('mail.register_response1', $data1, function($message) use ($to_name, $to_email) {
+            Mail::send('mail.register_response1_'.app()->currentLocale(), $data1, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)
                     ->subject('Thank you for registration');
                 $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
@@ -160,14 +160,14 @@ class FrontController extends Controller
         }
         try{
 
-            $to_name = 'Hormatly Tif administratory';
+            $to_name = 'Hormatly IFT administratory';
 
 //            $to_email = 'ereshjumayew@gmail.com';
 //            $to_email = 'yusuph0206@gmail.com';
 //            $to_email = 'info@tmt.tm';
             $to_email = 'tmt.group.web@gmail.com';
 
-            $title = 'Tif new registration report';
+            $title = 'IFT new registration report';
 //            $img = $data['photo'];
             $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
 //            Mail::send('mail.register_report1', $data2, function($message) use ($to_name, $to_email, $img) {
@@ -242,14 +242,14 @@ class FrontController extends Controller
             Log::error($th->getMessage());
         }
         try{
-            $to_name = 'Hormatly Tif administratory';
+            $to_name = 'Hormatly IFT administratory';
 
 //            $to_email = 'ereshjumayew@gmail.com';
 //            $to_email = 'yusup@ucyap.com';
 //            $to_email = 'info@tmt.tm';
             $to_email = 'tmt.group.web@gmail.com';
 
-            $title = 'Tif new feedback report';
+            $title = 'IFT new feedback report';
             $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
             Mail::send('mail.feedback_report1', $data2, function($message) use ($to_name, $to_email) {
                 $message->to($to_email, $to_name)

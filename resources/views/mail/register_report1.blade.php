@@ -1,162 +1,711 @@
 <!DOCTYPE html>
-<html lang="tk">
+<html
+        lang="und"
+        dir="auto"
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office"
+>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>{{ $title }}</title>
-  <style>
-    * {
+  <!--[if !mso]><!-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style type="text/css">
+    #outlook a,
+    body {
       padding: 0;
+    }
+    body {
       margin: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
+      -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
     }
-
-    .container {
-      width: 100%;
+    table,
+    td {
+      border-collapse: collapse;
+      mso-table-lspace: 0;
+      mso-table-rspace: 0;
     }
-
-    .inner-container {
-      max-width: 1280px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .header {
-      width: 100%;
-      padding: 30px;
-      background: #1fc9e8;
-      color: #fff;
-    }
-    .header h1 {
-      font-size: 36px;
-      font-weight: bolder;
-      margin-bottom: 10px;
-    }
-    .header p {
-      font-size: 16px;
-    }
-
-    .body {
-      width: 100%;
-      padding: 30px;
-    }
-    .body h5 {
-      font-size: 16px;
-      font-weight: bolder;
-      color: #000;
-      margin-bottom: 20px;
-    }
-    .body p {
-      font-size: 16px;
-      font-weight: bold;
-      color: #666;
-      margin-bottom: 20px;
-    }
-    .body p a {
-      color: #1fc9e8;
+    img {
+      border: 0;
+      height: auto;
+      line-height: 100%;
+      outline: none;
       text-decoration: none;
+      -ms-interpolation-mode: bicubic;
     }
-    .body .table {
-      padding: 20px;
-      background: rgba(17, 108, 179, 0.1);
-      border-radius: 6px;
-      margin: 0 auto;
-      margin-bottom: 20px;
-      overflow-x: auto;
+    p {
+      display: block;
+      margin: 13px 0;
     }
-
-    .body table th {
-      border-bottom: 1px solid #000;
-      white-space: nowrap;
-      padding: 5px;
-      color: #000;
+  </style>
+  <!--[if mso]>
+  <noscript>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG />
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+  </noscript>
+  <![endif]-->
+  <!--[if lte mso 11]>
+  <style type="text/css">
+    .mj-outlook-group-fix {
+      width: 100% !important;
     }
-
-    .body table td {
-      padding: 5px;
-      color: #333;
+  </style>
+  <![endif]-->
+  <!--[if !mso]><!-->
+  <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet"
+          type="text/css"
+  />
+  <style type="text/css">
+    @import url(https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+  </style>
+  <!--<![endif]-->
+  <style type="text/css">
+    @media only screen and (max-width: 479px) {
+      table.mj-full-width-mobile {
+        width: 100% !important;
+      }
+      td.mj-full-width-mobile {
+        width: auto !important;
+      }
     }
-
-    .body .table p {
-      color: #1fc9e8;
-      font-size: 48px;
-      margin-bottom: 0px;
+    noinput.mj-menu-checkbox {
+      display: block !important;
+      max-height: none !important;
+      visibility: visible !important;
     }
-
-    .footer {
-      width: 100%;
-      background: #1fc9e8;
-      padding: 30px;
-      color: #fff;
-    }
-    .footer h2 {
-      color: white;
-      font-size: 32px;
-      font-weight: bolder;
-      margin-bottom: 10px;
-    } /*# sourceMappingURL=style.css.map */
-    .flex {
-      display: flex;
-    }
-    .flex-col {
-      flex-direction: column;
+    @media only screen and (max-width: 479px) {
+      .mj-menu-checkbox[type="checkbox"] ~ .mj-inline-links {
+        display: none !important;
+      }
+      .mj-menu-checkbox[type="checkbox"]:checked ~ .mj-inline-links,
+      .mj-menu-checkbox[type="checkbox"] ~ .mj-menu-trigger {
+        display: block !important;
+        font-size: inherit !important;
+        max-height: none !important;
+        max-width: none !important;
+      }
+      .mj-menu-checkbox[type="checkbox"]:checked
+      ~ .mj-menu-trigger
+      .mj-menu-icon-close,
+      .mj-menu-checkbox[type="checkbox"] ~ .mj-inline-links > a {
+        display: block !important;
+      }
+      .mj-menu-checkbox[type="checkbox"]:checked
+      ~ .mj-menu-trigger
+      .mj-menu-icon-open {
+        display: none !important;
+      }
     }
   </style>
 </head>
-<body>
-<section class="container">
-  <div class="header">
-    <div class="inner-container">
-      <p>{{ $name }}</p>
-    </div>
+<body style="word-spacing: normal">
+<div lang="und" dir="auto">
+  <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:670px;" width="670" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
+  <div style="margin: 0 auto; max-width: 670px">
+    <table
+            align="center"
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="width: 100%"
+    >
+      <tbody>
+      <tr>
+        <td
+                style="
+                  direction: ltr;
+                  font-size: 0;
+                  padding: 0 0 20px;
+                  text-align: center;
+                "
+        >
+          <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" width="670px" ><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:670px;" width="670" ><tr><td style="line-height:0;font-size:0;mso-line-height-rule:exactly;"><v:image style="border:0;height:621px;mso-position-horizontal:center;position:absolute;top:0;width:592px;z-index:-3;" src="https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png" xmlns:v="urn:schemas-microsoft-com:vml" /><![endif]-->
+          <div style="margin: 0 auto; max-width: 670px">
+            <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                    style="width: 100%"
+            >
+              <tbody>
+              <tr style="vertical-align: top">
+                <td
+                        style="
+                            padding-bottom: 105%;
+                            width: 0.01%;
+                            mso-padding-bottom-alt: 0;
+                          "
+                ></td>
+                <td
+                        background="https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png"
+                        style="
+                            background: #0a9dcd
+                              url(https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png)
+                              no-repeat 50% / cover;
+                            background-position: 50%;
+                            background-repeat: no-repeat;
+                            border-radius: 0 0 0 0;
+                            padding: 0 0 50px;
+                            vertical-align: top;
+                          "
+                >
+                  <!--[if mso | IE]><table border="0" cellpadding="0" cellspacing="0" style="width:670px;" width="670" ><tr><td style=""><![endif]-->
+                  <div class="mj-hero-content" style="margin: 0 auto">
+                    <table
+                            border="0"
+                            cellpadding="0"
+                            cellspacing="0"
+                            role="presentation"
+                            style="margin: 0; width: 100%"
+                    >
+                      <tbody>
+                      <tr>
+                        <td>
+                          <table
+                                  border="0"
+                                  cellpadding="0"
+                                  cellspacing="0"
+                                  role="presentation"
+                                  style="margin: 0; width: 100%"
+                          >
+                            <tbody>
+                            <tr>
+                              <td
+                                      align="left"
+                                      style="
+                                              font-size: 0;
+                                              padding: 50px 0 0 50px;
+                                              word-break: break-word;
+                                            "
+                              >
+                                <table
+                                        border="0"
+                                        cellpadding="0"
+                                        cellspacing="0"
+                                        role="presentation"
+                                        style="
+                                                border-collapse: collapse;
+                                                border-spacing: 0;
+                                              "
+                                >
+                                  <tbody>
+                                  <tr>
+                                    <td style="width: 190px">
+                                      <img
+                                              alt
+                                              src="https://s.iimg.su/s/20/0f5t9PT56HyE2ic3r9aiHK0eMOn0tllSwYg00i5A.png"
+                                              style="
+                                                        border: 0;
+                                                        display: block;
+                                                        font-size: 13px;
+                                                        height: auto;
+                                                        outline: none;
+                                                        text-decoration: none;
+                                                        width: 100%;
+                                                      "
+                                              width="190"
+                                              height="auto"
+                                      />
+                                    </td>
+                                  </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td
+                                      align="center"
+                                      style="
+                                              font-size: 0;
+                                              padding: 30px 0 0;
+                                              word-break: break-word;
+                                            "
+                              >
+                                <div
+                                        style="
+                                                color: #fff;
+                                                font-family: Montserrat,
+                                                  sans-serif;
+                                                font-size: 20px;
+                                                font-weight: 800;
+                                                line-height: 1;
+                                                text-align: center;
+                                              "
+                                >
+                                  {{ $name }}
+                                </div>
+                              </td>
+                            </tr> <tr>
+                              <td
+                                      align="center"
+                                      style="
+                                              font-size: 0;
+                                              padding: 30px 0 0;
+                                              word-break: break-word;
+                                            "
+                              >
+                                <div
+                                        style="
+                                                color: #fff;
+                                                font-family: Montserrat,
+                                                  sans-serif;
+                                                font-size: 20px;
+                                                font-weight: 800;
+                                                line-height: 1;
+                                                text-align: center;
+                                              "
+                                >
+                                  Register Information
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td
+                                      align="justify"
+                                      style="
+                                              font-size: 0;
+                                              padding: 10px 80px 0;
+                                              word-break: break-word;
+                                            "
+                              >
+                                <div
+                                        style="
+                                                color: #fff;
+                                                font-family: Montserrat,
+                                                  sans-serif;
+                                                font-size: 14px;
+                                                font-weight: 600;
+                                                line-height: 22px;
+                                              "
+                                ></div>
+                              </td>
+                            </tr>
+
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Ady:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['name'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Familiyasy:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['surname'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Atasynyn ady:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['middle_name'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Kompaniya:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['company_name'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Ish:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['job'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Dowlet:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['country'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Telefon belgisi:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['number'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Email:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['email'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Website:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['website'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Status:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['status'] }}
+                              </td>
+                            </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                            display: grid;
+                                            grid-template-columns: 1fr 1fr;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Viza:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['visa'] }}
+                              </td>
+                            </tr>
+
+                            <tr>
+                              <td
+                                      align="center"
+                                      style="
+                                              font-size: 0;
+                                              word-break: break-word;
+                                            "
+                              >
+                                <div class="mj-inline-links">
+                                  <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0" align="center"><tr><td style="padding:15px 10px;" class="" ><![endif]-->
+                                  <a
+                                          class="mj-link"
+                                          href="mailto:info@tmt.tm"
+                                          target="_blank"
+                                          style="
+                                                  color: #fff;
+                                                  display: inline-block;
+                                                  font-family: Montserrat;
+                                                  font-size: 16px;
+                                                  font-weight: 400;
+                                                  line-height: 20px;
+                                                  padding: 15px 10px;
+                                                  text-decoration: none;
+                                                  text-transform: lowercase;
+                                                "
+                                  >
+                                    info@tmt.tm
+                                  </a>
+                                  <!--[if mso | IE]></td></tr></table><![endif]-->
+                                </div>
+                              </td>
+                            </tr>
+                            </tbody>
+                          </table>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <!--[if mso | IE]></td></tr></table><![endif]-->
+                </td>
+                <td
+                        style="
+                            padding-bottom: 105%;
+                            width: 0.01%;
+                            mso-padding-bottom-alt: 0;
+                          "
+                ></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--[if mso | IE]></td></tr></table></td></tr></table><![endif]-->
+        </td>
+      </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="body">
-    <div class="inner-container">
-      <div class="table">
-        <table>
-          <thead>
-          <tr>
-            <th>Ady:</th>
-            <th>Familiyasy:</th>
-            <th>Atasynyn ady:</th>
-            <th>Kompaniya:</th>
-            <th>Ish:</th>
-            <th>Dowlet:</th>
-            <th>Telefon belgisi:</th>
-            <th>Telefon belgisi (adatdan daşary ýagdaý):</th>
-            <th>Email:</th>
-            <th>Website:</th>
-            <th>Status:</th>
-            <th>Viza:</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td>{{ $body['name'] }}</td>
-            <td>{{ $body['surname'] }}</td>
-            <td>{{ $body['middle_name'] }}</td>
-            <td>{{ $body['company_name'] }}</td>
-            <td>{{ $body['job'] }}</td>
-            <td>{{ $body['country'] }}</td>
-            <td>{{ $body['number'] }}</td>
-            <td>{{ $body['emergency_number'] }}</td>
-            <td>{{ $body['email'] }}</td>
-            <td>{{ $body['website'] }}</td>
-            <td>{{ $body['status'] }}</td>
-            <td>{{ $body['visa'] }}</td>
-          </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class="footer">
-    <div class="inner-container">
-      <h2>ift2025turkmenistan@gmail.com</h2>
-    </div>
-  </div>
-</section>
+  <!--[if mso | IE]></td></tr></table><![endif]-->
+</div>
 </body>
 </html>
