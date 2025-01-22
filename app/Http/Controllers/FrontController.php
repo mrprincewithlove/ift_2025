@@ -139,25 +139,27 @@ class FrontController extends Controller
             File::put($filePath, json_encode($existingData));
         }
 
-        try{
-
-            $to_name = $request->name. ' '. $request->middle_name.' '.$request->surname;
-
-            $to_email = $request->email;
-
-            $user_details = "Thank you for registration";
-
-            $data1 = array('name'=>$to_name, 'body' => $user_details);
-            Mail::send('mail.register_response1_'.app()->currentLocale(), $data1, function($message) use ($to_name, $to_email) {
-                $message->to($to_email, $to_name)
-                    ->subject('Thank you for registration');
-                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
-            });
-        }
-        catch (\Throwable $th) {
-            //            log here
-            Log::error($th->getMessage());
-        }
+//        response mail for register
+//        try{
+//
+//            $to_name = $request->name. ' '. $request->middle_name.' '.$request->surname;
+//
+//            $to_email = $request->email;
+//
+//            $user_details = "Thank you for registration";
+//
+//            $data1 = array('name'=>$to_name, 'body' => $user_details);
+//            Mail::send('mail.register_response1_'.app()->currentLocale(), $data1, function($message) use ($to_name, $to_email) {
+//                $message->to($to_email, $to_name)
+//                    ->subject('Thank you for registration');
+//                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
+//            });
+//        }
+//        catch (\Throwable $th) {
+//            //            log here
+//            Log::error($th->getMessage());
+//        }
+//        report mail for register
         try{
 
             $to_name = 'Hormatly IFT administratory';
@@ -222,25 +224,27 @@ class FrontController extends Controller
             File::put($filePath, json_encode($existingData));
         }
 
-        try{
-
-            $to_name = $request->name. ' '.$request->surname;
-
-            $to_email = $request->email;
-
-            $user_details = "Thank you for feedback ";
-
-            $data1 = array('name'=>$to_name, 'body' => $user_details);
-            Mail::send('mail.feedback_response1', $data1, function($message) use ($to_name, $to_email) {
-                $message->to($to_email, $to_name)
-                    ->subject('Thank you for feedback');
-                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
-            });
-        }
-        catch (\Throwable $th) {
-            //            log here
-            Log::error($th->getMessage());
-        }
+//        response mail for feedback
+//        try{
+//
+//            $to_name = $request->name. ' '.$request->surname;
+//
+//            $to_email = $request->email;
+//
+//            $user_details = "Thank you for feedback ";
+//
+//            $data1 = array('name'=>$to_name, 'body' => $user_details);
+//            Mail::send('mail.feedback_response1', $data1, function($message) use ($to_name, $to_email) {
+//                $message->to($to_email, $to_name)
+//                    ->subject('Thank you for feedback');
+//                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
+//            });
+//        }
+//        catch (\Throwable $th) {
+//            //            log here
+//            Log::error($th->getMessage());
+//        }
+//        report mail for feedback
         try{
             $to_name = 'Hormatly IFT administratory';
 
