@@ -84,7 +84,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="flex flex-col items-center justify-start pb-10">
+            <div class="flex flex-col items-center justify-start pb-10 text-center text-balance">
                 <div class="text-green-500">
                     <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -99,9 +99,10 @@
                         />
                     </svg>
                 </div>
-                <h4 class="text-green-500 text-xl md:text-2xl font-semibold">
-                    Success Успешный Üstünliki
+                <h4 class="text-green-500 text-xl md:text-2xl font-semibold mb-2">
+                    {{ __('ift.Dear Participant') }}
                 </h4>
+                <p class="text-textColor text-base md:text-lg">{{ session('success') }}</p>
             </div>
         </div>
     </div>

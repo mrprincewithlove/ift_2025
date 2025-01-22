@@ -185,7 +185,7 @@ class FrontController extends Controller
         catch (\Throwable $th) {
             Log::error($th->getMessage());
         }
-        return redirect()->back()->with('success', __('front.Registration sended successfully!'));
+        return redirect()->back()->with('success', __('ift.Registration sended message'));
 
     }
 

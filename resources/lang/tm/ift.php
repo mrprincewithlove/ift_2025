@@ -154,5 +154,7 @@ return [
 
 
 
-    'test'               => 'test',
+    'Dear Participant'               => 'Hormatly Gatnaşyjy,',
+
+    'Registration sended message'               => '2025-nji ýylyň 18-nji martynda Aşgabat şäherinde geçiriljek hususy pudaga maýa goýumlaryny çekmek boýunça «Türkmenistanyň geljegine maýa goýumlar» atly halkara forumyna hasaba alynandygyňyzy tassyklaýarys.',
 ];

@@ -156,4 +156,12 @@ return [
     'send'               => 'Send',
 
 
+
+    'Dear Participant'               => 'Dear Participant,',
+
+
+
+    'Registration sended message'               => 'We are delighted to confirm your registration for the ­­­­­­ International Forum on Investment Attraction to the Private Sector "Investments in the Future of Turkmenistan", taking place in Ashgabat, Turkmenistan, on March 18, 2025.',
+
+
 ];
