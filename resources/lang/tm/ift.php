@@ -2,7 +2,7 @@
 
 return [
     //    global translates
-    'project_address'               => 'tiftm.com',
+    'project_address'               => 'ift.com.tm',
     'project_name'               => 'IFT 2025',
     'menu'               => 'Menýu',
 
