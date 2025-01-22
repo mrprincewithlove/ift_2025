@@ -79,11 +79,11 @@
                                 {{ __('ift.Official support') }}
                                 {{--Official support--}}
                             </a>
-                            <a href="/assets/files/konsepsiya.docx" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="{{ route('front.coming_soon') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.Agenda') }}
                                 {{--Agenda--}}
                             </a>
-                            <a href="/assets/files/konsepsiya.docx" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="{{ route('front.coming_soon') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.Forum Concept') }}
                                 {{--Forum Concept--}}
                             </a>
