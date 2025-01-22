@@ -1,6 +1,6 @@
 <!doctype html>
-<html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml"
->
+<html lang="und" dir="auto" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+      xmlns:o="urn:schemas-microsoft-com:office:office">
 <head><title></title><!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -111,15 +111,15 @@
                                         <td style="line-height:0;font-size:0;mso-line-height-rule:exactly;">
                                             <v:image
                                                     style="border:0;height:621px;mso-position-horizontal:center;position:absolute;top:0;width:592px;z-index:-3;"
-                                                    src="https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png"
+                                                    src="https://s.iimg.su/s/21/c2Vvmw0OHf5ZQurAEathowqRqxcfPN68XriXimn6.png"
                                                     xmlns:v="urn:schemas-microsoft-com:vml"/><![endif]-->
                     <div style="margin:0 auto;max-width:670px">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%">
                             <tbody>
                             <tr style="vertical-align:top">
                                 <td style="padding-bottom:105%;width:.01%;mso-padding-bottom-alt:0"></td>
-                                <td background="https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png"
-                                    style="background:#0a9dcd url(https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png) no-repeat 50%/cover;background-position:50%;background-repeat:no-repeat;border-radius:0 0 0 0;padding:0 0 50px;vertical-align:top">
+                                <td background="https://s.iimg.su/s/21/c2Vvmw0OHf5ZQurAEathowqRqxcfPN68XriXimn6.png"
+                                    style="background:#0a9dcd url(https://s.iimg.su/s/21/c2Vvmw0OHf5ZQurAEathowqRqxcfPN68XriXimn6.png) no-repeat 50%/cover;background-position:50%;background-repeat:no-repeat;border-radius:0 0 0 0;padding:0 0 50px;vertical-align:top">
                                     <!--[if mso | IE]>
                                     <table border="0" cellpadding="0" cellspacing="0" style="width:670px;" width="670">
                                         <tr>
@@ -190,16 +190,15 @@
                                                                     <br><br>Спасибо за регистрацию на IFT 2025:
                                                                     Инвестиции в будущее Туркменистана. <br><br>Для
                                                                     завершения процесса регистрации мы любезно
-                                                                    напоминаем вам подписать Делегатское соглашение, что
-                                                                    является необходимым шагом для завершения вашего
-                                                                    участия. <br><br>Вы можете найти соглашение в
-                                                                    приложении или получить к нему доступ через [ссылка
-                                                                    на соглашение]. После завершения отправьте его в
-                                                                    течении 3 рабочих дней <br><br>Если у вас возникнут
-                                                                    какие-либо вопросы или вам понадобится помощь,
-                                                                    свяжитесь с нами по адресу [контактная информация].
-                                                                    <br><br>Мы с нетерпением ждем возможности
-                                                                    приветствовать вас на форуме в марте!
+                                                                    напоминаем Вам подписать Делегатское соглашение, что
+                                                                    является необходимым шагом для подтверждения вашего
+                                                                    участия. В скором времени наша команда свяжется с
+                                                                    Вами. <br><br>Если у Вас возникнут какие-либо
+                                                                    вопросы или Вам понадобится помощь, свяжитесь с нами
+                                                                    по электронному адресу info@tmt.tm или по номеру
+                                                                    +99312753648. Мы с нетерпением ждем возможности
+                                                                    приветствовать Вас на форуме в марте! <br><br>С
+                                                                    наилучшими пожеланиями,
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -207,7 +206,8 @@
                                                             <td align="justify"
                                                                 style="font-size:0;padding:10px 80px 0;word-break:break-word">
                                                                 <div style="color:#fff;font-family:Montserrat,sans-serif;font-size:14px;font-weight:600;line-height:22px;text-align:justify">
-                                                                    ITF 2025: Investment in the Future of Turkmenistan
+                                                                    Команда TMT Consulting Group <br><br>IFT 2025:
+                                                                    Investment in Future of Turkmenistan
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -273,7 +273,11 @@
                                                                                     href="mailto:info@tmt.tm"
                                                                                     target="_blank"
                                                                                     style="color:#fff;display:inline-block;font-family:Montserrat;font-size:16px;font-weight:400;line-height:20px;padding:15px 10px;text-decoration:none;text-transform:lowercase">
-                                                                        info@tmt.tm </a>
+                                                                        info@tmt.tm </a><a class="mj-link"
+                                                                                           href="http://ift.com.tm/index"
+                                                                                           target="_blank"
+                                                                                           style="color:#fff;display:inline-block;font-family:Montserrat;font-size:16px;font-weight:400;line-height:20px;padding:15px 10px;text-decoration:none;text-transform:lowercase">
+                                                                        www.ift.com.tm </a>
                                                                     <!--[if mso | IE]></td></tr></table><![endif]-->
                                                                 </div>
                                                             </td>

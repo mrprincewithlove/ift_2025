@@ -111,15 +111,15 @@
                                         <td style="line-height:0;font-size:0;mso-line-height-rule:exactly;">
                                             <v:image
                                                     style="border:0;height:621px;mso-position-horizontal:center;position:absolute;top:0;width:592px;z-index:-3;"
-                                                    src="https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png"
+                                                    src="https://s.iimg.su/s/21/c2Vvmw0OHf5ZQurAEathowqRqxcfPN68XriXimn6.png"
                                                     xmlns:v="urn:schemas-microsoft-com:vml"/><![endif]-->
                     <div style="margin:0 auto;max-width:670px">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%">
                             <tbody>
                             <tr style="vertical-align:top">
                                 <td style="padding-bottom:105%;width:.01%;mso-padding-bottom-alt:0"></td>
-                                <td background="https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png"
-                                    style="background:#0a9dcd url(https://s.iimg.su/s/20/Mp6em0CGvoiEaQWDNLwMV1RNgGw4KGYnXnwxTsI3.png) no-repeat 50%/cover;background-position:50%;background-repeat:no-repeat;border-radius:0 0 0 0;padding:0 0 50px;vertical-align:top">
+                                <td background="https://s.iimg.su/s/21/c2Vvmw0OHf5ZQurAEathowqRqxcfPN68XriXimn6.png"
+                                    style="background:#0a9dcd url(https://s.iimg.su/s/21/c2Vvmw0OHf5ZQurAEathowqRqxcfPN68XriXimn6.png) no-repeat 50%/cover;background-position:50%;background-repeat:no-repeat;border-radius:0 0 0 0;padding:0 0 50px;vertical-align:top">
                                     <!--[if mso | IE]>
                                     <table border="0" cellpadding="0" cellspacing="0" style="width:670px;" width="670">
                                         <tr>
@@ -155,7 +155,7 @@
                                                             <td align="left"
                                                                 style="font-size:0;padding:40px 0 0 70px;word-break:break-word">
                                                                 <div style="color:#fff;font-family:Montserrat,sans-serif;font-size:21px;font-weight:700;line-height:25px;text-align:left">
-                                                                    Türkmenistanyň Geljegine <br>Maýa Goýumlar
+                                                                    Türkmenistanyň geljegine <br>maýa goýumlar
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -179,7 +179,7 @@
                                                             <td align="center"
                                                                 style="font-size:0;padding:30px 0 0;word-break:break-word">
                                                                 <div style="color:#fff;font-family:Montserrat,sans-serif;font-size:20px;font-weight:800;line-height:1;text-align:center">
-                                                                    Hormatly gatnaşyjy {{ $name }},
+                                                                    Hormatly {{ $name }},
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -187,16 +187,19 @@
                                                             <td align="justify"
                                                                 style="font-size:0;padding:10px 80px 0;word-break:break-word">
                                                                 <div style="color:#fff;font-family:Montserrat,sans-serif;font-size:14px;font-weight:600;line-height:22px;text-align:justify">
-                                                                    <br><br>IFT2025. Türkmenistanyñ geljegine maýa
-                                                                    goýumlar atly foruma gatnaşyjy hökmünde bellige
-                                                                    alnanyñyz ùçin sag boluñ! <br><br>ITF 2025-e
-                                                                    gatnaşmak üçin ýerine ýetirilýän amaly doly
-                                                                    tamamlamakda zerur ädimleriň biri bolan Gatnaşyjynyň
-                                                                    ylalaşygyna goluňyzy çekmegiňizi haýyş edýäris. <br><br>•
-                                                                    Gatnaşyjynyň ylalaşygyny ýükläp alyň. <br><br>•
-                                                                    Doldurylan ylalaşygy 3 günüň içinde ugradyň.
-                                                                    <br><br>Eger-de Sizde soraglar ýüze çyksa, onda şu
-                                                                    info@tmt.tm salgy boýunça biz bilen habarlaşyň.
+                                                                    <br><br>IFT 2025: Türkmenistanyň geljegine maýa
+                                                                    goýumlar forumyna hasaba alnandygyňyz üçin sag
+                                                                    boluň. <br><br>Hasaba alyş işini tamamlamak üçin
+                                                                    Delegat şertnamasyna gol çekmegiňizi haýyş edýäris,
+                                                                    bu Siziň gatnaşýandygyňyzy tassyklamak üçin zerur
+                                                                    ädimdir. Toparymyz gysga wagtda Siziň bilen
+                                                                    habarlaşar.<br><br>Eger-de Sizde islendik sowallar
+                                                                    ýüze çyksa ýa-da kömek gerek bolsa, info@tmt.tm
+                                                                    elektron poçta salgysy ýa-da +99312753648 telefon
+                                                                    belgisi arkaly biziň bilen habarlaşyp bilersiňiz.
+                                                                    <br><br>Biz Sizi mart aýynda geçiriljek forumda
+                                                                    garşylamaga sabyrsyzlyk bilen garaşýarys! <br><br>Hormatlamak
+                                                                    bilen,
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -204,7 +207,8 @@
                                                             <td align="justify"
                                                                 style="font-size:0;padding:10px 80px 0;word-break:break-word">
                                                                 <div style="color:#fff;font-family:Montserrat,sans-serif;font-size:14px;font-weight:600;line-height:22px;text-align:justify">
-                                                                    ITF 2025: Investment in the Future of Turkmenistan
+                                                                    TMT Consultıng Group. <br><br>IFT 2025:
+                                                                    Türkmenistanyň geljegine maýa goýumlar
                                                                 </div>
                                                             </td>
                                                         </tr>
@@ -270,7 +274,11 @@
                                                                                     href="mailto:info@tmt.tm"
                                                                                     target="_blank"
                                                                                     style="color:#fff;display:inline-block;font-family:Montserrat;font-size:16px;font-weight:400;line-height:20px;padding:15px 10px;text-decoration:none;text-transform:lowercase">
-                                                                        info@tmt.tm </a>
+                                                                        info@tmt.tm </a><a class="mj-link"
+                                                                                           href="http://ift.com.tm/index"
+                                                                                           target="_blank"
+                                                                                           style="color:#fff;display:inline-block;font-family:Montserrat;font-size:16px;font-weight:400;line-height:20px;padding:15px 10px;text-decoration:none;text-transform:lowercase">
+                                                                        www.ift.com.tm </a>
                                                                     <!--[if mso | IE]></td></tr></table><![endif]-->
                                                                 </div>
                                                             </td>
