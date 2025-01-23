@@ -75,7 +75,7 @@
                             {{--Read all--}}
                         </a>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mt-5">
-                            <a href="/assets/files/konsepsiya.docx" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="{{ route('front.coming_soon') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.Official support') }}
                                 {{--Official support--}}
                             </a>
@@ -87,7 +87,7 @@
                                 {{ __('ift.Forum Concept') }}
                                 {{--Forum Concept--}}
                             </a>
-                            <a href="/assets/files/broshura.pdf" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="{{ route('front.coming_soon') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.IFT 2025 brochure') }}
                                 {{--IFT 2025 brochure--}}
                             </a>
