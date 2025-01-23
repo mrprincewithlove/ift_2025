@@ -45,12 +45,15 @@
                                 {{ __('ift.form_title') }}
                                 {{--Registration Form for Delegates:--}}
                             </h1>
-                            <!-- <p class="text-textColor text-base md:text-lg">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                              Dolorum vero repellat nam dolorem exercitationem consequatur,
-                              accusantium aspernatur iusto provident repudiandae, quam natus
-                              perferendis! Voluptatem, suscipit?
-                            </p> -->
+                             <p class="text-textColor text-base md:text-lg">
+                                 {{ __('ift.form_text') }}
+                            </p>
+                            <p class="text-textColor text-base md:text-lg font-semibold">
+                                {{ __('ift.form_date') }}
+                            </p>
+                            <p class="text-textColor text-base md:text-lg font-semibold">
+                                {{ __('ift.form_venue') }}
+                            </p>
                         </div>
                         <form action="{{ route('front.register.send') }}" method="POST" enctype="multipart/form-data" id="registerForm" class="w-full grid grid-cols-2 gap-5">
                             @csrf

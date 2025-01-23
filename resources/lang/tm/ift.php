@@ -36,6 +36,11 @@ return [
     'registration'               => 'Hasaba alynmak',
     'home'               => 'Baş sahypa',
     'form_title'               => 'Delegatlary hasaba almak üçin anketa:',
+    'form_text'               => 'Türkmenistanyň hususy pudagyna maýa goýumlaryny çekmäge bagyşlanan ýylyň iň iri çäresine
+gatnaşmak üçin maglumatnamany dolduryň! Maglumatlaryňyzy paýlaşyň hem-de dünýä derejesinde
+bilim we pikir alyşmalara goşulyň.',
+    'form_date'               => 'Geçiriljek senesi: 18.03.2025',
+    'form_venue'               => 'Geçiriljek ýeri: Aşgabat şäheri',
 //        register form translates
     'name'               => 'Ady',
     'surname'               => 'Familiýasy',

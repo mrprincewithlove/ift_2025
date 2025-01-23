@@ -33,6 +33,10 @@ return [
     'registration'               => 'Registration',
     'home'               => 'Home',
     'form_title'               => 'Registration Form for Delegates:',
+    'form_text'               => 'Fill out the registration form to participate in the years largest event dedicated to investment to the private sector of Turkmenistan! Share your details and join the global exchange of knowledge and ideas.',
+    'form_date'               => 'Event Date: March 18, 2025',
+    'form_venue'               => 'Venue: Ashgabat, Turkmenistan',
+
 //        register form translates
     'name'               => 'First Name',
     'surname'               => 'Last Name',
