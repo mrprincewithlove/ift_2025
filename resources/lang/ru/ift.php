@@ -103,7 +103,7 @@ return [
     //    services section
 
     'Our services'               => 'Наши услуги',
-    'Flight'               => 'Перелёт',
+    'Flight'               => 'Авиарейсы',
     'Visa support'               => 'Визовая поддержка',
     'Logistics'               => 'Логистика',
     'Hotel'               => 'Отель',
