@@ -79,7 +79,7 @@
                                 {{ __('ift.Official support') }}
                                 {{--Official support--}}
                             </a>
-                            <a href="{{ route('front.coming_soon') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="{{ asset('/assets/files/Program_For_IFT_2025_'.app()->currentLocale().'.pdf') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.Agenda') }}
                                 {{--Agenda--}}
                             </a>
@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     <div class="border-[10px] border-r-[10px] md:border-r-0 border-primary customShadow rounded-xl md:rounded-none rounded-l-xl md:rounded-l-full overflow-hidden">
-                        <img src="/assets/images/image2.jpg" alt="" class="w-full rounded-xl md:rounded-none"/>
+                        <img src="/assets/images/image6.jpeg" alt="" class="w-full rounded-xl md:rounded-none"/>
                     </div>
                 </div>
             </div>
@@ -443,7 +443,7 @@
                                 </div>
                             </div>
                         </a>
-                        <a class="group relative w-full min-h-[250px] bg-no-repeat bg-center gap-5 rounded-xl p-5 customShadow active:scale-105 md:hover:scale-105 transition-all" style="background-image: url('/assets/images/image2.jpg')">
+                        <a class="group relative w-full min-h-[250px] bg-no-repeat bg-center gap-5 rounded-xl p-5 customShadow active:scale-105 md:hover:scale-105 transition-all" style="background-image: url('/assets/images/image6.jpeg')">
                             <div class="absolute top-0 left-0 w-full h-full flex flex-col justify-center text-center bg-black bg-opacity-50 rounded-xl p-2">
                                 <div class="flex flex-col gap-2">
                                     <h4 class="text-white text-xl md:text-2xl font-semibold">
@@ -615,7 +615,7 @@
             <div class="max-w-[1680px] w-full mr-auto">
                 <div class="w-full pl-5 md:pl-0 pr-5 md:pr-10 py-10 grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10 items-center">
                     <div class="border-[10px] border-l-[10px] md:border-l-0 border-primary customShadow rounded-xl md:rounded-none rounded-r-xl md:rounded-r-full overflow-hidden">
-                        <img src="/assets/images/image2.jpg" alt="" class="w-full rounded-xl md:rounded-none"/>
+                        <img src="/assets/images/image6.jpeg" alt="" class="w-full rounded-xl md:rounded-none"/>
                     </div>
                     <div class="flex flex-col gap-2">
                         <h4 class="text-white text-xl md:text-2xl font-semibold">
