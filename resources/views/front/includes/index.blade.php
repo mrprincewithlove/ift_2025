@@ -137,7 +137,7 @@
                             </h4>
                             <span class="w-20 h-[2px] bg-headerColor group-active:bg-white md:group-hover:bg-white transition-all"></span>
                         </a>
-                        <a href="{{ route('front.coming_soon') }}" class="group bg-white active:bg-primary md:hover:bg-primary w-full max-w-[440px] flex flex-col items-center justify-start gap-2 text-center text-balance rounded-xl px-4 py-8 customShadow active:scale-105 md:hover:scale-105 transition-all">
+                        <a href="{{ route('front.visa') }}" class="group bg-white active:bg-primary md:hover:bg-primary w-full max-w-[440px] flex flex-col items-center justify-start gap-2 text-center text-balance rounded-xl px-4 py-8 customShadow active:scale-105 md:hover:scale-105 transition-all">
                             <div class="size-20 text-primary group-active:text-white md:group-hover:text-white">
                                 <svg
                                         xmlns="http://www.w3.org/2000/svg"
