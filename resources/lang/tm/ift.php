@@ -204,7 +204,7 @@ bilim we pikir alyşmalara goşulyň.',
     'visa-text-3' => 'Gatnaşýandygyňyzy
                       tassyklaýan resminamalara
                       gol çekenimizden soň,
-                      toparymyz Sizizň çakylyk
+                      toparymyz Siziň çakylyk
                       hatyňyzy almak üçin
                       Türkmenistanyň Döwlet
                       migrasiýa gullugy bilen
