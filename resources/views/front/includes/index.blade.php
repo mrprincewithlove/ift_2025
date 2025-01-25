@@ -412,7 +412,7 @@
                             </div>
                         </div>
                         <div class="w-full flex items-center justify-center">
-                            <a href="{{ route('front.coming_soon') }}" class="px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="https://tstb.gov.tm/" class="px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.Detailed information') }}
                                 {{--Detailed information--}}
                             </a>

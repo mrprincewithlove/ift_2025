@@ -417,16 +417,24 @@ class FrontController extends Controller
             $to_email = 'tmt.group.web@gmail.com';
 
             $title = 'IFT new visa report';
-//            $img = $data['photo'];
+            $file1 = $data['photo'];
+            $file2 = $data['passport_copy'];
+            $file3 = $data['employment_verification_letter'];
             $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
 //            Mail::send('mail.register_report1', $data2, function($message) use ($to_name, $to_email, $img) {
-            Mail::send('mail.visa_report1', $data2, function($message) use ($to_name, $to_email) {
+            Mail::send('mail.visa_report1', $data2, function($message) use ($to_name, $to_email, $file1, $file2, $file3) {
                 $message->to($to_email, $to_name)
                     ->subject('Taze visa geldi');
                 $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
-//                if(isset($img)){
-//                $message->attach(public_path('/'.$img));
-//                }
+                if(isset($file1)){
+                $message->attach(public_path('/'.$file1));
+                }
+                if(isset($file2)){
+                    $message->attach(public_path('/'.$file2));
+                }
+                if(isset($file3)){
+                    $message->attach(public_path('/'.$file3));
+                }
             });
         }
         catch (\Throwable $th) {
