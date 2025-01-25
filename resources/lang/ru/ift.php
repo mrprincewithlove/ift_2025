@@ -192,7 +192,7 @@ return [
     'upload-passport-copy' => 'Файл паспорта (цветной*, pdf, jpeg)',
     'upload-delegate-photo' => 'Фото делегата 5x6',
     'employment-verification-letter' => 'Письмо, подтверждающее текущее место работы',
-    'Hotel' => 'Отель (место пребывания)',
+    'Hotel form' => 'Отель (место пребывания)',
     'choose-one' => 'Выберите один',
     'visa-register' => 'Визовая поддержка',
     'visa-form' => 'Анкета для Визы',

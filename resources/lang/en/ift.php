@@ -190,7 +190,7 @@ return [
     'upload-passport-copy' => 'Upload a colored passport copy (pdf, jpeg)',
     'upload-delegate-photo' => 'Upload delegate photo (5x6)',
     'employment-verification-letter' => 'Employment Verification Letter',
-    'Hotel' => 'Hotel (place of accommodation)',
+    'Hotel form' => 'Hotel (place of accommodation)',
     'choose-one' => 'Choose one',
 
     'visa-register' => 'Visa Support',

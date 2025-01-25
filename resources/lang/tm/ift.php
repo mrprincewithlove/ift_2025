@@ -186,7 +186,7 @@ bilim we pikir alyşmalara goşulyň.',
     'upload-passport-copy' => 'Pasport faýly(reňkli, pdf, jpeg)',
     'upload-delegate-photo' => '5x6 delegatyň suraty',
     'employment-verification-letter' => 'Häzirki iş ýerini tassyklaýan hat',
-    'Hotel' => 'Myhmanhana (bolýan ýeri)',
+    'Hotel form' => 'Myhmanhana (bolýan ýeri)',
     'choose-one' => 'Birini saýlaň',
 
     'visa-register' => 'Wiza goldawy',

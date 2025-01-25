@@ -295,7 +295,7 @@
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
                                 <label for="hotel" class="required w-fit {{ $errors->has('hotel') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
-                                    {{ __('ift.Hotel') }}
+                                    {{ __('ift.Hotel form') }}
                                 </label>
 
                                 <select name="hotel" id="hotel" class="js-example-basic-single w-full border-2 {{ $errors->has('hotel') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none">
