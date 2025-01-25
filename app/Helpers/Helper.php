@@ -95,6 +95,20 @@ class Helper
 
         ];
     }
+    public static function getHotelName($id)
+    {
+        $hotels = [
+            ['id'=>1, 'name_en'=> "Yyldyz", 'name_tm'=> "Ýyldyz", 'name_ru'=> "Йылдыз"],
+            ['id'=>2, 'name_en'=> "Archabil", 'name_tm'=> "Arçabil", 'name_ru'=> "Арчабиль"],
+            ['id'=>3, 'name_en'=> "Sport", 'name_tm'=> "Sport", 'name_ru'=> "Спорт"],
+        ];
+        foreach ($hotels as $hotel){
+            if($hotel['id'] == $id){
+                return $hotel['name_tm'];
+            }
+        }
+    }
+
     public static function getCountries(){
 	    return [
   [ 'id'=> 1, 'name_en'=> "Afghanistan", 'name_tm'=> "Owganystan", 'name_ru'=> "Афганистан" ],
