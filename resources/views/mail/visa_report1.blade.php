@@ -921,7 +921,7 @@
                                               padding: 5px;
                                             "
                               >
-                                <a href="{{ 'http://127.0.0.1:8000/'.$body['photo'] }}">{{ 'http://127.0.0.1:8000/'.$body['photo'] }}</a>
+                                <a href="{{ 'https://ift.com.tm/'.$body['photo'] }}">{{ 'https://ift.com.tm/'.$body['photo'] }}</a>
 
                               </td>
                             </tr>
@@ -952,7 +952,7 @@
                                               padding: 5px;
                                             "
                               >
-                                <a href="{{ 'http://127.0.0.1:8000/'.$body['passport_copy'] }}">{{ 'http://127.0.0.1:8000/'.$body['passport_copy'] }}</a>
+                                <a href="{{ 'https://ift.com.tm/'.$body['passport_copy'] }}">{{ 'https://ift.com.tm/'.$body['passport_copy'] }}</a>
                               </td>
                             </tr>
                             <tr
@@ -982,7 +982,7 @@
                                               padding: 5px;
                                             "
                               >
-                                <a href="{{ 'http://127.0.0.1:8000/'.$body['employment_verification_letter'] }}">{{ 'http://127.0.0.1:8000/'.$body['employment_verification_letter'] }}</a>
+                                <a href="{{ 'https://ift.com.tm/'.$body['employment_verification_letter'] }}">{{ 'https://ift.com.tm/'.$body['employment_verification_letter'] }}</a>
                               </td>
                             </tr>
 
