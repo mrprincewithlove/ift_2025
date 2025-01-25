@@ -27,8 +27,10 @@ Route::group(['middleware' => ['set_locale']], function () {
     Route::get('/index', [\App\Http\Controllers\FrontController::class, 'index'])->name('front.index');
     Route::get('/coming-soon', [\App\Http\Controllers\FrontController::class, 'soon'])->name('front.coming_soon');
     Route::get('/register', [\App\Http\Controllers\FrontController::class, 'register'])->name('front.register');
+    Route::get('/visa', [\App\Http\Controllers\FrontController::class, 'visa'])->name('front.visa');
     Route::post('/register', [\App\Http\Controllers\FrontController::class, 'register_send'])->name('front.register.send');
     Route::post('/feedback', [\App\Http\Controllers\FrontController::class, 'feedback_send'])->name('front.feedback.send');
+    Route::post('/visa', [\App\Http\Controllers\FrontController::class, 'visa_send'])->name('front.visa.send');
 
 });
 

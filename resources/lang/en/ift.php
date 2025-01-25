@@ -167,5 +167,75 @@ return [
 
     'Registration sended message'               => 'We are delighted to confirm your registration for the ­­­­­­ International Forum on Investment Attraction to the Private Sector "Investments in the Future of Turkmenistan", taking place in Ashgabat, Turkmenistan, on March 18, 2025.',
 
+    // visa form
+    'first-name' => 'First Name',
+    'last-name' => 'Last Name',
+    'middle-name' => 'Middle Name',
+    'organization' => 'Organization',
+    'position' => 'Position',
+    'email' => 'Email Address',
+    'date-of-birth' => 'Date of Birth',
+    'citizenship' => 'Citizenhip',
+    'address' => 'Address',
+    'passport-number' => 'Passport Number',
+    'date-of-issue' => 'Date of Issue',
+    'date-of-expiry' => 'Date of Expiry',
+    'education' => 'Education',
+    'education-institution' => 'Education Institution',
+    'specialization' => 'Specialization',
+    'purpose-of-visit' => 'Purpose of Visit',
+    'date-of-arrival' => 'Date of Arrival',
+    'date-of-departure' => 'Date of Departure',
+    'website' => 'Website',
+    'upload-passport-copy' => 'Upload a colored passport copy (pdf, jpeg)',
+    'upload-delegate-photo' => 'Upload delegate photo (5x6)',
+    'employment-verification-letter' => 'Employment Verification Letter',
+    'Hotel' => 'Hotel (place of accommodation)',
+    'choose-one' => 'Choose one',
+
+    'visa-register' => 'Visa Support',
+    'visa-form' => 'Visa Application Form',
+    'visa-header-1' => 'Dear IFT 2025 Forum Participant,',
+    'visa-text-1' => 'The team at  Turkmen Consulting Group  provides visa support to all foreign
+                      delegates. This service is an integral part of your successful participation in our
+                      international forum. We understand the importance of a smooth and quick visa
+                      invitation process for participants and are ready to handle this procedure for you.
+                      Once the visa invitation is issued, our staff will send it to you via email.',
+    'visa-header-2' => 'To obtain a visa invitation, you need to:',
+    'visa-text-2' => 'on our website and complete the form below.',
+    'visa-text-3' => 'After signing the documents
+                      confirming your participation,
+                      our team will contact the State
+                      Migration Service of
+                      Turkmenistan to obtain your
+                      invitation letter.',
+    'visa-header-3' => 'To cross the border and enter
+                        Turkmenistan, you must have with
+                        you:',
+    'visa-text-4' => 'A valid visa or a printed
+                      invitation letter',
+    'visa-text-5' => 'A valid international passport',
+    'visa-text-6' => 'Once you receive the invitation letter, you can either contact the Embassy of
+                      Turkmenistan in your country to obtain a visa (which will take 3 to 5 working
+                      days) or present a printed copy of your invitation letter and passport to the
+                      immigration officer upon arrival in Turkmenistan.',
+    'visa-text-7' => 'For further information, you can contact- email address a.atabaev@tmt.tm, phone
+                      +99365033447.
+                      We look forward to your participation in IFT 2025! 
+                      Attention! Once the visa application and relevant documents are received by
+                      the State Migration Service of Turkmenistan, they will be processed within 10
+                      working days.',
+    'visa-header-4' => 'Please note!',
+    'visa-text-8' => 'The process of reviewing documents and issuing a visa invitation takes
+                      from 10 to 15 working days. To avoid any complications with your
+                      travel schedule for the forum, please submit your visa application with
+                      all relevant documents, considering these timelines.',
+    'visa-text-9' => 'The decision to grant or deny the visa invitation is made by the State
+                      Migration Service of Turkmenistan. Turkmen Consulting Group is not
+                      responsible for the decisions made by this agency.',
+    'visa-registration' => 'Register',
+    'visa sended message'               => 'Thank you for submitting your visa application to participate in the IFT 2025 forum. Your request has been successfully received.
+If you have any questions, please contact us via email at info@tmt.tm or by calling +99312753648.',
+
 
 ];

@@ -162,4 +162,78 @@ bilim we pikir alyşmalara goşulyň.',
     'Dear Participant'               => 'Hormatly Gatnaşyjy,',
 
     'Registration sended message'               => '2025-nji ýylyň 18-nji martynda Aşgabat şäherinde geçiriljek hususy pudaga maýa goýumlaryny çekmek boýunça «Türkmenistanyň geljegine maýa goýumlar» atly halkara forumyna hasaba alynandygyňyzy tassyklaýarys.',
+
+    // visa form
+    'first-name' => 'Ady',
+    'last-name' => 'Familiýasy',
+    'middle-name' => 'Atasynyň ady',
+    'organization' => 'Guramanyň ady',
+    'position' => 'Wezpesi',
+    'email' => 'Elektron salgysy',
+    'date-of-birth' => 'Doglan senesi',
+    'citizenship' => 'Raýatlygy',
+    'address' => 'Аdresi',
+    'passport-number' => 'Pasport belgisi',
+    'date-of-issue' => 'Pasportyň berlen senesi',
+    'date-of-expiry' => 'Pasportyň möhleti',
+    'education' => 'Bilimi',
+    'education-institution' => 'Tamamlan okuw jaýynyň ady',
+    'specialization' => 'Hünäri',
+    'purpose-of-visit' => 'Saparyň maksady',
+    'date-of-arrival' => 'Geliş senesi',
+    'date-of-departure' => 'Çykyş senesi',
+    'website' => 'Web-sahypa',
+    'upload-passport-copy' => 'Pasport faýly(reňkli, pdf, jpeg)',
+    'upload-delegate-photo' => '5x6 delegatyň suraty',
+    'employment-verification-letter' => 'Häzirki iş ýerini tassyklaýan hat',
+    'Hotel' => 'Myhmanhana (bolýan ýeri)',
+    'choose-one' => 'Birini saýlaň',
+
+    'visa-register' => 'Wiza goldawy',
+    'visa-form' => 'Wiza üçin anketa',
+    'visa-header-1' => 'Hormatly IFT 2025 forumyna gatnaşyjy,',
+    'visa-text-1' => '«Turkmen Consulting Group» kompaniýasynyň topary ähli daşary ýurtly
+                      wekillere wiza goldawyny berýär. Şeýle hyzmatlar Siziň halkara forumymyza
+                      üstünlikli gatnaşmagyňyzyň çäklerinde aýratyn ähmiýetlidir. Biz gatnaşyjylar
+                      üçin amatly we çalt esasda wiza çakylygyny almagyň nähili möhümdigine
+                      düşünýäris hem-de bu işleri ýerine ýetirmegi öz üstümize almaga taýýardyrys.
+                      Wiza çakylygy resmileşdirilenden soňra, biziň işgärimiz ony Size elektron
+                      poçta arkaly iberer.',
+    'visa-header-2' => 'Wiza çakylygyny almak üçin aşakdakylar hökmandyr:',
+    'visa-text-2' => 'we aşakdaky maglumatnamany dolduryň',
+    'visa-text-3' => 'Gatnaşýandygyňyzy
+                      tassyklaýan resminamalara
+                      gol çekenimizden soň,
+                      toparymyz Sizizň çakylyk
+                      hatyňyzy almak üçin
+                      Türkmenistanyň Döwlet
+                      migrasiýa gullugy bilen
+                      habarlaşar.',
+    'visa-header-3' => 'Türkmenistanyň çägine girmek
+                        üçin serhetden geçeniňizde
+                        ýanyňyzda aşakdakylaryň bolmagy
+                        hökmandyr:',
+    'visa-text-4' => 'Hereket edýän wiza ýa-da çap edilen çakylyk haty',
+    'visa-text-5' => 'Hereket edýän halkara pasporty',
+    'visa-text-6' => 'Çakylyk hatyny alanyňyzdan soň wiza almak üçin ýurduňyzyň çägindäki
+                      Türkmenistanyň ilçihanasyna ýüz tutup bilersiňiz (munuň üçin 3 – 5 iş güni
+                      gerek bolar) ýa-da Türkmenistana geleniňizden soň çakylyk hatyňyzyň çap
+                      edilen nusgasyny we pasportyňyzy migrasiýa gullugynyň işgärine berip
+                      bilersiňiz.',
+    'visa-text-7' => 'Goşmaça maglumat almak üçin a.atabaev@tmt.tm e-poçta salgysyna,
+                      +99365033447 telefon belgisine ýüz tutup bilersiňiz.
+                      IFT 2025-e gatnaşmagyňyza sabyrsyzlyk bilen garaşýarys!',
+    'visa-header-4' => 'Üns beriň!',
+    'visa-text-8' => 'Resminamalary gözden geçirmek we wiza çakylygyny bermek tertibi 10 – 15
+                      iş gününe çenli dowam edýär. Foruma gatnaşmak meýilnamaňyz bilen
+                      baglanyşykly haýsydyr bir kynçylyklaryň öňüni almak üçin, bu möhletleri göz
+                      öňünde tutup, ähli degişli resminamalar bilen wiza almak baradaky arzaňyzy
+                      ibermegiňizi haýyş edýäris.',
+    'visa-text-9' => 'Wiza çakylygyny bermek ýa-da ret etmek karary Türkmenistanyň Döwlet
+                      migrasiýa gullugy tarapyndan kabul edilýär. «Turkmen Consulting Group»
+                      kompaniýasy bu edara tarapyndan kabul edilen kararlar üçin jogapkärçilik
+                      çekmeýär.',
+    'visa-registration' => 'Saýtymyzda hasaba alnyň',
+    'visa sended message'               => 'IFT 2025 forumyna gatnaşmaga wiza almak üçin beren ýüzlenmäňiz üçin sag bolun. Siziň ýüzlenmäňiz üstünlikli kabul edildi.
+Eger-de soraglaryňyz bolsa, biz bilen info@tmt.tm adresi ýa-da +99312753648 telefon belgisi arkaly habarlaşyp bilersiňiz.',
 ];
