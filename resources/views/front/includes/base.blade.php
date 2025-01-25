@@ -12,7 +12,7 @@
 
     <title>{{ __('ift.project_name') }}</title>
 </head>
-<body class="min-h-screen">
+<body class="front min-h-screen">
 <header class="absolute top-0 left-0 z-40 w-full">
     <div class="w-full bg-primary hidden md:flex">
         <div class="container">
@@ -554,7 +554,7 @@
 
 @yield('content')
 
-<footer class="w-full bg-gradient-to-r from-primary to-secondary">
+<footer class="w-full bg-gradient-to-b md:bg-gradient-to-r from-[#062126] via-secondary to-primary from-1% via-30% to-90%">
     <div class="container">
         <div class="w-full px-5 md:px-10 py-10 flex flex-col gap-10">
             <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
