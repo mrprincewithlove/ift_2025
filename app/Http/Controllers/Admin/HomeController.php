@@ -6,6 +6,7 @@ use App\Exports\UsersExport;
 use App\Models\Account;
 use App\Models\AccountType;
 use App\Models\Agreement;
+use App\Models\RegistrationForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Message;
@@ -19,6 +20,7 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
 use Revolution\Google\Sheets\Facades\Sheets;
+use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {
@@ -75,6 +77,57 @@ class HomeController extends Controller
 
     public function working_with_excell()
     {
+
+        $filePath = resource_path('local_info/registration.json');
+
+        if (!File::exists($filePath)) {
+            return 1;
+        }
+        $values = Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('register')->get();
+        $header = $values->pull(0);
+        $values = Sheets::collection( $header, $values);
+        $data = $values->toArray();
+        dump($data);
+
+        $jsonData = File::get($filePath);
+        $existingData = json_decode($jsonData, true);
+        $data_to_export = [];
+        foreach ($existingData as $existing) {
+            $form = RegistrationForm::create([
+                'name'                 => $existing['name'] ?? '',
+                'surname'              => $existing['surname'] ?? '',
+                'middle_name'          => $existing['middle_name'] ?? '',
+                'company_name'         => $existing['company_name'] ?? '',
+                'job'                  => $existing['job'] ?? '',
+                'country'              => $existing['country'] ?? '',
+                'number'               => $existing['number'] ?? '',
+                'emergency_number'     => $existing['emergency_number'] ?? '',
+                'email'                => $existing['email'] ?? '',
+                'website'              => $existing['website'] ?? '',
+                'status'               => $existing['status'] ?? '',
+                'visa'                 => $existing['visa'] ?? '',
+            ]);
+            Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('register')->append([[
+                $existing['id'] ?? '',
+                $existing['name'] ?? '',
+                $existing['surname'] ?? '',
+                $existing['middle_name'] ?? '',
+                $existing['company_name'] ?? '',
+                $existing['job'] ?? '',
+                $existing['country'] ?? '',
+                $existing['number'] ?? '',
+                $existing['emergency_number'] ?? '',
+                $existing['email'] ?? '',
+                $existing['website'] ?? '',
+                $existing['status'] ?? '',
+                $existing['visa'] ?? '',]
+            ]);
+        }
+
+        dump($data_to_export);
+        dd($existingData);
+
+
         $values = Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('test1')->get();
         $header = $values->pull(0);
         $values = Sheets::collection( $header, $values);

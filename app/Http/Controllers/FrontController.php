@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
 use App\Helpers\Helper;
+use Revolution\Google\Sheets\Facades\Sheets;
+use App\Models\RegistrationForm;
 
 class FrontController extends Controller
 {
@@ -139,6 +141,40 @@ class FrontController extends Controller
         if($validator->fails()){
             return back()->withErrors($validator)->withInput();
         }
+
+////        spreadsheet write here
+//        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('register')->append([[
+//            $this->getNextId() ?? '',
+//            $request->name ?? '',
+//            $request->surname ?? '',
+//            $request->middle_name ?? '',
+//            $request->company_name ?? '',
+//            $request->job ?? '',
+//            \Helper::getCountryName($request->country) ?? '',
+//            $request->number ?? '',
+//            $request->emergency_number ?? '',
+//            $request->email ?? '',
+//            $request->website ?? '',
+//            $request->status ?? '',
+//            $request->visa ?? '',
+//            ]]);
+////            create register here
+//        $register = RegistrationForm::create([
+//            'name'                 => $request->name ?? '',
+//            'surname'              => $request->surname ?? '',
+//            'middle_name'          => $request->middle_name ?? '',
+//            'company_name'         => $request->company_name ?? '',
+//            'job'                  => $request->job ?? '',
+//            'country'              => \Helper::getCountryName($request->country) ?? '',
+//            'number'               => $request->number ?? '',
+//            'emergency_number'     => $request->emergency_number ?? '',
+//            'email'                => $request->email ?? '',
+//            'website'              => $request->website ?? '',
+//            'status'               => $request->status ?? '',
+//            'visa'                 => $request->visa ?? '',
+//        ]);
+
+
 //        $directoryPath = public_path('images/registration');
 //        if ( $request->hasFile('photo') ) {
 //
