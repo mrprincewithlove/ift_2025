@@ -238,4 +238,48 @@ return [
 If you have any questions, please contact us via email at info@tmt.tm or by calling +99312753648.',
 
 
+    // hotel
+    'hotel-register' => 'Hotel (place of accommodation)',
+    'hotel-form' => 'Hotel Reservation Form (IFT 2025)',
+    'hotel-header-1' => '',
+    'hotel-text-1' => 'Ashgabat is not only the capital of Turkmenistan, but also a modern city with a well-developed tourism
+                        infrastructure. It is home to first-class hotels that offer guests a high level of service, comfort, and
+                        hospitality.',
+    'hotel-text-2' => 'Many hotels combine modern design with elements of Turkmen culture. Guests are offered national
+                        dishes, as well as unique souvenirs and handicrafts. This allows visitors to immerse themselves in the
+                        atmosphere of Turkmen traditions while maintaining a high level of comfort. Regardless of the purpose
+                        of your trip, here you will find the perfect place to stay!',
+    'hotel-text-3' => 'You can find detailed information about hotels and room rates by downloading the PDF document below.',
+
+    'check-in-date' => 'Check-in Date',
+    'check-out-date' => 'Check-out Date',
+    'hotel request sended message' => 'Thank you for submitting your hotel booking request for participation in the IFT 2025 forum. Your request has been successfully received.
+If you have any questions, please contact us via email at info@tmt.tm or by calling +99312753648.',
+
+
+
+
+    // flight
+    'flight-text-1' => 'Thanks to regular flights and a convenient schedule, Turkmenistan remains accessible to tourists,
+                        business travelers, and investors. Traveling to this country offers an opportunity to discover its unique
+                        culture, economic potential, and the hospitality of the Turkmen people.',
+    'fligth-text-2' => 'For your convenience, this section provides information on international flights arriving in Ashgabat and
+                        departing from Ashgabat. Here you can find details on the schedule, airlines, and other relevant
+                        information.',
+    'flight-header-1' => 'Attention!',
+    'flight-text-3' => 'In order to ensure the most efficient organization of transfers for IFT 2025 participants, this section is
+                        intended exclusively for providing information on the flights of forum delegates and must be completed
+                        after purchasing their airline tickets.',
+    'flight-text-4' => 'You will not be able to book a flight through this interface. For booking and additional services, please
+                        contact airlines or agencies directly.',
+    'flight-text-5' => 'For more detailed information, you can download this PDF document.',
+    'download-pdf' => 'Download PDF',
+
+    'arrival-date-time' => 'Arrival date and time',
+    'departure-date-time' => 'Departure date and time',
+    'upload-ticket' => 'Upload Ticket file',
+    'flight-form' => 'Your flight details',
+
+
+
 ];

@@ -92,6 +92,19 @@ class FrontController extends Controller
         $countries = \Helper::getCountries();
         return view('front.includes.visa')->with('countries', $countries)->with('hotels', $hotels);
     }
+    public function hotel()
+    {
+        $hotels = \Helper::getHotels();
+        $countries = \Helper::getCountries();
+        return view('front.includes.hotel')->with('countries', $countries)->with('hotels', $hotels);
+    }
+
+    public function flight()
+    {
+        $hotels = \Helper::getHotels();
+        $countries = \Helper::getCountries();
+        return view('front.includes.flight')->with('countries', $countries)->with('hotels', $hotels);
+    }
 
     public function register_send(Request $request)
     {
@@ -441,6 +454,101 @@ class FrontController extends Controller
             Log::error($th->getMessage());
         }
         return redirect()->back()->with('success', __('ift.visa sended message'));
+
+    }
+
+    public function hotel_send(Request $request)
+    {
+        $rules = [
+            'name' => 'required|string|max:255',
+            'surname' => 'required|string|max:255',
+            'middle_name' => 'nullable|string|max:255',
+            'company_name' => 'required|string|max:255',
+            'job' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'number' => [
+                'required',
+                'regex:/^\+[0-9]{6,15}$/',
+            ],
+            'passport' => 'required|string|max:255',
+            'hotel' => 'required|integer|min:1|max:3',
+            'in_date' => 'required|date|before:2025-03-20',
+            'out_date' => 'required|date|after:2025-03-20',
+        ];
+        $validator = Validator::make($request->all(), $rules);
+        if($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        }
+
+
+        $data = [
+            'name'              => $request->name,
+            'surname'               => $request->surname,
+            'middle_name'               => $request->middle_name,
+            'company_name'              => $request->company_name,
+            'job'               => $request->job,
+            'email'             => $request->email,
+            'number'                => $request->number,
+            'passport'              => $request->passport,
+            'hotel'             => \Helper::getHotelName($request->hotel),
+            'in_date'                => $request->in_date,
+            'out_date'                => $request->out_date,
+        ];
+
+        $filePath = resource_path('local_info/hotel.json');
+
+        if (!File::exists($filePath)) {
+            File::put($filePath, json_encode([$data]));
+        } else {
+            $jsonData = File::get($filePath);
+            $existingData = json_decode($jsonData, true);
+            $existingData[] = $data;
+            File::put($filePath, json_encode($existingData));
+        }
+
+//        response mail for register
+        try{
+
+            $to_name = $request->name. ' '. $request->middle_name.' '.$request->surname;
+
+            $to_email = $request->email;
+
+            $user_details = "Thank you for hotel registration";
+
+            $data1 = array('name'=>$to_name, 'body' => $user_details);
+            Mail::send('mail.hotel.response_'.app()->currentLocale(), $data1, function($message) use ($to_name, $to_email) {
+                $message->to($to_email, $to_name)
+                    ->subject('Thank you for hotel registration');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
+            });
+        }
+        catch (\Throwable $th) {
+            //            log here
+            Log::error($th->getMessage());
+        }
+//        report mail for register
+        try{
+
+            $to_name = 'Hormatly IFT administratory';
+
+            $to_email = 'maslovsaparmyrat@gmail.com';
+//            $to_email = 'yusuph0206@gmail.com';
+//            $to_email = 'info@tmt.tm';
+//            $to_email = 'tmt.group.web@gmail.com';
+
+            $title = 'IFT new hotel report';
+            $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
+//            Mail::send('mail.register_report1', $data2, function($message) use ($to_name, $to_email, $img) {
+            Mail::send('mail.hotel.report', $data2, function($message) use ($to_name, $to_email) {
+                $message->to($to_email, $to_name)
+                    ->subject('Taze hotel zakaz geldi');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
+            });
+        }
+        catch (\Throwable $th) {
+            Log::error($th->getMessage());
+        }
+        return redirect()->back()->with('success', __('ift.hotel request sended message'));
 
     }
 }

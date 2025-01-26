@@ -236,4 +236,46 @@ bilim we pikir alyşmalara goşulyň.',
     'visa-registration' => 'Saýtymyzda hasaba alnyň',
     'visa sended message'               => 'IFT 2025 forumyna gatnaşmaga wiza almak üçin beren ýüzlenmäňiz üçin sag bolun. Siziň ýüzlenmäňiz üstünlikli kabul edildi.
 Eger-de soraglaryňyz bolsa, biz bilen info@tmt.tm adresi ýa-da +99312753648 telefon belgisi arkaly habarlaşyp bilersiňiz.',
+
+    // hotel
+    'hotel-register' => 'Hotel (place of accommodation)',
+    'hotel-form' => 'Myhmanhanada bron IFT 2025',
+    'hotel-header-1' => '',
+    'hotel-text-1' => 'Aşgabat — bu diňe bir Türkmenistanyň paýtagty däl, eýsem ösdürilen syýahatçylyk infrastrukturasy bilen
+                        döwrebap şäherdir. Bu ýerde myhmanlara ýokary hyzmat derejesini, rahatlygy we myhmansöýerligi
+                        teklip edýän birinji derejeli myhmanhanalar ýerleşýär.',
+    'hotel-text-2' => 'Ýokary hilli dizaýn bilen türkmen medeniýetiniň elementlerini özünde jemleýän köp sanly
+                        myhmanhanalar bar. Myhmanlara milli tagamlar, şeýle hem täsin sowgatlar we halk meşhurlarynyň işleri
+                        hödürlenýär. Bu, türkmen däp-dessurlaryna doly goşulmaga mümkinçilik berýär, şonuň bilen birlikde
+                        ýokary rahatlyk derejesi saklanýar. Gezişe degişli maksatdan gaýry, bu ýerde her kim özüne laýyk orny
+                        tapar!',
+    'hotel-text-3' => 'Oteller we otag bahalary barada giňişleýin maglumat almak üçin aşakdaky PDF resminamasynda öwrenip bilersiňiz.',
+
+    'check-in-date' => 'Giriş senesi',
+    'check-out-date' => 'Çykyş senesi',
+
+    'hotel request sended message' => 'IFT 2025 forumyna gatnaşmak bilen myhmanhana otagyny bellige almak üçin beren ýüzlenmäňiz üçin sag boluň. Siziň ýüzlenmäňiz üstünlikli kabul edildi.
+Eger-de soraglaryňyz bolsa, biz bilen info@tmt.tm adresi ýa-da +99312753648 telefon belgisi arkaly habarlaşyp bilersiňiz.',
+
+    // flight
+    'flight-text-1' => 'Yzygiderli howa gatnawlary we amatly gatnaw wagtlary sebäpli, Türkmenistana syýahatçylar, işewür
+                        syýahatçylar we inwestorlar üçin arzanlyk üpjün edilýär. Bu ýurda syýahat etmek – türkmen halkynyň
+                        özboluşly medeniýetini, ykdysady mümkinçiliklerini we myhmansöýerligini öwrenmek üçin aýratyn bir
+                        mümkinçilikdir.',
+    'fligth-text-2' => 'Size amatlylyk üçin, bu bölümde Aşgabat şäherine gelen we Aşgabatdan ugramagy barada halkara howa
+                        gatnawlary baradaky maglumatlar hödürlenilýär. Bu ýerde, gatnaw wagtlary, howa ýolagçy
+                        kompaniýalary we beýleki degişli jikme-jiklikler bilen tanyşyp bilersiňiz.',
+    'flight-header-1' => 'Ünsüňizi çekýäris!',
+    'flight-text-3' => 'IFT 2025 forumynyň gatnaşýanlarynyň geçişiniň netijeli gurnalmagy üçin, bu bölüm diňe forumyň
+                        gatnaşyjylarynyň uçuşlary barada maglumat bermek üçin niýetlenendir we olar howa biletlerini satyn
+                        alandan soň doldurulmagy möhümdir.',
+    'flight-text-4' => 'Bu interfeýs arkaly uçuşy bron etmek mümkinçiligiňiz ýokdur. Bron ediş we goşmaça hyzmatlar üçin,
+                        uçary kompaniýalary ýa-da agentlikler bilen habarlaşyňyzy haýyş edýäris.',
+    'flight-text-5' => 'Has giňişleýin maglumat almak üçin bu PDF resminamasyny ýükläp bilersiňiz.',
+    'download-pdf' => 'PDF ýükläp alyň',
+
+    'arrival-date-time' => 'Gelýän uçuş',
+    'departure-date-time' => 'Yzyna gidiş',
+    'upload-ticket' => 'Petegiň faýly',
+    'flight-form' => 'Uçuşa hasaba almak',
 ];
