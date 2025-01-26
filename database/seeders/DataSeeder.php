@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\FormCount;
 use App\Models\Permission;
 use App\Models\RolePermission;
 use App\Models\Visa;
@@ -50,6 +51,20 @@ class DataSeeder extends Seeder
 //        RolePermission::create(['role_id'=>1, 'permission_id'=> $perm13->id]);
 //        RolePermission::create(['role_id'=>1, 'permission_id'=> $perm14->id]);
 
-        $visa = Visa::factory(10000)->create();
+//        $visa = Visa::factory(10000)->create();
+
+        $formCount = FormCount::create([
+            'registration'  =>0,
+            'flight'        =>0,
+            'visa'      =>0,
+            'logistic'      =>0,
+            'hotel'     =>0,
+            'city_tours'        =>0,
+            'request_call'      =>0,
+            'feedback'      =>0,
+            'test'      =>0,
+            'another_form'      =>0,
+        ]);
     }
+
 }

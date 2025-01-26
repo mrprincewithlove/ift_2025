@@ -18,6 +18,7 @@ use App\Models\Tariff;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
+use Revolution\Google\Sheets\Facades\Sheets;
 
 class HomeController extends Controller
 {
@@ -71,5 +72,17 @@ class HomeController extends Controller
     {
         return Excel::download(new UsersExport, 'users.xlsx');
     }
-    
+
+    public function working_with_excell()
+    {
+        $values = Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('test1')->get();
+        $header = $values->pull(0);
+        $values = Sheets::collection( $header, $values);
+        $data = $values->toArray();
+//        dd($data);
+
+        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('test1')->append([['7', '1234', '1t@mail.ru'], ['8', '4567', '45t@mail.ru']]);
+        $new_data = Sheets::all();
+        dd($new_data);
+    }
 }

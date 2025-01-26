@@ -58,6 +58,7 @@ Route::middleware(['auth', 'admin.auth'])->prefix('tif')->group(function () {
 
         Route::get('/home', [App\Http\Controllers\Admin\HomeController::class, 'index'])->name('home');
         Route::get('/test', [App\Http\Controllers\Admin\HomeController::class, 'test'])->name('test');
+        Route::get('/working_with_excell', [App\Http\Controllers\Admin\HomeController::class, 'working_with_excell'])->name('working_with_excell');
         Route::get('/export', [App\Http\Controllers\Admin\HomeController::class, 'export'])->name('export');
 
         Route::get('/visas', [App\Http\Controllers\Admin\VisaController::class, 'index'])->name('visas.index');
