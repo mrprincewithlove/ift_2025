@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FeedbackForm;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -279,6 +280,25 @@ class FrontController extends Controller
         if($validator->fails()){
             return back()->withErrors($validator)->withInput();
         }
+
+//        write to excell
+        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('feedback')->append([[
+            $request->name ?? '',
+            $request->surname ?? '',
+            $request->number ?? '',
+            $request->email ?? '',
+            $request->message ?? '',
+        ]]);
+//            create form here
+        $feedback = FeedbackForm::create([
+            'name'                 => $request->name ?? '',
+            'surname'              => $request->surname ?? '',
+            'number'               => $request->number ?? '',
+            'email'                => $request->email ?? '',
+            'message'              => $request->message ?? '',
+        ]);
+
+
         $data = [
             'name'              => $request->name,
             'surname'           => $request->surname,
