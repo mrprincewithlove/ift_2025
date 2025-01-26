@@ -531,10 +531,10 @@ class FrontController extends Controller
 
             $to_name = 'Hormatly IFT administratory';
 
-            $to_email = 'maslovsaparmyrat@gmail.com';
+//            $to_email = 'maslovsaparmyrat@gmail.com';
 //            $to_email = 'yusuph0206@gmail.com';
 //            $to_email = 'info@tmt.tm';
-//            $to_email = 'tmt.group.web@gmail.com';
+            $to_email = 'tmt.group.web@gmail.com';
 
             $title = 'IFT new hotel report';
             $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
