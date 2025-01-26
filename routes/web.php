@@ -29,12 +29,13 @@ Route::group(['middleware' => ['set_locale']], function () {
     Route::get('/register', [\App\Http\Controllers\FrontController::class, 'register'])->name('front.register');
     Route::get('/visa', [\App\Http\Controllers\FrontController::class, 'visa'])->name('front.visa');
     Route::get('/hotel', [\App\Http\Controllers\FrontController::class, 'hotel'])->name('front.hotel');
-//    Route::get('/flight', [\App\Http\Controllers\FrontController::class, 'flight'])->name('front.flight');
+    Route::get('/flight', [\App\Http\Controllers\FrontController::class, 'flight'])->name('front.flight');
 
     Route::post('/register', [\App\Http\Controllers\FrontController::class, 'register_send'])->name('front.register.send');
     Route::post('/feedback', [\App\Http\Controllers\FrontController::class, 'feedback_send'])->name('front.feedback.send');
     Route::post('/visa', [\App\Http\Controllers\FrontController::class, 'visa_send'])->name('front.visa.send');
     Route::post('/hotel', [\App\Http\Controllers\FrontController::class, 'hotel_send'])->name('front.hotel.send');
+    Route::post('/flight', [\App\Http\Controllers\FrontController::class, 'flight_send'])->name('front.flight.send');
 
 
 });

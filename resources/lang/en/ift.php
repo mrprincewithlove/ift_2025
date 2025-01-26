@@ -280,6 +280,9 @@ If you have any questions, please contact us via email at info@tmt.tm or by call
     'upload-ticket' => 'Upload Ticket file',
     'flight-form' => 'Your flight details',
 
+    'flight request sended message' => 'You have successfully provided your flight details. Please note that the organizers have already received this information and will take it into account during the event preparations.
+If there are any changes to the information, please let us know via email at info@tmt.tm or by number +99312753648.',
+
 
 
 ];

@@ -551,4 +551,107 @@ class FrontController extends Controller
         return redirect()->back()->with('success', __('ift.hotel request sended message'));
 
     }
+    public function flight_send(Request $request)
+    {
+        $rules = [
+            'name' => 'required|string|max:255',
+            'surname' => 'required|string|max:255',
+            'middle_name' => 'nullable|string|max:255',
+            'company_name' => 'required|string|max:255',
+            'job' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'emergency_number' => [
+                'required',
+                'regex:/^\+[0-9]{6,15}$/',
+            ],
+            'arrival_date' => 'required|date_format:Y-m-d\TH:i|before:2025-03-20',
+            'departure_date' => 'required|date_format:Y-m-d\TH:i|after:2025-03-20',
+            'ticket' => 'required|mimes:pdf,jpg,jpeg|max:4096',
+        ];
+        $validator = Validator::make($request->all(), $rules);
+        if($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        }
+        $directoryPath = 'files/flight';
+        if ( $request->hasFile('ticket') ) {
+
+            $ticket = $this->storeFiles($request->file('ticket'), $directoryPath);
+
+        } else {
+            $ticket = null;
+        }
+
+
+        $data = [
+            'name'              => $request->name,
+            'surname'               => $request->surname,
+            'middle_name'               => $request->middle_name,
+            'company_name'              => $request->company_name,
+            'job'               => $request->job,
+            'email'             => $request->email,
+            'emergency_number'                => $request->emergency_number,
+            'arrival_date' => str_replace('T', ' ', $request->arrival_date),
+            'departure_date' => str_replace('T', ' ', $request->departure_date),
+            'ticket'                    => $ticket
+        ];
+        $filePath = resource_path('local_info/flight.json');
+
+        if (!File::exists($filePath)) {
+            File::put($filePath, json_encode([$data]));
+        } else {
+            $jsonData = File::get($filePath);
+            $existingData = json_decode($jsonData, true);
+            $existingData[] = $data;
+            File::put($filePath, json_encode($existingData));
+        }
+
+//        response mail for register
+        try{
+
+            $to_name = $request->name. ' '. $request->middle_name.' '.$request->surname;
+
+            $to_email = $request->email;
+
+            $user_details = "Thank you for flight information";
+
+            $data1 = array('name'=>$to_name, 'body' => $user_details);
+            Mail::send('mail.flight.response_'.app()->currentLocale(), $data1, function($message) use ($to_name, $to_email) {
+                $message->to($to_email, $to_name)
+                    ->subject('Thank you for flight information');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
+            });
+        }
+        catch (\Throwable $th) {
+            //            log here
+            Log::error($th->getMessage());
+        }
+//        report mail for register
+        try{
+
+            $to_name = 'Hormatly IFT administratory';
+
+//            $to_email = 'maslovsaparmyrat@gmail.com';
+            $to_email = 'yusuph0206@gmail.com';
+//            $to_email = 'info@tmt.tm';
+//            $to_email = 'tmt.group.web@gmail.com';
+            $ticket_image = $data['ticket'];
+            $title = 'IFT new flight information report';
+            $data2 = array('name'=>$to_name, 'body' => $data, 'title'=>$title);
+//            Mail::send('mail.register_report1', $data2, function($message) use ($to_name, $to_email, $img) {
+            Mail::send('mail.flight.report', $data2, function($message) use ($to_name, $to_email, $ticket_image) {
+                $message->to($to_email, $to_name)
+                    ->subject('Taze flight information geldi');
+                $message->from('ift2025turkmenistan@gmail.com', 'IFT administration');
+                if(isset($ticket_image)){
+                    $message->attach(public_path('/'.$ticket_image));
+                }
+            });
+        }
+        catch (\Throwable $th) {
+            Log::error($th->getMessage());
+        }
+        return redirect()->back()->with('success', __('ift.flight request sended message'));
+
+    }
+
 }

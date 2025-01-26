@@ -168,7 +168,7 @@ bilim we pikir alyşmalara goşulyň.',
     'last-name' => 'Familiýasy',
     'middle-name' => 'Atasynyň ady',
     'organization' => 'Guramanyň ady',
-    'position' => 'Wezpesi',
+    'position' => 'Wezipesi',
     'email' => 'Elektron salgysy',
     'date-of-birth' => 'Doglan senesi',
     'citizenship' => 'Raýatlygy',
@@ -278,4 +278,6 @@ Eger-de soraglaryňyz bolsa, biz bilen info@tmt.tm adresi ýa-da +99312753648 te
     'departure-date-time' => 'Yzyna gidiş',
     'upload-ticket' => 'Petegiň faýly',
     'flight-form' => 'Uçuşa hasaba almak',
+    'flight request sended message' => 'Siz uçuş barada maglumatlary üstünlikli belläp geçdiňiz. Guramaçylar bu maglumatlary aldylar we çäreleriň taýýarlygynda ulanarlar diýip ýatladyp geçýäris
+Eger-de maglumatlar üýtgese, bize info@tmt.tm elektron poçta adresi ýa-da +99312753648 nomerine habar bermegiňizi haýyş edýäris.',
 ];

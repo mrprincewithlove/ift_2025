@@ -48,7 +48,7 @@
                         </h4>
                         <ul class="text-textColor text-base md:text-lg">
                             <li class="">{{ __('ift.flight-text-1') }}</li>
-                            <li class="">{{ __('ift.flight-text-2') }}</li>
+                            <li class="">{{ __('ift.fligth-text-2') }}</li>
                             <h4 class="text-headerColor text-xl md:text-2xl font-semibold mb-2">
                                 {{ __('ift.flight-header-1') }}
                             </h4>
@@ -69,165 +69,95 @@
             <div class="container">
                 <div class="w-full px-5 md:px-10 py-10 flex flex-col">
                     <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
-                        <div
-                                class="flex flex-col items-center md:items-start justify-start gap-2 text-center md:text-start"
-                        >
-                            <h1
-                                    class="text-headerColor text-4xl md:text-5xl lg:text-6xl font-semibold"
-                            >
+                        <div class="flex flex-col items-center md:items-start justify-start gap-2 text-center md:text-start">
+                            <h1 class="text-headerColor text-4xl md:text-5xl lg:text-6xl font-semibold">
                                 {{ __('ift.flight-form') }}
                             </h1>
-                            <!-- <p class="text-textColor text-base md:text-lg">
-                              Становление спонсором мероприятий — это стратегический шаг,
-                              который может принести множество выгод для бизнеса.
-                              Спонсорство позволяет Вам не только заявить о себе на рынке,
-                              но и выстроить более глубокие связи с целевой аудиторией и
-                              улучшить имидж.
-                            </p> -->
                         </div>
-                        <form action="" class="w-full grid grid-cols-2 gap-5">
+                        <form action="{{ route('front.flight.send') }}" method="POST" enctype="multipart/form-data"  class="w-full grid grid-cols-2 gap-5">
+                            @csrf
                             <div class="col-span-2 sm:col-span-1 flex flex-col">
-                                <label
-                                        for="name"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >
-                                    {{ __('ift.first-name') }}</label
-                                >
-                                <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <label for="name" class="required w-fit {{ $errors->has('name') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.first-name') }}
+                                </label>
+                                <input type="text" name="name" id="name" class="border-2 {{ $errors->has('name') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                       value="{{ old('name') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="name"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >{{ __('ift.last-name') }}</label
-                                >
-                                <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <label for="surname" class="required w-fit {{ $errors->has('surname') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.last-name') }}
+                                </label>
+                                <input type="text" name="surname" id="surname" class="border-2 {{ $errors->has('surname') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                       value="{{ old('surname') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="name"
-                                        class="w-fit text-textColor text-base md:text-lg font-semibold"
-                                >{{ __('ift.middle-name') }}</label
-                                >
-                                <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <label for="middle_name" class="w-fit {{ $errors->has('middle_name') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.middle-name') }}
+                                </label>
+                                <input type="text" name="middle_name" id="middle_name" class="border-2 {{ $errors->has('middle_name') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                       value="{{ old('middle_name') }}"
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="name"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >{{ __('ift.organization') }}</label
-                                >
-                                <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <label for="company_name" class="required w-fit {{ $errors->has('company_name') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.organization') }}
+                                </label>
+                                <input type="text" name="company_name" id="company_name" class="border-2 {{ $errors->has('company_name') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                       value="{{ old('company_name') }}" required
                                 />
                             </div>
 
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="name"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >{{ __('ift.position') }}</label
-                                >
-                                <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <label for="job" class="required w-fit {{ $errors->has('job') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.position') }}
+                                </label>
+                                <input type="text" name="job" id="job" class="border-2 {{ $errors->has('job') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                       value="{{ old('job') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="name"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >{{ __('ift.email') }}</label
-                                >
-                                <input
-                                        type="text"
-                                        name="name"
-                                        id="name"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <label for="email" class="required w-fit {{ $errors->has('email') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.email') }}
+                                </label>
+                                <input type="text" name="email" id="email" class="border-2 {{ $errors->has('email') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                       value="{{ old('email') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="email"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >
-                                    {{ __('ift.emergency_number') }}</label
-                                >
-                                <input
-                                        type="number"
-                                        name="email"
-                                        id="email"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <label for="emergency_number" class="required w-fit {{ $errors->has('emergency_number') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.emergency_number') }}
+                                </label>
+                                <input type="text" name="emergency_number" id="emergency_number" class="border-2 {{ $errors->has('emergency_number') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                       value="{{ old('emergency_number') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="email"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >
-                                    {{ __('ift.arrival-date-time') }}</label
-                                >
-                                <input
-                                        type="datetime-local"
-                                        name="email"
-                                        id="email"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500"
-                                        placeholder=""
+                                <label for="arrival_date" class="required w-fit {{ $errors->has('arrival_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.arrival-date-time') }}
+                                </label>
+                                <input type="datetime-local" name="arrival_date" id="arrival_date" class="border-2 {{ $errors->has('arrival_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                       value="{{ old('arrival_date') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="email"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >
-                                    {{ __('ift.departure-date-time') }}</label
-                                >
-                                <input
-                                        type="datetime-local"
-                                        name="email"
-                                        id="email"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500"
-                                        placeholder=""
+                                <label for="departure_date" class="required w-fit {{ $errors->has('departure_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.departure-date-time') }}
+                                </label>
+                                <input type="datetime-local" name="departure_date" id="departure_date" class="border-2 {{ $errors->has('departure_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                       value="{{ old('departure_date') }}" required
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label
-                                        for="email"
-                                        class="required w-fit text-textColor text-base md:text-lg font-semibold"
-                                >
-                                    {{ __('ift.upload-ticket') }}</label
-                                >
-                                <input
-                                        type="file"
-                                        name="email"
-                                        id="email"
-                                        class="border-2 border-textColor p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500"
-                                        placeholder=""
+                                <label for="ticket" class="required w-fit {{ $errors->has('ticket') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                    {{ __('ift.upload-ticket') }}
+                                </label>
+                                <input type="file" name="ticket" id="ticket" class="border-2 {{ $errors->has('ticket') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                       value="{{ old('ticket') }}" required
                                 />
                             </div>
-                            <button
-                                    class="col-span-2 p-3 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all"
-                            >
+                            <button type="submit" class="col-span-2 p-3 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.send') }}
                             </button>
                         </form>
@@ -332,6 +262,7 @@
                 </form>
             </div>
         </div>
+        @include('front.includes.messages')
     </main>
 
 @endsection
