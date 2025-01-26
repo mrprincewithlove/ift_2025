@@ -8,6 +8,7 @@ use App\Models\AccountType;
 use App\Models\Agreement;
 use App\Models\FeedbackForm;
 use App\Models\RegistrationForm;
+use App\Models\VisaForm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Message;
@@ -79,7 +80,7 @@ class HomeController extends Controller
     public function working_with_excell()
     {
 
-        $filePath = resource_path('local_info/feedback.json');
+        $filePath = resource_path('local_info/visa.json');
 
         if (!File::exists($filePath)) {
             return 1;
@@ -88,19 +89,55 @@ class HomeController extends Controller
         $existingData = json_decode($jsonData, true);
         $data_to_export = [];
         foreach ($existingData as $existing) {
-            $form = FeedbackForm::create([
-                'name'                 => $existing['name'] ?? '',
-                'surname'              => $existing['surname'] ?? '',
-                'email'                => $existing['email'] ?? '',
-                'number'                => $existing['number'] ?? '',
-                'message'              => $existing['message'] ?? '',
+            $form = VisaForm::create([
+                'name'                              => $existing['name'] ?? '',
+                'surname'                           => $existing['surname'] ?? '',
+                'middle_name'                       => $existing['middle_name'] ?? '',
+                'company_name'                      => $existing['company_name'] ?? '',
+                'job'                               => $existing['job'] ?? '',
+                'email'                             => $existing['email'] ?? '',
+                'birth_date'                        => $existing['birth_date'] ?? '',
+                'country'                           => $existing['country'] ?? '',
+                'address'                           => $existing['address'] ?? '',
+                'passport'                          => $existing['passport'] ?? '',
+                'date_issue'                        => $existing['date_issue'] ?? '',
+                'date_expiry'                       => $existing['date_expiry'] ?? '',
+                'education'                         => $existing['education'] ?? '',
+                'education_institute'               => $existing['education_institute'] ?? '',
+                'specialization'                    => $existing['specialization'] ?? '',
+                'purpose'                           => $existing['purpose'] ?? '',
+                'arrival_date'                      => $existing['arrival_date'] ?? '',
+                'departure_date'                    => $existing['departure_date'] ?? '',
+                'website'                           => $existing['website'] ?? '',
+                'hotel'                             => $existing['hotel'] ?? '',
+                'photo'                             => $existing['photo'] ?? '',
+                'passport_copy'                     => $existing['passport_copy'] ?? '',
+                'employment_verification_letter'    => $existing['employment_verification_letter'] ?? '',
             ]);
-            Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('feedback')->append([[
+            Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('visa')->append([[
                 $existing['name'] ?? '',
                 $existing['surname'] ?? '',
-                $existing['number'] ?? '',
+                $existing['middle_name'] ?? '',
+                $existing['company_name'] ?? '',
+                $existing['job'] ?? '',
                 $existing['email'] ?? '',
-                $existing['message'] ?? '',
+                $existing['birth_date'] ?? '',
+                $existing['country'] ?? '',
+                $existing['address'] ?? '',
+                $existing['passport'] ?? '',
+                $existing['date_issue'] ?? '',
+                $existing['date_expiry'] ?? '',
+                $existing['education'] ?? '',
+                $existing['education_institute'] ?? '',
+                $existing['specialization'] ?? '',
+                $existing['purpose'] ?? '',
+                $existing['arrival_date'] ?? '',
+                $existing['departure_date'] ?? '',
+                $existing['website'] ?? '',
+                $existing['hotel'] ?? '',
+                'https://ift.com.tm/'.$existing['photo'] ?? '',
+                'https://ift.com.tm/'.$existing['passport_copy'] ?? '',
+                'https://ift.com.tm/'.$existing['employment_verification_letter'] ?? '',
                 ]]);
         }
 

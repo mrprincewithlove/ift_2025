@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FeedbackForm;
+use App\Models\VisaForm;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -415,6 +416,60 @@ class FrontController extends Controller
         } else {
             $employment_verification_letter = null;
         }
+
+
+//        write to excell
+        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('visa')->append([[
+            $request->name ?? '',
+            $request->surname ?? '',
+            $request->middle_name ?? '',
+            $request->company_name ?? '',
+            $request->job ?? '',
+            $request->email ?? '',
+            $request->birth_date ?? '',
+            $request->country ?? '',
+            $request->address ?? '',
+            $request->passport ?? '',
+            $request->date_issue ?? '',
+            $request->date_expiry ?? '',
+            $request->education ?? '',
+            $request->education_institute ?? '',
+            $request->specialization ?? '',
+            $request->purpose ?? '',
+            $request->arrival_date ?? '',
+            $request->departure_date ?? '',
+            $request->website ?? '',
+            $request->hotel ?? '',
+            'https://ift.com.tm/'.$image ?? '',
+            'https://ift.com.tm/'.$passport_copy ?? '',
+            'https://ift.com.tm/'.$employment_verification_letter ?? '',
+        ]]);
+//            create form here
+        $feedback = VisaForm::create([
+            'name'                              => $request->name ?? '',
+            'surname'                           => $request->surname ?? '',
+            'middle_name'                       => $request->middle_name ?? '',
+            'company_name'                      => $request->company_name ?? '',
+            'job'                               => $request->job ?? '',
+            'email'                             => $request->email ?? '',
+            'birth_date'                        => $request->birth_date ?? '',
+            'country'                           => $request->country ?? '',
+            'address'                           => $request->address ?? '',
+            'passport'                          => $request->passport ?? '',
+            'date_issue'                        => $request->date_issue ?? '',
+            'date_expiry'                       => $request->date_expiry ?? '',
+            'education'                         => $request->education ?? '',
+            'education_institute'               => $request->education_institute ?? '',
+            'specialization'                    => $request->specialization ?? '',
+            'purpose'                           => $request->purpose ?? '',
+            'arrival_date'                      => $request->arrival_date ?? '',
+            'departure_date'                    => $request->departure_date ?? '',
+            'website'                           => $request->website ?? '',
+            'hotel'                             => $request->hotel ?? '',
+            'photo'                             => $image ?? '',
+            'passport_copy'                     => $passport_copy ?? '',
+            'employment_verification_letter'    => $employment_verification_letter ?? '',
+        ]);
 
 
         $data = [
