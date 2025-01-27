@@ -79,7 +79,7 @@
                                 {{ __('ift.Official support') }}
                                 {{--Official support--}}
                             </a>
-                            <a href="{{ asset('/assets/files/Program_For_IFT_2025_'.app()->currentLocale().'.pdf') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="{{ asset('/assets/files/Program_for_IFT_2025_'.app()->currentLocale().'.pdf') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.Agenda') }}
                                 {{--Agenda--}}
                             </a>
@@ -109,7 +109,7 @@
                         </h1>
                     </div>
                     <div class="flex items-start justify-center flex-wrap gap-5 md:gap-10">
-                        <a href="{{ route('front.coming_soon') }}" class="group bg-white active:bg-primary md:hover:bg-primary w-full max-w-[440px] flex flex-col items-center justify-start gap-2 text-center text-balance rounded-xl px-4 py-8 customShadow active:scale-105 md:hover:scale-105 transition-all">
+                        <a href="{{ route('front.flight') }}" class="group bg-white active:bg-primary md:hover:bg-primary w-full max-w-[440px] flex flex-col items-center justify-start gap-2 text-center text-balance rounded-xl px-4 py-8 customShadow active:scale-105 md:hover:scale-105 transition-all">
                             <div class="size-20 text-primary group-active:text-white md:group-hover:text-white">
                                 <svg
                                         xmlns="http://www.w3.org/2000/svg"
