@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FeedbackForm;
+use App\Models\HotelForm;
 use App\Models\VisaForm;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
@@ -453,7 +454,7 @@ class FrontController extends Controller
             'job'                               => $request->job ?? '',
             'email'                             => $request->email ?? '',
             'birth_date'                        => $request->birth_date ?? '',
-            'country'                           => $request->country ?? '',
+            'country'                           => \Helper::getCountryName($request->country) ?? '',
             'address'                           => $request->address ?? '',
             'passport'                          => $request->passport ?? '',
             'date_issue'                        => $request->date_issue ?? '',
@@ -465,7 +466,7 @@ class FrontController extends Controller
             'arrival_date'                      => $request->arrival_date ?? '',
             'departure_date'                    => $request->departure_date ?? '',
             'website'                           => $request->website ?? '',
-            'hotel'                             => $request->hotel ?? '',
+            'hotel'                             => \Helper::getHotelName($request->hotel) ?? '',
             'photo'                             => $image ?? '',
             'passport_copy'                     => $passport_copy ?? '',
             'employment_verification_letter'    => $employment_verification_letter ?? '',
@@ -591,6 +592,34 @@ class FrontController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
+////        write to excell
+//        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('hotel')->append([[
+//            $request->name ?? '',
+//            $request->surname ?? '',
+//            $request->middle_name ?? '',
+//            $request->company_name ?? '',
+//            $request->job ?? '',
+//            $request->email ?? '',
+//            $request->number ?? '',
+//            $request->passport ?? '',
+//            $request->hotel ?? '',
+//            $request->in_date ?? '',
+//            $request->out_date ?? '',
+//        ]]);
+////            create form here
+//        $hotel = HotelForm::create([
+//            'name'                              => $request->name ?? '',
+//            'surname'                           => $request->surname ?? '',
+//            'middle_name'                       => $request->middle_name ?? '',
+//            'company_name'                      => $request->company_name ?? '',
+//            'job'                               => $request->job ?? '',
+//            'email'                             => $request->email ?? '',
+//            'number'                            => $request->number ?? '',
+//            'passport'                          => $request->passport ?? '',
+//            'hotel'                             => \Helper::getHotelName($request->hotel) ?? '',
+//            'in_date'                           => $request->in_date ?? '',
+//            'out_date'                          => $request->out_date ?? '',
+//        ]);
 
         $data = [
             'name'              => $request->name,
