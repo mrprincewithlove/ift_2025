@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FeedbackForm;
+use App\Models\FlightForm;
 use App\Models\HotelForm;
 use App\Models\VisaForm;
 use Carbon\Carbon;
@@ -720,6 +721,32 @@ class FrontController extends Controller
         } else {
             $ticket = null;
         }
+//        write to excell
+        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('flight')->append([[
+            $request->name ?? '',
+            $request->surname ?? '',
+            $request->middle_name ?? '',
+            $request->company_name ?? '',
+            $request->job ?? '',
+            $request->email ?? '',
+            $request->emergency_number ?? '',
+            str_replace('T', ' ', $request->arrival_date) ?? '',
+            str_replace('T', ' ', $request->departure_date) ?? '',
+            'https://ift.com.tm/'.$ticket ?? '',
+        ]]);
+//            create form here
+        $hotel = FlightForm::create([
+            'name'                              => $request->name ?? '',
+            'surname'                           => $request->surname ?? '',
+            'middle_name'                       => $request->middle_name ?? '',
+            'company_name'                      => $request->company_name ?? '',
+            'job'                               => $request->job ?? '',
+            'email'                             => $request->email ?? '',
+            'emergency_number'                            => $request->emergency_number ?? '',
+            'arrival_date'                           =>  $request->arrival_date ?? '',
+            'departure_date'                           => $request->departure_date ?? '',
+            'ticket'                          => $ticket ?? '',
+        ]);
 
 
         $data = [
