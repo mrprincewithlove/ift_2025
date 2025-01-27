@@ -81,46 +81,46 @@ class HomeController extends Controller
     public function working_with_excell()
     {
 
-        $filePath = resource_path('local_info/hotel.json');
-
-        if (!File::exists($filePath)) {
-            return 1;
-        }
-        $jsonData = File::get($filePath);
-        $existingData = json_decode($jsonData, true);
-        $data_to_export = [];
-        foreach ($existingData as $existing) {
-            $form = HotelForm::create([
-                'name'                              => $existing['name'] ?? '',
-                'surname'                           => $existing['surname'] ?? '',
-                'middle_name'                       => $existing['middle_name'] ?? '',
-                'company_name'                      => $existing['company_name'] ?? '',
-                'job'                               => $existing['job'] ?? '',
-                'email'                             => $existing['email'] ?? '',
-                'number'                            => $existing['number'] ?? '',
-                'passport'                          => $existing['passport'] ?? '',
-                'hotel'                             => $existing['hotel'] ?? '',
-                'in_date'                           => $existing['in_date'] ?? '',
-                'out_date'                          => $existing['out_date'] ?? '',
-
-            ]);
-            Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('hotel')->append([[
-                $existing['name'] ?? '',
-                $existing['surname'] ?? '',
-                $existing['middle_name'] ?? '',
-                $existing['company_name'] ?? '',
-                $existing['job'] ?? '',
-                $existing['email'] ?? '',
-                $existing['number'] ?? '',
-                $existing['passport'] ?? '',
-                $existing['hotel'] ?? '',
-                $existing['in_date'] ?? '',
-                $existing['out_date'] ?? '',
-                ]]);
-        }
-
-        dump($data_to_export);
-        dd($existingData);
+//        $filePath = resource_path('local_info/hotel.json');
+//
+//        if (!File::exists($filePath)) {
+//            return 1;
+//        }
+//        $jsonData = File::get($filePath);
+//        $existingData = json_decode($jsonData, true);
+//        $data_to_export = [];
+//        foreach ($existingData as $existing) {
+//            $form = HotelForm::create([
+//                'name'                              => $existing['name'] ?? '',
+//                'surname'                           => $existing['surname'] ?? '',
+//                'middle_name'                       => $existing['middle_name'] ?? '',
+//                'company_name'                      => $existing['company_name'] ?? '',
+//                'job'                               => $existing['job'] ?? '',
+//                'email'                             => $existing['email'] ?? '',
+//                'number'                            => $existing['number'] ?? '',
+//                'passport'                          => $existing['passport'] ?? '',
+//                'hotel'                             => $existing['hotel'] ?? '',
+//                'in_date'                           => $existing['in_date'] ?? '',
+//                'out_date'                          => $existing['out_date'] ?? '',
+//
+//            ]);
+//            Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('hotel')->append([[
+//                $existing['name'] ?? '',
+//                $existing['surname'] ?? '',
+//                $existing['middle_name'] ?? '',
+//                $existing['company_name'] ?? '',
+//                $existing['job'] ?? '',
+//                $existing['email'] ?? '',
+//                $existing['number'] ?? '',
+//                $existing['passport'] ?? '',
+//                $existing['hotel'] ?? '',
+//                $existing['in_date'] ?? '',
+//                $existing['out_date'] ?? '',
+//                ]]);
+//        }
+//
+//        dump($data_to_export);
+//        dd($existingData);
 
 
         $values = Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('test1')->get();
