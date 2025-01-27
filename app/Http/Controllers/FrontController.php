@@ -428,7 +428,7 @@ class FrontController extends Controller
             $request->job ?? '',
             $request->email ?? '',
             $request->birth_date ?? '',
-            $request->country ?? '',
+            \Helper::getCountryName($request->country) ?? '',
             $request->address ?? '',
             $request->passport ?? '',
             $request->date_issue ?? '',
@@ -440,7 +440,7 @@ class FrontController extends Controller
             $request->arrival_date ?? '',
             $request->departure_date ?? '',
             $request->website ?? '',
-            $request->hotel ?? '',
+            \Helper::getHotelName($request->hotel) ?? '',
             'https://ift.com.tm/'.$image ?? '',
             'https://ift.com.tm/'.$passport_copy ?? '',
             'https://ift.com.tm/'.$employment_verification_letter ?? '',
@@ -592,34 +592,34 @@ class FrontController extends Controller
             return back()->withErrors($validator)->withInput();
         }
 
-////        write to excell
-//        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('hotel')->append([[
-//            $request->name ?? '',
-//            $request->surname ?? '',
-//            $request->middle_name ?? '',
-//            $request->company_name ?? '',
-//            $request->job ?? '',
-//            $request->email ?? '',
-//            $request->number ?? '',
-//            $request->passport ?? '',
-//            $request->hotel ?? '',
-//            $request->in_date ?? '',
-//            $request->out_date ?? '',
-//        ]]);
-////            create form here
-//        $hotel = HotelForm::create([
-//            'name'                              => $request->name ?? '',
-//            'surname'                           => $request->surname ?? '',
-//            'middle_name'                       => $request->middle_name ?? '',
-//            'company_name'                      => $request->company_name ?? '',
-//            'job'                               => $request->job ?? '',
-//            'email'                             => $request->email ?? '',
-//            'number'                            => $request->number ?? '',
-//            'passport'                          => $request->passport ?? '',
-//            'hotel'                             => \Helper::getHotelName($request->hotel) ?? '',
-//            'in_date'                           => $request->in_date ?? '',
-//            'out_date'                          => $request->out_date ?? '',
-//        ]);
+//        write to excell
+        Sheets::spreadsheet('1AJahI4bSxV7JXe9TaqGdeZ_adTPR3miP0p67OSBLF50')->sheet('hotel')->append([[
+            $request->name ?? '',
+            $request->surname ?? '',
+            $request->middle_name ?? '',
+            $request->company_name ?? '',
+            $request->job ?? '',
+            $request->email ?? '',
+            $request->number ?? '',
+            $request->passport ?? '',
+            \Helper::getHotelName($request->hotel) ?? '',
+            $request->in_date ?? '',
+            $request->out_date ?? '',
+        ]]);
+//            create form here
+        $hotel = HotelForm::create([
+            'name'                              => $request->name ?? '',
+            'surname'                           => $request->surname ?? '',
+            'middle_name'                       => $request->middle_name ?? '',
+            'company_name'                      => $request->company_name ?? '',
+            'job'                               => $request->job ?? '',
+            'email'                             => $request->email ?? '',
+            'number'                            => $request->number ?? '',
+            'passport'                          => $request->passport ?? '',
+            'hotel'                             => \Helper::getHotelName($request->hotel) ?? '',
+            'in_date'                           => $request->in_date ?? '',
+            'out_date'                          => $request->out_date ?? '',
+        ]);
 
         $data = [
             'name'              => $request->name,
