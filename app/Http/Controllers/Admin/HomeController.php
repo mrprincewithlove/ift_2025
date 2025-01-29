@@ -3,27 +3,20 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Exports\UsersExport;
+use App\Http\Controllers\Controller;
 use App\Models\Account;
 use App\Models\AccountType;
 use App\Models\Agreement;
-use App\Models\FeedbackForm;
-use App\Models\HotelForm;
-use App\Models\RegistrationForm;
-use App\Models\VisaForm;
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
-use App\Models\Message;
 use App\Models\Company;
-use App\Models\Worker;
-use App\Models\Vacancy;
 use App\Models\Cv;
-use App\Models\User;
+use App\Models\Message;
 use App\Models\Tariff;
-use Carbon\Carbon;
+use App\Models\Vacancy;
+use App\Models\Worker;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Maatwebsite\Excel\Facades\Excel;
 use Revolution\Google\Sheets\Facades\Sheets;
-use Illuminate\Support\Facades\File;
 
 class HomeController extends Controller
 {

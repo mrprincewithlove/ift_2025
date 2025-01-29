@@ -21,6 +21,47 @@
 
         <li class="side-nav__devider my-6"></li>
         <li>
+            <a href="javascript:;" class="side-menu @if (isset($page) && in_array('Pages', $page)) side-menu--active @endif">
+                <div class="side-menu__icon"> <i data-lucide="trello"></i> </div>
+                <div class="side-menu__title">
+                    {{__('translates.Pages')}}
+                    <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                </div>
+            </a>
+            <ul class="@if (isset($page) && in_array('Pages', $page)) side-menu__sub-open @endif">
+                <li>
+                    <a href="javascript:;" class="side-menu @if (isset($page) && in_array('Meeting', $page)) side-menu--active @endif">
+                        <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                        <div class="side-menu__title"> {{__('translates.Meeting')}}
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="@if (isset($page) && in_array('Meeting', $page)) side-menu__sub-open @endif">
+                        <li>
+                            <a href="#" class="side-menu @if (isset($page) && in_array('Meeting_page', $page)) side-menu--active @endif">
+                                <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                                <div class="side-menu__title"> {{__('translates.Meeting_page')}}</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="side-menu @if (isset($page) && in_array('Meeting_items', $page)) side-menu--active @endif">
+                                <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                                <div class="side-menu__title"> {{__('translates.Meeting_items')}}</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="side-menu @if (isset($page) && in_array('Meeting_companies', $page)) side-menu--active @endif">
+                                <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                                <div class="side-menu__title"> {{__('translates.Meeting_companies')}}</div>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+        <li class="side-nav__devider my-6"></li>
+        <li>
             <a href="javascript:;" class="side-menu @if (isset($page) && in_array('Catalog', $page)) side-menu--active @endif">
                 <div class="side-menu__icon"> <i data-lucide="trello"></i> </div>
                 <div class="side-menu__title">
@@ -33,6 +74,18 @@
                     <a href="#" class="side-menu @if (isset($page) && in_array('Countries', $page)) side-menu--active @endif">
                         <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
                         <div class="side-menu__title"> {{__('translates.countries')}}</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('socialMedias.index') }}" class="side-menu @if (isset($page) && in_array('SocialMedia', $page)) side-menu--active @endif">
+                        <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                        <div class="side-menu__title"> {{__('translates.SocialMedia')}}</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('numbers.index') }}" class="side-menu @if (isset($page) && in_array('Number', $page)) side-menu--active @endif">
+                        <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                        <div class="side-menu__title"> {{__('translates.Numbers')}}</div>
                     </a>
                 </li>
             </ul>

@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Menu;
 use App\Models\Permission;
-use App\Models\RoleMenu;
-use Illuminate\Http\Request;
 use App\Models\Role;
+use App\Models\RoleMenu;
 use App\Models\RolePermission;
 use App\Models\User;
+use Illuminate\Http\Request;
 use Validator;
-use App\Http\Controllers\Controller;
 
 class RoleController extends Controller
 {
