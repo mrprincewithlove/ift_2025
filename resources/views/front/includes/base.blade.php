@@ -254,7 +254,7 @@
                                     </details>
                                     <!-- link -->
                                     <a
-                                            href="{{ route('front.coming_soon') }}"
+                                            href="{{ asset('/assets/files/Program_for_IFT_2025_'.app()->currentLocale().'.pdf') }}"
                                             class="w-full p-4 rounded-xl flex items-center justify-between gap-4 bg-primary text-white text-base font-semibold active:bg-secondary transition-all"
                                     >
                                         {{ __('ift.agenda_ift') }}
@@ -425,7 +425,7 @@
                         </div>
                     </div>
                     <a
-                            href="{{ route('front.coming_soon') }}"
+                            href="{{ asset('/assets/files/Program_for_IFT_2025_'.app()->currentLocale().'.pdf') }}"
                             class="text-white text-lg font-semibold hover:text-primary transition-all whitespace-nowrap"
                     >
                         {{ __('ift.agenda_ift') }}
