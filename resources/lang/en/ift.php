@@ -188,7 +188,7 @@ return [
     'date-of-departure' => 'Date of Departure',
     'website' => 'Website',
     'upload-passport-copy' => 'Upload a colored passport copy (pdf, jpeg)',
-    'upload-delegate-photo' => 'Upload delegate photo (5x6)',
+    'upload-delegate-photo' => 'Upload delegate photo (3x4)',
     'employment-verification-letter' => 'Employment Verification Letter',
     'Hotel form' => 'Hotel (place of accommodation)',
     'choose-one' => 'Choose one',
@@ -279,6 +279,7 @@ If you have any questions, please contact us via email at info@tmt.tm or by call
     'departure-date-time' => 'Departure date and time',
     'upload-ticket' => 'Upload Ticket file',
     'flight-form' => 'Your flight details',
+    'Feedback sended successfully' => 'Your request has been successfully received.',
 
     'flight request sended message' => 'You have successfully provided your flight details. Please note that the organizers have already received this information and will take it into account during the event preparations.
 If there are any changes to the information, please let us know via email at info@tmt.tm or by number +99312753648.',

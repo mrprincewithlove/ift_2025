@@ -361,7 +361,7 @@ class FrontController extends Controller
         catch (\Throwable $th) {
             Log::error($th->getMessage());
         }
-        return redirect()->back()->with('success', __('front.Feedback sended successfully!'));
+        return redirect()->back()->with('success', __('ift.Feedback sended successfully'));
 
     }
 
@@ -386,7 +386,7 @@ class FrontController extends Controller
             'purpose' => 'required|string|max:255',
             'arrival_date' => 'required|date|before:2025-03-20',
             'departure_date' => 'required|date|after:2025-03-20',
-            'website' => 'required|url|max:255',
+            'website' => 'nullable|url|max:255',
             'hotel' => 'required|integer|min:1|max:3',
             'photo' => 'required|mimes:pdf,jpg,jpeg|max:4096',
             'passport_copy' => 'required|mimes:pdf,jpg,jpeg|max:4096',

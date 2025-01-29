@@ -190,7 +190,7 @@ return [
     'date-of-departure' => 'Дата отъезда',
     'website' => 'Веб-сайт',
     'upload-passport-copy' => 'Файл паспорта (цветной*, pdf, jpeg)',
-    'upload-delegate-photo' => 'Фото делегата 5x6',
+    'upload-delegate-photo' => 'Фото делегата 3x4',
     'employment-verification-letter' => 'Письмо, подтверждающее текущее место работы',
     'Hotel form' => 'Отель (место пребывания)',
     'choose-one' => 'Выберите один',
@@ -285,6 +285,7 @@ return [
     'departure-date-time' => 'Дата и время вылета',
     'upload-ticket' => 'Файл билета',
     'flight-form' => 'Информация о вашем рейсе',
+    'Feedback sended successfully' => 'Ваш запрос успешно принят.',
 
     'flight request sended message' => 'Вы успешно указали информацию о рейсе. Напоминаем, что организаторы уже получили эти данные и будут учитывать их при подготовке к мероприятию.
 Если информация изменится, пожалуйста, сообщите нам по электронной почте info@tmt.tm или по номеру +99312753648.',

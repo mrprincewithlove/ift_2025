@@ -27,9 +27,6 @@
                             <h4 class="text-white text-xl md:text-2xl text-center max-w-5xl">
                                 {{ __('ift.visa-register') }}
                             </h4>
-                            <a href="" class="text-white text-xl md:text-2xl text-center max-w-5xl">
-                                {{ __('ift.visa-register') }}
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -262,11 +259,11 @@
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">
-                                <label for="website" class="required w-fit {{ $errors->has('website') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
+                                <label for="website" class="w-fit {{ $errors->has('website') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.website') }}
                                 </label>
                                 <input type="url" name="website" id="website" class="border-2 {{ $errors->has('website') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
-                                       value="{{ old('website') }}" required
+                                       value="{{ old('website') }}"
                                 />
                             </div>
                             <div class="col-span-2 sm:col-span-1 flex flex-col justify-end">

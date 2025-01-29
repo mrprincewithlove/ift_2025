@@ -184,7 +184,7 @@ bilim we pikir alyşmalara goşulyň.',
     'date-of-departure' => 'Çykyş senesi',
     'website' => 'Web-sahypa',
     'upload-passport-copy' => 'Pasport faýly(reňkli, pdf, jpeg)',
-    'upload-delegate-photo' => '5x6 delegatyň suraty',
+    'upload-delegate-photo' => '3x4 delegatyň suraty',
     'employment-verification-letter' => 'Häzirki iş ýerini tassyklaýan hat',
     'Hotel form' => 'Myhmanhana (bolýan ýeri)',
     'choose-one' => 'Birini saýlaň',
@@ -278,6 +278,8 @@ Eger-de soraglaryňyz bolsa, biz bilen info@tmt.tm adresi ýa-da +99312753648 te
     'departure-date-time' => 'Yzyna gidiş',
     'upload-ticket' => 'Petegiň faýly',
     'flight-form' => 'Uçuşa hasaba almak',
+    'Feedback sended successfully' => 'Siziň ýüzlenmäňiz üstünlikli kabul edildi.',
+
     'flight request sended message' => 'Siz uçuş barada maglumatlary üstünlikli belläp geçdiňiz. Guramaçylar bu maglumatlary aldylar we çäreleriň taýýarlygynda ulanarlar diýip ýatladyp geçýäris
 Eger-de maglumatlar üýtgese, bize info@tmt.tm elektron poçta adresi ýa-da +99312753648 nomerine habar bermegiňizi haýyş edýäris.',
 ];
