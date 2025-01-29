@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Http\Request;
-use App\Models\Permission;
-use App\Models\Role;
-use Validator;
 use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
+use App\Models\Permission;
+use App\Models\Role;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Validator;
 
 class PermissionController extends Controller
 {

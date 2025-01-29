@@ -68,6 +68,8 @@ Route::middleware(['auth', 'admin.auth'])->prefix('tif')->group(function () {
         Route::resource('permissions', \App\Http\Controllers\Admin\PermissionController::class);
         Route::resource('menus', \App\Http\Controllers\Admin\MenuController::class);
         Route::resource('translations', \App\Http\Controllers\TranslationController::class);
+        Route::resource('socialMedias', \App\Http\Controllers\Admin\SocialMediaController::class);
+        Route::resource('numbers', \App\Http\Controllers\Admin\NumberController::class);
 
 
         // Role

@@ -28,6 +28,49 @@
 
             <li class="menu__devider my-6"></li>
             <li>
+                <a href="javascript:;" class="menu @if (isset($page) && in_array('Pages', $page)) menu--active @endif">
+                    <div class="menu__icon"><i data-lucide="trello"></i></div>
+                    <div class="menu__title">  {{__('translates.Pages')}}
+                        <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                    </div>
+                </a>
+                <ul class="@if (isset($page) && in_array('Pages', $page)) menu__sub-open @endif">
+                    <li>
+                        <a href="javascript:;" class="menu @if (isset($page) && in_array('Meeting', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.Meeting')}}
+                                <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                            </div>
+                        </a>
+                        <ul class="@if (isset($page) && in_array('Meeting', $page)) menu__sub-open @endif">
+                            <li>
+                                <a href="#" class="menu @if (isset($page) && in_array('Meeting_page', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Meeting_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu @if (isset($page) && in_array('Meeting_items', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Meeting_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu @if (isset($page) && in_array('Meeting_items', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Meeting_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu__devider my-6"></li>
+            <li>
                 <a href="javascript:;" class="menu @if (isset($page) && in_array('Catalog', $page)) menu--active @endif">
                     <div class="menu__icon"><i data-lucide="trello"></i></div>
                     <div class="menu__title">  {{__('translates.catalogs')}}
@@ -41,7 +84,18 @@
                             <div class="menu__title"> {{__('translates.countries')}}</div>
                         </a>
                     </li>
-
+                    <li>
+                        <a href="{{ route('socialMedias.index') }}" class="menu @if (isset($page) && in_array('SocialMedia', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.SocialMedia')}}</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('numbers.index') }}" class="menu @if (isset($page) && in_array('Number', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.Numbers')}}</div>
+                        </a>
+                    </li>
                 </ul>
             </li>
             @if(Session::has('user_menus') && in_array('settings', Session::get('user_menus', [])) )

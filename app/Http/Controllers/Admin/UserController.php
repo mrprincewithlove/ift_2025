@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Center;
 use App\Models\CenterUsers;
+use App\Models\Role;
+use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
-use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Role;
-use Validator;
-//use App\Helpers\Helper;
-use App\Http\Controllers\Controller;
 use Image;
+use Validator;
+
+//use App\Helpers\Helper;
 
 class UserController extends Controller
 {

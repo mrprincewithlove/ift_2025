@@ -2,13 +2,10 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Menu;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Http\Request;
-use App\Models\Role;
-use Validator;
-use App\Helpers\Helper;
 use App\Http\Controllers\Controller;
+use App\Models\Menu;
+use Illuminate\Http\Request;
+use Validator;
 
 class MenuController extends Controller
 {
