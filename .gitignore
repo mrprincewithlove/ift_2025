@@ -1,3 +1,7 @@
+resources/local_info/
+resources/local_info/*
+/resources/local_info/
+/resources/local_info/*
 /node_modules
 bootstrap/
 /bootstrap
