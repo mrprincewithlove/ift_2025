@@ -18,7 +18,7 @@ class SocialMediaController extends Controller
     {
         $this->middleware('admin.auth');
     }
-    
+
     private function search($str)
     {
         $a = new SocialMedia;
@@ -43,7 +43,7 @@ class SocialMediaController extends Controller
         $r = $this->hasPermission('socialMedia.index', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
-        
+
         $input = $request->all();
         $row = $this->search($input['search'] ?? '');
 
@@ -198,7 +198,8 @@ class SocialMediaController extends Controller
 
     private function storeImage($image_name)
     {
-        $directoryPath = public_path('ift/images/socialMedia');
+        $path = 'ift/images/socialMedia';
+        $directoryPath = public_path($path);
 
         // Check if the directory exists and create it if it does not
         if (!File::exists($directoryPath))
@@ -208,12 +209,12 @@ class SocialMediaController extends Controller
 
         if ($image_name->extension() == 'svg') {
         // Store SVG as it is
-            $image = $directoryPath.'/' . Str::slug(Str::before($image_name->getClientOriginalName(), '.' . $image_name->extension())) . '_' . time() . '.svg';
-            $image_name->move(public_path($directoryPath), $image);
+            $image = $path.'/' . Str::slug(Str::before($image_name->getClientOriginalName(), '.' . $image_name->extension())) . '_' . time() . '.svg';
+            $image_name->move(public_path($path), $image);
         }
         else{
 
-            $image = $directoryPath.'/' . Str::before(Str::replace(' ', '_', $image_name->getClientOriginalName()), '.' . $image_name->extension()) . '_' . time() . '.webp';
+            $image = $path.'/' . Str::before(Str::replace(' ', '_', $image_name->getClientOriginalName()), '.' . $image_name->extension()) . '_' . time() . '.webp';
             $img = Image::make($image_name->path())->encode('webp', 100);
             $img->resize(1000, 1000, function ($const) {
                 $const->aspectRatio();

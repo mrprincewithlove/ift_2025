@@ -44,23 +44,23 @@
                         </a>
                         <ul class="@if (isset($page) && in_array('Meeting', $page)) menu__sub-open @endif">
                             <li>
-                                <a href="#" class="menu @if (isset($page) && in_array('Meeting_page', $page)) menu--active @endif">
+                                <a href="{{ route('meeting-page.edit') }}" class="menu @if (isset($page) && in_array('Meeting_page', $page)) menu--active @endif">
                                     <div class="menu__icon"><i data-lucide="globe"></i></div>
                                     <div class="menu__title"> {{__('translates.Meeting_page')}}
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="menu @if (isset($page) && in_array('Meeting_items', $page)) menu--active @endif">
+                                <a href="{{ route('meeting-page-items.index') }}" class="menu @if (isset($page) && in_array('Meeting_items', $page)) menu--active @endif">
                                     <div class="menu__icon"><i data-lucide="globe"></i></div>
-                                    <div class="menu__title"> {{__('translates.Meeting_page')}}
+                                    <div class="menu__title"> {{__('translates.Meeting_items')}}
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="menu @if (isset($page) && in_array('Meeting_items', $page)) menu--active @endif">
+                                <a href="#" class="menu @if (isset($page) && in_array('Meeting_companies', $page)) menu--active @endif">
                                     <div class="menu__icon"><i data-lucide="globe"></i></div>
-                                    <div class="menu__title"> {{__('translates.Meeting_page')}}
+                                    <div class="menu__title"> {{__('translates.Meeting_companies')}}
                                     </div>
                                 </a>
                             </li>

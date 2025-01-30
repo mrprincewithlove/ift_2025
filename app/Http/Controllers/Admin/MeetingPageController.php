@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreNumberRequest;
-use App\Http\Requests\UpdateNumberRequest;
+use App\Http\Requests\StoreMeetingPageRequest;
+use App\Http\Requests\UpdateMeetingPageRequest;
+use App\Models\MeetingPage;
 use App\Models\Number;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
@@ -12,7 +13,7 @@ use Illuminate\Support\Str;
 use Image;
 use Validator;
 
-class NumberController extends Controller
+class MeetingPageController extends Controller
 {
     public function __construct()
     {
@@ -21,14 +22,19 @@ class NumberController extends Controller
 
     private function search($str)
     {
-        $a = new Number;
+        $a = new MeetingPage;
         if(strlen(trim($str)) > 0)
         {
             $a = $a->where(function($query) use ($str){
-                $query->where('title_tm', 'LIKE', '%'. $str . '%')
-                    ->where('title_ru', 'LIKE', '%'. $str . '%')
-                    ->where('title_en', 'LIKE', '%'. $str . '%')
-                    ->where('number', 'LIKE', '%'. $str . '%');
+                $query->where('main_breadcrumb_title_tm', 'LIKE', '%'. $str . '%')
+                    ->orWhere('main_breadcrumb_title_ru', 'LIKE', '%'. $str . '%')
+                    ->orWhere('main_breadcrumb_title_en', 'LIKE', '%'. $str . '%')
+                    ->orWhere('title_tm', 'LIKE', '%'. $str . '%')
+                    ->orWhere('title_ru', 'LIKE', '%'. $str . '%')
+                    ->orWhere('title_en', 'LIKE', '%'. $str . '%')
+                    ->orWhere('list_section_title_tm', 'LIKE', '%'. $str . '%')
+                    ->orWhere('list_section_title_ru', 'LIKE', '%'. $str . '%')
+                    ->orWhere('list_section_title_en', 'LIKE', '%'. $str . '%');
             });
         }
         return $a;
@@ -41,23 +47,24 @@ class NumberController extends Controller
      */
     public function index(Request $request)
     {
-        $page = [ 'Number', 'Catalog'];
+        return back();
+        $page = [ 'Meeting_page', 'Pages', 'Meeting', ];
 
-        $r = $this->hasPermission('number.index', auth()->user()->role_id);
+        $r = $this->hasPermission('meeting_page.index', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
         $input = $request->all();
         $row = $this->search($input['search'] ?? '');
 
-        $row = $row->select(Number::getColumns());
+        $row = $row->select(MeetingPage::getColumns());
 
         $row = $row->paginate(\Helper::getMyConfigCache('custom.page-limit'))->appends([
             'search' => $input['search'] ?? '',
         ]);
 
-        return view('admin.number.index', compact(['page']))
-                ->with('numbers', $row)
+        return view('admin.meeting_page.index', compact(['page']))
+                ->with('meetingPages', $row)
                 ->with('input', $input);
     }
 
@@ -68,15 +75,16 @@ class NumberController extends Controller
      */
     public function create()
     {
-        $page = [ 'Create', 'Number', 'Catalog' ];
+        return back();
+        $page = [ 'Meeting_page', 'Pages', 'Meeting', ];
 
-        $r = $this->hasPermission('number.create', auth()->user()->role_id);
+        $r = $this->hasPermission('meeting_page.create', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
-        $row = new Number();
+        $row = new MeetingPage();
 
-        return view('admin.number.create', compact(['page']))->with('number', $row);
+        return view('admin.meeting_page.create', compact(['page']))->with('meetingPage', $row);
     }
 
     /**
@@ -85,25 +93,26 @@ class NumberController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreNumberRequest $request)
+    public function store(StoreMeetingPageRequest $request)
     {
-        $r = $this->hasPermission('number.create', auth()->user()->role_id);
+        return back();
+        $r = $this->hasPermission('meeting_page.create', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
-        if ( $request->hasFile('icon') ) {
-            $image = $this->storeImage($request->icon);
+        if ( $request->hasFile('main_background_image') ) {
+            $image = $this->storeImage($request->main_background_image);
         }
         else {
             $image = null;
         }
 
         $data = $request->validated();
-        $data['icon'] = $image;
-        $number = Number::create($data);
+        $data['main_background_image'] = $image;
+        $meetingPage = MeetingPage::create($data);
 
 
-        if($number->save())
+        if($meetingPage->save())
         {
             return redirect()->route('numbers.index')->with('success', 'Created successfully');
         }
@@ -128,16 +137,16 @@ class NumberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Number $number)
+    public function edit()
     {
-        $page = [ 'Edit', 'Number', 'Catalog' ];
+        $page = [ 'Meeting_page', 'Pages', 'Meeting', ];
 
-        $r = $this->hasPermission('number.update', auth()->user()->role_id);
+        $r = $this->hasPermission('meeting_page.update', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
-
-        return view('admin.number.edit', compact(['page']))->with('number', $number);
+        $meetingPage = MeetingPage::find(1);
+        return view('admin.meeting_page.edit', compact(['page']))->with('meetingPage', $meetingPage);
     }
 
     /**
@@ -147,32 +156,32 @@ class NumberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateNumberRequest $request, Number $number)
+    public function update(UpdateMeetingPageRequest $request)
     {
-        $r = $this->hasPermission('number.update', auth()->user()->role_id);
+        $r = $this->hasPermission('meeting_page.update', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
-
-        if ( $request->hasFile('icon') )
+        $meetingPage = MeetingPage::find(1);
+        if ( $request->hasFile('main_background_image') )
         {
             // delete old image when update new one
-            if ($number->icon && File::exists(public_path($number->icon))) {
-                File::delete(public_path($number->icon));
+            if ($meetingPage->main_background_image && File::exists(public_path($meetingPage->main_background_image))) {
+                File::delete(public_path($meetingPage->main_background_image));
             }
 
-            $image = $this->storeImage($request->icon);
+            $image = $this->storeImage($request->main_background_image);
 
         }
         else{
-            $image = $number->icon;
+            $image = $meetingPage->main_background_image;
         }
         $data = $request->validated();
-        $data['icon'] = $image;
-        $number->update($data);
+        $data['main_background_image'] = $image;
+        $meetingPage->update($data);
 
-        if($number->save())
+        if($meetingPage->save())
         {
-            return redirect()->route('numbers.index')->with('success', 'Updated successfully');
+            return redirect()->route('meeting-page.edit')->with('success', 'Updated successfully');
         }
         return back()->with('prev-url', $request->input('prev-url'))->with('error', 'Update error');
     }
@@ -183,15 +192,16 @@ class NumberController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, Number $number)
+    public function destroy(Request $request, MeetingPage $meetingPage)
     {
-        $r = $this->hasPermission('number.delete', auth()->user()->role_id);
+        return back();
+        $r = $this->hasPermission('meeting_page.delete', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
-        if($number->delete()){
-            if ($number->icon && File::exists(public_path($number->icon))) {
-                File::delete(public_path($number->icon));
+        if($meetingPage->delete()){
+            if ($meetingPage->main_background_image && File::exists(public_path($meetingPage->main_background_image))) {
+                File::delete(public_path($meetingPage->main_background_image));
             }
             return redirect()->route('numbers.index')->withSuccess(__('translates.deleted_successfully'));
         }
@@ -201,7 +211,7 @@ class NumberController extends Controller
 
     private function storeImage($image_name)
     {
-        $path= 'ift/images/number';
+        $path = 'ift/images/meeting-page';
         $directoryPath = public_path($path);
 
         // Check if the directory exists and create it if it does not
@@ -216,12 +226,11 @@ class NumberController extends Controller
             $image_name->move(public_path($path), $image);
         }
         else{
-
             $image = $path.'/' . Str::before(Str::replace(' ', '_', $image_name->getClientOriginalName()), '.' . $image_name->extension()) . '_' . time() . '.webp';
             $img = Image::make($image_name->path())->encode('webp', 100);
             $img->resize(1000, 1000, function ($const) {
                 $const->aspectRatio();
-            })->save(public_path() . '/' . $image);
+            })->save(public_path() .'/' . $image);
         }
 
         return $image;

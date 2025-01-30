@@ -71,6 +71,10 @@ Route::middleware(['auth', 'admin.auth'])->prefix('tif')->group(function () {
         Route::resource('socialMedias', \App\Http\Controllers\Admin\SocialMediaController::class);
         Route::resource('numbers', \App\Http\Controllers\Admin\NumberController::class);
 
+        Route::get('meeting-page/edit', [App\Http\Controllers\Admin\MeetingPageController::class, 'edit'])->name('meeting-page.edit');
+        Route::post('meeting-page/update', [App\Http\Controllers\Admin\MeetingPageController::class, 'update'])->name('meeting-page.update');
+
+        Route::resource('meeting-page-items', \App\Http\Controllers\Admin\MeetingPageItemController::class);
 
         // Role
         Route::get('/roles', [App\Http\Controllers\Admin\RoleController::class, 'index'])->name('roles.index');

@@ -65,8 +65,10 @@ class DataSeeder extends Seeder
 //            'test'      =>0,
 //            'another_form'      =>0,
 //        ]);
-        $this->call(SocialMediaPermissionAndMenuSeeder::class);
-        $this->call(NumberPermissionAndMenuSeeder::class);
+//        $this->call(SocialMediaPermissionAndMenuSeeder::class);
+//        $this->call(NumberPermissionAndMenuSeeder::class);
+        $this->call(MeetingPagePermissionAndMenuSeeder::class);
+        $this->call(MeetingPageItemPermissionAndMenuSeeder::class);
     }
 
 }
