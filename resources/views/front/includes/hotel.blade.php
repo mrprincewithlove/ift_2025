@@ -145,7 +145,7 @@
 {{--                                <select name="hotel" id="hotel" class="js-example-basic-single w-full border-2 {{ $errors->has('hotel') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none">--}}
                                     <option value="">{{ __('ift.choose-one') }}</option>
                                     @foreach($hotels as $hotel)
-                                        <option value="{{$hotel['id']}}" {{ old('hotel') == $hotel['id']? 'selected': '' }}>{{ $hotel['name_'.app()->currentLocale()] }}</option>
+                                        <option value="{{$hotel['id']}}" {{ old('hotelSelect') == $hotel['id']? 'selected': '' }}>{{ $hotel['name_'.app()->currentLocale()] }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -306,11 +306,51 @@
     <script>
         sessionStorage.setItem("language", "ru");
     </script>
+{{--    <script>--}}
+{{--        document.addEventListener("DOMContentLoaded", function () {--}}
+{{--            const rooms = @json($hotelPrices);--}}
+{{--            const currentLocale = "{{ app()->getLocale() }}";--}}
+{{--            const choose_one = "{{ __('ift.choose-one') }}";--}}
+
+{{--            const hotelSelect = document.getElementById("hotelSelect");--}}
+{{--            const roomSelect = document.getElementById("roomSelect");--}}
+
+{{--            function getCurrentLanguage() {--}}
+{{--                return currentLocale || "en";--}}
+{{--            }--}}
+
+{{--            hotelSelect.addEventListener("change", function () {--}}
+{{--                const selectedHotelId = parseInt(hotelSelect.value);--}}
+
+{{--                roomSelect.innerHTML =--}}
+{{--                    `<option value="">${choose_one}</option>`;--}}
+
+{{--                const language = getCurrentLanguage();--}}
+
+{{--                const filteredRooms = rooms.filter(--}}
+{{--                    (room) => room.hotel_id === selectedHotelId--}}
+{{--                );--}}
+
+{{--                filteredRooms.forEach((room) => {--}}
+{{--                    const option = document.createElement("option");--}}
+{{--                    option.value = room.id;--}}
+
+{{--                    const roomNameWithPrice = `${room[`name_${language}`]} - ${--}}
+{{--                        room.price--}}
+{{--                        }`;--}}
+
+{{--                    option.textContent = roomNameWithPrice;--}}
+{{--                    roomSelect.appendChild(option);--}}
+{{--                });--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const rooms = @json($hotelPrices);
             const currentLocale = "{{ app()->getLocale() }}";
             const choose_one = "{{ __('ift.choose-one') }}";
+
 
             const hotelSelect = document.getElementById("hotelSelect");
             const roomSelect = document.getElementById("roomSelect");
@@ -319,30 +359,36 @@
                 return currentLocale || "en";
             }
 
-            hotelSelect.addEventListener("change", function () {
+            function populateRooms() {
                 const selectedHotelId = parseInt(hotelSelect.value);
 
-                roomSelect.innerHTML =
-                    `<option value="">${choose_one}</option>`;
+                if (selectedHotelId) {
+                    roomSelect.innerHTML =
+                        `<option value="">${choose_one}</option>`;
+                    const language = getCurrentLanguage();
 
-                const language = getCurrentLanguage();
+                    const filteredRooms = rooms.filter(
+                        (room) => room.hotel_id === selectedHotelId
+                    );
 
-                const filteredRooms = rooms.filter(
-                    (room) => room.hotel_id === selectedHotelId
-                );
+                    filteredRooms.forEach((room) => {
+                        const option = document.createElement("option");
+                        option.value = room.id;
 
-                filteredRooms.forEach((room) => {
-                    const option = document.createElement("option");
-                    option.value = room.id;
-
-                    const roomNameWithPrice = `${room[`name_${language}`]} - ${
-                        room.price
+                        const roomNameWithPrice = `${room[`name_${language}`]} - ${
+                            room.price
                         }`;
+                        option.textContent = roomNameWithPrice;
+                        roomSelect.appendChild(option);
+                    });
+                }
+            }
 
-                    option.textContent = roomNameWithPrice;
-                    roomSelect.appendChild(option);
-                });
-            });
+            if (hotelSelect.value) {
+                populateRooms();
+            }
+
+            hotelSelect.addEventListener("change", populateRooms);
         });
     </script>
 @endpush
