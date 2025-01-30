@@ -251,6 +251,7 @@ If you have any questions, please contact us via email at info@tmt.tm or by call
                         of your trip, here you will find the perfect place to stay!',
     'hotel-text-3' => 'You can find detailed information about hotels and room rates by downloading the PDF document below.',
 
+    'choose-room' => 'Choose room',
     'check-in-date' => 'Check-in Date',
     'check-out-date' => 'Check-out Date',
     'hotel request sended message' => 'Thank you for submitting your hotel booking request for participation in the IFT 2025 forum. Your request has been successfully received.

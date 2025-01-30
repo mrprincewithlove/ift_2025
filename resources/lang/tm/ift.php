@@ -250,7 +250,7 @@ Eger-de soraglaryňyz bolsa, biz bilen info@tmt.tm adresi ýa-da +99312753648 te
                         ýokary rahatlyk derejesi saklanýar. Gezişe degişli maksatdan gaýry, bu ýerde her kim özüne laýyk orny
                         tapar!',
     'hotel-text-3' => 'Oteller we otag bahalary barada giňişleýin maglumat almak üçin aşakdaky PDF resminamasynda öwrenip bilersiňiz.',
-
+    'choose-room' => 'Otag saýlaň',
     'check-in-date' => 'Giriş senesi',
     'check-out-date' => 'Çykyş senesi',
 
