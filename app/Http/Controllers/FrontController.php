@@ -585,7 +585,8 @@ class FrontController extends Controller
                 'regex:/^\+[0-9]{6,15}$/',
             ],
             'passport' => 'required|string|max:255',
-            'hotel' => 'required|integer|min:1|max:3',
+            'hotelSelect' => 'required|integer|min:1|max:3',
+            'roomSelect' => 'required|integer|min:1|max:10',
             'in_date' => 'required|date|before:2025-03-20',
             'out_date' => 'required|date|after:2025-03-20',
         ];
@@ -604,7 +605,8 @@ class FrontController extends Controller
             $request->email ?? '',
             $request->number ?? '',
             $request->passport ?? '',
-            \Helper::getHotelName($request->hotel) ?? '',
+            \Helper::getHotelName($request->hotelSelect) ?? '',
+            \Helper::getHotelPriceName($request->roomSelect) ?? '',
             $request->in_date ?? '',
             $request->out_date ?? '',
         ]]);
@@ -618,7 +620,8 @@ class FrontController extends Controller
             'email'                             => $request->email ?? '',
             'number'                            => $request->number ?? '',
             'passport'                          => $request->passport ?? '',
-            'hotel'                             => \Helper::getHotelName($request->hotel) ?? '',
+            'hotel'                             => \Helper::getHotelName($request->hotelSelect) ?? '',
+            'room'                             => \Helper::getHotelPriceName($request->roomSelect) ?? '',
             'in_date'                           => $request->in_date ?? '',
             'out_date'                          => $request->out_date ?? '',
         ]);
@@ -632,7 +635,8 @@ class FrontController extends Controller
             'email'             => $request->email,
             'number'                => $request->number,
             'passport'              => $request->passport,
-            'hotel'             => \Helper::getHotelName($request->hotel),
+            'hotel'             => \Helper::getHotelName($request->hotelSelect),
+            'room'             => \Helper::getHotelPriceName($request->roomSelect),
             'in_date'                => $request->in_date,
             'out_date'                => $request->out_date,
         ];

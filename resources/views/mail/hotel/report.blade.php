@@ -625,6 +625,36 @@
                                 {{ $body['hotel'] }}
                               </td>
                             </tr>
+                            <tr
+                                    style="
+                                            color: #fff;
+                                            font-family: Montserrat, sans-serif;
+                                            font-size: 14px;
+                                            text-align: end;
+                                            width: 100%;
+                                          "
+                            >
+                              <th
+                                      style="
+                                              font-weight: 600;
+                                              line-height: 22px;
+                                              text-align: end;
+                                              padding: 5px;
+                                            "
+                              >
+                                Room:
+                              </th>
+                              <td
+                                      style="
+                                              font-weight: 400;
+                                              line-height: 22px;
+                                              text-align: start;
+                                              padding: 5px;
+                                            "
+                              >
+                                {{ $body['room'] }}
+                              </td>
+                            </tr>
                             <tr>
                               <td
                                       align="center"

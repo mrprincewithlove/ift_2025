@@ -258,7 +258,7 @@ class Helper
         ];
         foreach ($getHotelPrices as $getHotelPrice){
             if($getHotelPrice['id'] == $id){
-                return $getHotelPrice;
+                return $getHotelPrice['name_tm'].'-'.$getHotelPrice['price'];
             }
         }
     }
