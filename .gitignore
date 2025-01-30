@@ -50,7 +50,6 @@ config/mail.php
 config/broadcasting.php
 config/websockets.php
 resources/js/bootstrap.js
-resources/local_info/*
 resources/local_info/feedback.json
 /resources/local_info/feedback.json
 resources/local_info/registration.json
