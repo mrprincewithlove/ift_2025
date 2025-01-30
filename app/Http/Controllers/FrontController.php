@@ -100,9 +100,10 @@ class FrontController extends Controller
     }
     public function hotel()
     {
+        $hotelPrices = \Helper::getHotelPrice();
         $hotels = \Helper::getHotels();
         $countries = \Helper::getCountries();
-        return view('front.includes.hotel')->with('countries', $countries)->with('hotels', $hotels);
+        return view('front.includes.hotel')->with('countries', $countries)->with('hotels', $hotels)->with('hotelPrices', $hotelPrices);
     }
 
     public function flight()

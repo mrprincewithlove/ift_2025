@@ -87,6 +87,181 @@ class Helper
             'Other',
         ];
     }
+    public static function getHotelPrice(){
+        return [
+            [
+                'id'=>1,
+                'hotel_id'=>1,
+                'name_en'=> "Standard Deluxe Room",
+                'name_tm'=> "Standard Deluxe Room",
+                'name_ru'=> "Стандартный номер «Deluxe»",
+                'price'=>'200$'
+            ],
+            [
+                'id'=>2,
+                'hotel_id'=>1,
+                'name_en'=> "Standard Deluxe Double Room",
+                'name_tm'=> "Standard Deluxe Double Room",
+                'name_ru'=> "Стандартный двухместный номер «Deluxe»",
+                'price'=>'240$'
+            ],
+            [
+                'id'=>3,
+                'hotel_id'=>1,
+                'name_en'=> "Junior Suite Room",
+                'name_tm'=> "Junior Suite Room",
+                'name_ru'=> "Номер Junior Suite",
+                'price'=>'310$'
+            ],
+            [
+                'id'=>4,
+                'hotel_id'=>1,
+                'name_en'=> "Executive Suite Room",
+                'name_tm'=> "Executive Suite Room",
+                'name_ru'=> "Номер Executive Suite",
+                'price'=>'410$'
+            ],
+            [
+                'id'=>5,
+                'hotel_id'=>2,
+                'name_en'=> "Standard single Room",
+                'name_tm'=> "Standard single Room",
+                'name_ru'=> "Стандартный одноместный номер",
+                'price'=>'100$'
+            ],
+            [
+                'id'=>6,
+                'hotel_id'=>2,
+                'name_en'=> "Standard double Room",
+                'name_tm'=> "Standard double Room",
+                'name_ru'=> "Стандартный двухместный номер",
+                'price'=>'150$'
+            ],
+            [
+                'id'=>7,
+                'hotel_id'=>2,
+                'name_en'=> "Luxury  Room",
+                'name_tm'=> "Luxury  Room",
+                'name_ru'=> "Номер Люкс",
+                'price'=>'250$'
+            ],
+            [
+                'id'=>8,
+                'hotel_id'=>3,
+                'name_en'=> "Standard Room",
+                'name_tm'=> "Standard Room",
+                'name_ru'=> "Стандартный одноместный номер",
+                'price'=>'100$'
+            ],
+            [
+                'id'=>9,
+                'hotel_id'=>3,
+                'name_en'=> "Standard double room",
+                'name_tm'=> "Standard double room",
+                'name_ru'=> "Стандартный двухместный номер",
+                'price'=>'130$'
+            ],
+            [
+                'id'=>10,
+                'hotel_id'=>3,
+                'name_en'=> "Luxury room",
+                'name_tm'=> "Luxury room",
+                'name_ru'=> "Номер Люкс",
+                'price'=>'260$'
+            ],
+
+        ];
+    }
+    public static function getHotelPriceName($id)
+    {
+        $getHotelPrices = [
+            [
+                'id'=>1,
+                'hotel_id'=>1,
+                'name_en'=> "Standard Deluxe Room",
+                'name_tm'=> "Standard Deluxe Room",
+                'name_ru'=> "Стандартный номер «Deluxe»",
+                'price'=>'200$'
+            ],
+            [
+                'id'=>2,
+                'hotel_id'=>1,
+                'name_en'=> "Standard Deluxe Double Room",
+                'name_tm'=> "Standard Deluxe Double Room",
+                'name_ru'=> "Стандартный двухместный номер «Deluxe»",
+                'price'=>'240$'
+            ],
+            [
+                'id'=>3,
+                'hotel_id'=>1,
+                'name_en'=> "Junior Suite Room",
+                'name_tm'=> "Junior Suite Room",
+                'name_ru'=> "Номер Junior Suite",
+                'price'=>'310$'
+            ],
+            [
+                'id'=>4,
+                'hotel_id'=>1,
+                'name_en'=> "Executive Suite Room",
+                'name_tm'=> "Executive Suite Room",
+                'name_ru'=> "Номер Executive Suite",
+                'price'=>'410$'
+            ],
+            [
+                'id'=>5,
+                'hotel_id'=>2,
+                'name_en'=> "Standard single Room",
+                'name_tm'=> "Standard single Room",
+                'name_ru'=> "Стандартный одноместный номер",
+                'price'=>'100$'
+            ],
+            [
+                'id'=>6,
+                'hotel_id'=>2,
+                'name_en'=> "Standard double Room",
+                'name_tm'=> "Standard double Room",
+                'name_ru'=> "Стандартный двухместный номер",
+                'price'=>'150$'
+            ],
+            [
+                'id'=>7,
+                'hotel_id'=>2,
+                'name_en'=> "Luxury  Room",
+                'name_tm'=> "Luxury  Room",
+                'name_ru'=> "Номер Люкс",
+                'price'=>'250$'
+            ],
+            [
+                'id'=>8,
+                'hotel_id'=>3,
+                'name_en'=> "Standard Room",
+                'name_tm'=> "Standard Room",
+                'name_ru'=> "Стандартный одноместный номер",
+                'price'=>'100$'
+            ],
+            [
+                'id'=>9,
+                'hotel_id'=>3,
+                'name_en'=> "Standard double room",
+                'name_tm'=> "Standard double room",
+                'name_ru'=> "Стандартный двухместный номер",
+                'price'=>'130$'
+            ],
+            [
+                'id'=>10,
+                'hotel_id'=>3,
+                'name_en'=> "Luxury room",
+                'name_tm'=> "Luxury room",
+                'name_ru'=> "Номер Люкс",
+                'price'=>'260$'
+            ],
+        ];
+        foreach ($getHotelPrices as $getHotelPrice){
+            if($getHotelPrice['id'] == $id){
+                return $getHotelPrice;
+            }
+        }
+    }
     public static function getHotels(){
 	    return [
 	        ['id'=>1, 'name_en'=> "Yyldyz", 'name_tm'=> "Ýyldyz", 'name_ru'=> "Йылдыз"],
