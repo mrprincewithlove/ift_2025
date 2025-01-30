@@ -94,7 +94,7 @@ bilim we pikir alyşmalara goşulyň.',
 
     //    services section
 
-    'Our services'               => 'Biziň hyzmatlarymyz',
+    'Our services'               => 'Biziň hyzmatlarymyzdan peýdalanyp bilersiňiz',
     'Flight'               => 'Uçuş',
     'Visa support'               => 'Wiza goldawy',
     'Logistics'               => 'Logistika',
@@ -111,11 +111,11 @@ bilim we pikir alyşmalara goşulyň.',
 
 //    WHY JOIN IFT 2025? section
 
-    'WHY JOIN IFT 2025?'               => 'NÄME ÜÇIN IFT 2025-e GATNAŞMALY?',
-    'An impressive experience'               => 'Täsir galdyryjy tejribe',
-    'Rich business and cultural program'               => 'Baý işewürlik we medeni maksatnamasy',
-    'Space for business communication and networking'               => 'Işewürlik aragatnaşygy we arabaglanyşyk üçin giňişlik',
-    'Exhibitions introducing the latest technologies'               => 'Iň täze tehnologiýalar bilen tanyşdyrýan sergiler',
+    'WHY JOIN IFT 2025?'               => 'IFT 2025 halkara forumyna gatnaşmagyň ähmiýeti',
+    'An impressive experience'               => 'Tejribe alyşmak',
+    'Rich business and cultural program'               => 'Baý işewürlik we medeni maksatnama',
+    'Space for business communication and networking'               => 'Özara bähbitli hyzmatdaşlyk',
+    'Exhibitions introducing the latest technologies'               => 'Iň täze tehnologiýalar bilen tanyşdyrýan sergi meýdançasy',
 
 
 //    Organizers section

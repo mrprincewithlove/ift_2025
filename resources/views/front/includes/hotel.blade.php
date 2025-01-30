@@ -153,7 +153,7 @@
                                 <label for="in_date" class="required w-fit {{ $errors->has('in_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.check-in-date') }}
                                 </label>
-                                <input type="date" name="in_date" id="in_date" class="border-2 {{ $errors->has('in_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="date" name="in_date" id="in_date" class="w-full bg-white border-2 {{ $errors->has('in_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('in_date') }}" required
                                 />
                             </div>
@@ -161,7 +161,7 @@
                                 <label for="out_date" class="required w-fit {{ $errors->has('out_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.check-out-date') }}
                                 </label>
-                                <input type="date" name="out_date" id="out_date" class="border-2 {{ $errors->has('out_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="date" name="out_date" id="out_date" class="w-full bg-white border-2 {{ $errors->has('out_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('out_date') }}" required
                                 />
                             </div>

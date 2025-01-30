@@ -162,7 +162,7 @@
                                 <label for="birth_date" class="required w-fit {{ $errors->has('birth_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.date-of-birth') }}
                                 </label>
-                                <input type="date" name="birth_date" id="birth_date" class="border-2 {{ $errors->has('birth_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
+                                <input type="date" name="birth_date" id="birth_date" class="w-full bg-white border-2 {{ $errors->has('birth_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none"
                                        value="{{ old('birth_date') }}" required
                                 />
                             </div>
@@ -198,7 +198,7 @@
                                 <label for="date_issue" class="required w-fit {{ $errors->has('date_issue') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.date-of-issue') }}
                                 </label>
-                                <input type="date" name="date_issue" id="date_issue" class="border-2 {{ $errors->has('date_issue') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="date" name="date_issue" id="date_issue" class="w-full bg-white border-2 {{ $errors->has('date_issue') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('date_issue') }}" required
                                 />
                             </div>
@@ -206,7 +206,7 @@
                                 <label for="date_expiry" class="required w-fit {{ $errors->has('date_expiry') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.date-of-expiry') }}
                                 </label>
-                                <input type="date" name="date_expiry" id="date_expiry" class="border-2 {{ $errors->has('date_expiry') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="date" name="date_expiry" id="date_expiry" class="w-full bg-white border-2 {{ $errors->has('date_expiry') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('date_expiry') }}" required
                                 />
                             </div>
@@ -246,7 +246,7 @@
                                 <label for="arrival_date" class="required w-fit {{ $errors->has('arrival_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.date-of-arrival') }}
                                 </label>
-                                <input type="date" name="arrival_date" id="arrival_date" class="border-2 {{ $errors->has('arrival_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="date" name="arrival_date" id="arrival_date" class="w-full bg-white border-2 {{ $errors->has('arrival_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('arrival_date') }}" required
                                 />
                             </div>
@@ -254,7 +254,7 @@
                                 <label for="departure_date" class="required w-fit {{ $errors->has('departure_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.date-of-departure') }}
                                 </label>
-                                <input type="date" name="departure_date" id="departure_date" class="border-2 {{ $errors->has('departure_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="date" name="departure_date" id="departure_date" class="w-full bg-white border-2 {{ $errors->has('departure_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('departure_date') }}" required
                                 />
                             </div>

@@ -137,7 +137,7 @@
                                 <label for="arrival_date" class="required w-fit {{ $errors->has('arrival_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.arrival-date-time') }}
                                 </label>
-                                <input type="datetime-local" name="arrival_date" id="arrival_date" class="border-2 {{ $errors->has('arrival_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="datetime-local" name="arrival_date" id="arrival_date" class="w-full bg-white border-2 {{ $errors->has('arrival_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('arrival_date') }}" required
                                 />
                             </div>
@@ -145,7 +145,7 @@
                                 <label for="departure_date" class="required w-fit {{ $errors->has('departure_date') ? 'text-red-500' : 'text-textColor' }} text-base md:text-lg font-semibold">
                                     {{ __('ift.departure-date-time') }}
                                 </label>
-                                <input type="datetime-local" name="departure_date" id="departure_date" class="border-2 {{ $errors->has('departure_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
+                                <input type="datetime-local" name="departure_date" id="departure_date" class="w-full bg-white border-2 {{ $errors->has('departure_date') ? 'border-red-500' : 'border-textColor' }} p-3 text-base md:text-lg rounded-xl focus:border-primary outline-none placeholder:text-red-500" placeholder=""
                                        value="{{ old('departure_date') }}" required
                                 />
                             </div>
