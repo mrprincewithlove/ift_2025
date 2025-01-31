@@ -113,7 +113,23 @@
 
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript:;" class="side-menu @if (isset($page) && in_array('News', $page)) side-menu--active @endif">
+                        <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                        <div class="side-menu__title"> {{__('translates.News')}}
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="@if (isset($page) && in_array('News', $page)) side-menu__sub-open @endif">
+                        <li>
+                            <a href="{{ route('news-page.edit') }}" class="side-menu @if (isset($page) && in_array('News_page', $page)) side-menu--active @endif">
+                                <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                                <div class="side-menu__title"> {{__('translates.News_page')}}</div>
+                            </a>
+                        </li>
 
+                    </ul>
+                </li>
             </ul>
         </li>
         <li class="side-nav__devider my-6"></li>

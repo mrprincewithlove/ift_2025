@@ -124,6 +124,23 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;" class="menu @if (isset($page) && in_array('News', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.News')}}
+                                <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                            </div>
+                        </a>
+                        <ul class="@if (isset($page) && in_array('News', $page)) menu__sub-open @endif">
+                            <li>
+                                <a href="{{ route('news-page.edit') }}" class="menu @if (isset($page) && in_array('News_page', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.News_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li class="menu__devider my-6"></li>
