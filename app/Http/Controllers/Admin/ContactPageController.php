@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreNewsPageRequest;
-use App\Http\Requests\UpdateNewsPageRequest;
-use App\Models\NewsPage;
+use App\Http\Requests\StoreContactPageRequest;
+use App\Http\Requests\UpdateContactPageRequest;
+use App\Models\ContactPage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Image;
 use Validator;
 
-class NewsPageController extends Controller
+class ContactPageController extends Controller
 {
     public function __construct()
     {
@@ -21,7 +21,7 @@ class NewsPageController extends Controller
 
     private function search($str)
     {
-        $a = new NewsPage;
+        $a = new ContactPage;
         if(strlen(trim($str)) > 0)
         {
             $a = $a->where(function($query) use ($str){
@@ -44,23 +44,23 @@ class NewsPageController extends Controller
     public function index(Request $request)
     {
         return back();
-        $page = [ 'News_page', 'Pages', 'News', ];
+        $page = [ 'Contact_page', 'Pages', 'Contact', ];
 
-        $r = $this->hasPermission('news_page.index', auth()->user()->role_id);
+        $r = $this->hasPermission('contact_page.index', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
         $input = $request->all();
         $row = $this->search($input['search'] ?? '');
 
-        $row = $row->select(NewsPage::getColumns());
+        $row = $row->select(ContactPage::getColumns());
 
         $row = $row->paginate(\Helper::getMyConfigCache('custom.page-limit'))->appends([
             'search' => $input['search'] ?? '',
         ]);
 
-        return view('admin.news_page.index', compact(['page']))
-                ->with('newsPages', $row)
+        return view('admin.contact_page.index', compact(['page']))
+                ->with('contactPages', $row)
                 ->with('input', $input);
     }
 
@@ -72,15 +72,15 @@ class NewsPageController extends Controller
     public function create()
     {
         return back();
-        $page = [ 'News_page', 'Pages', 'News', ];
+        $page = [ 'Contact_page', 'Pages', 'Contact', ];
 
-        $r = $this->hasPermission('news_page.create', auth()->user()->role_id);
+        $r = $this->hasPermission('contact_page.create', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
-        $row = new NewsPage();
+        $row = new ContactPage();
 
-        return view('admin.news_page.create', compact(['page']))->with('newsPage', $row);
+        return view('admin.contact_page.create', compact(['page']))->with('contactPage', $row);
     }
 
     /**
@@ -89,10 +89,10 @@ class NewsPageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreNewsPageRequest $request)
+    public function store(StoreContactPageRequest $request)
     {
         return back();
-        $r = $this->hasPermission('news_page.create', auth()->user()->role_id);
+        $r = $this->hasPermission('contact_page.create', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
@@ -105,10 +105,10 @@ class NewsPageController extends Controller
 
         $data = $request->validated();
         $data['main_background_image'] = $image;
-        $newsPage = NewsPage::create($data);
+        $contactPage = ContactPage::create($data);
 
 
-        if($newsPage->save())
+        if($contactPage->save())
         {
             return redirect()->route('numbers.index')->with('success', 'Created successfully');
         }
@@ -121,7 +121,7 @@ class NewsPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(NewsPage $newsPage)
+    public function show(ContactPage $contactPage)
     {
         return back();
     }
@@ -135,14 +135,14 @@ class NewsPageController extends Controller
      */
     public function edit()
     {
-        $page = [ 'News_page', 'Pages', 'News', ];
+        $page = [ 'Contact_page', 'Pages', 'Contact', ];
 
-        $r = $this->hasPermission('news_page.update', auth()->user()->role_id);
+        $r = $this->hasPermission('contact_page.update', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
-        $newsPage = NewsPage::find(1);
-        return view('admin.news_page.edit', compact(['page']))->with('newsPage', $newsPage);
+        $contactPage = ContactPage::find(1);
+        return view('admin.contact_page.edit', compact(['page']))->with('contactPage', $contactPage);
     }
 
     /**
@@ -152,32 +152,32 @@ class NewsPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateNewsPageRequest $request)
+    public function update(UpdateContactPageRequest $request)
     {
-        $r = $this->hasPermission('news_page.update', auth()->user()->role_id);
+        $r = $this->hasPermission('contact_page.update', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
-        $newsPage = NewsPage::find(1);
+        $contactPage = ContactPage::find(1);
         if ( $request->hasFile('main_background_image') )
         {
             // delete old image when update new one
-            if ($newsPage->main_background_image && File::exists(public_path($newsPage->main_background_image))) {
-                File::delete(public_path($newsPage->main_background_image));
+            if ($contactPage->main_background_image && File::exists(public_path($contactPage->main_background_image))) {
+                File::delete(public_path($contactPage->main_background_image));
             }
 
             $image = $this->storeImage($request->main_background_image);
 
         }
         else{
-            $image = $newsPage->main_background_image;
+            $image = $contactPage->main_background_image;
         }
         $data = $request->validated();
         $data['main_background_image'] = $image;
-        $newsPage->update($data);
+        $contactPage->update($data);
 
-        if($newsPage->save())
+        if($contactPage->save())
         {
-            return redirect()->route('news-page.edit')->with('success', 'Updated successfully');
+            return redirect()->route('contact-page.edit')->with('success', 'Updated successfully');
         }
         return back()->with('prev-url', $request->input('prev-url'))->with('error', 'Update error');
     }
@@ -188,16 +188,16 @@ class NewsPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request, NewsPage $newsPage)
+    public function destroy(Request $request, ContactPage $contactPage)
     {
         return back();
-        $r = $this->hasPermission('news_page.delete', auth()->user()->role_id);
+        $r = $this->hasPermission('contact_page.delete', auth()->user()->role_id);
         if(!$r)
             return back()->with('prev-url', request()->input('prev-url') ?? '')->with('permission', 'no permission');
 
-        if($newsPage->delete()){
-            if ($newsPage->main_background_image && File::exists(public_path($newsPage->main_background_image))) {
-                File::delete(public_path($newsPage->main_background_image));
+        if($contactPage->delete()){
+            if ($contactPage->main_background_image && File::exists(public_path($contactPage->main_background_image))) {
+                File::delete(public_path($contactPage->main_background_image));
             }
             return redirect()->route('numbers.index')->withSuccess(__('translates.deleted_successfully'));
         }
@@ -207,7 +207,7 @@ class NewsPageController extends Controller
 
     private function storeImage($image_name)
     {
-        $path = 'ift/images/news-page';
+        $path = 'ift/images/contact-page';
         $directoryPath = public_path($path);
 
         // Check if the directory exists and create it if it does not

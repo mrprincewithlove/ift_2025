@@ -94,6 +94,14 @@ Route::middleware(['auth', 'admin.auth'])->prefix('tif')->group(function () {
         Route::get('news-page/edit', [App\Http\Controllers\Admin\NewsPageController::class, 'edit'])->name('news-page.edit');
         Route::post('news-page/update', [App\Http\Controllers\Admin\NewsPageController::class, 'update'])->name('news-page.update');
 
+//        contact page
+        Route::get('contact-page/edit', [App\Http\Controllers\Admin\ContactPageController::class, 'edit'])->name('contact-page.edit');
+        Route::post('contact-page/update', [App\Http\Controllers\Admin\ContactPageController::class, 'update'])->name('contact-page.update');
+
+//        about page
+        Route::get('about-page/edit', [App\Http\Controllers\Admin\AboutPageController::class, 'edit'])->name('about-page.edit');
+        Route::post('about-page/update', [App\Http\Controllers\Admin\AboutPageController::class, 'update'])->name('about-page.update');
+
 
 
         // Role

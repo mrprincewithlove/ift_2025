@@ -141,6 +141,47 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;" class="menu @if (isset($page) && in_array('Contact', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.Contact')}}
+                                <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                            </div>
+                        </a>
+                        <ul class="@if (isset($page) && in_array('Contact', $page)) menu__sub-open @endif">
+                            <li>
+                                <a href="{{ route('contact-page.edit') }}" class="menu @if (isset($page) && in_array('Contact_page', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Contact_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="menu @if (isset($page) && in_array('About', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.About')}}
+                                <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                            </div>
+                        </a>
+                        <ul class="@if (isset($page) && in_array('About', $page)) menu__sub-open @endif">
+                            <li>
+                                <a href="{{ route('about-page.edit') }}" class="menu @if (isset($page) && in_array('About_page', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.About_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu @if (isset($page) && in_array('About_page_items', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.About_page_items')}}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </li>
             <li class="menu__devider my-6"></li>

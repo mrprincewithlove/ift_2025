@@ -130,6 +130,46 @@
 
                     </ul>
                 </li>
+                <li>
+                    <a href="javascript:;" class="side-menu @if (isset($page) && in_array('Contact', $page)) side-menu--active @endif">
+                        <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                        <div class="side-menu__title"> {{__('translates.Contact')}}
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="@if (isset($page) && in_array('Contact', $page)) side-menu__sub-open @endif">
+                        <li>
+                            <a href="{{ route('contact-page.edit') }}" class="side-menu @if (isset($page) && in_array('Contact_page', $page)) side-menu--active @endif">
+                                <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                                <div class="side-menu__title"> {{__('translates.Contact_page')}}</div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:;" class="side-menu @if (isset($page) && in_array('About', $page)) side-menu--active @endif">
+                        <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                        <div class="side-menu__title"> {{__('translates.About')}}
+                            <div class="side-menu__sub-icon "> <i data-lucide="chevron-down"></i> </div>
+                        </div>
+                    </a>
+                    <ul class="@if (isset($page) && in_array('About', $page)) side-menu__sub-open @endif">
+                        <li>
+                            <a href="{{ route('about-page.edit') }}" class="side-menu @if (isset($page) && in_array('About_page', $page)) side-menu--active @endif">
+                                <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                                <div class="side-menu__title"> {{__('translates.About_page')}}</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="side-menu @if (isset($page) && in_array('About_page_items', $page)) side-menu--active @endif">
+                                <div class="side-menu__icon"> <i data-lucide="globe"></i> </div>
+                                <div class="side-menu__title"> {{__('translates.About_page_items')}}</div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </li>
             </ul>
         </li>
         <li class="side-nav__devider my-6"></li>

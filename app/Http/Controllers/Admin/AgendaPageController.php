@@ -4,14 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreAgendaPageRequest;
-use App\Http\Requests\StoreGalleryPageRequest;
-use App\Http\Requests\StoreMeetingPageRequest;
 use App\Http\Requests\UpdateAgendaPageRequest;
-use App\Http\Requests\UpdateGalleryPageRequest;
-use App\Http\Requests\UpdateMeetingPageRequest;
 use App\Models\AgendaPage;
-use App\Models\GalleryPage;
-use App\Models\MeetingPage;
 use App\Models\Number;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\File;

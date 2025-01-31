@@ -75,6 +75,9 @@ class DataSeeder extends Seeder
 //        $this->call(PressPagePermissionAndMenuSeeder::class);
 //        $this->call(NewsPagePermissionAndMenuSeeder::class);
 
+//        $this->call(ContactPagePermissionAndMenuSeeder::class);
+//        $this->call(AboutPagePermissionAndMenuSeeder::class);
+
     }
 
 }

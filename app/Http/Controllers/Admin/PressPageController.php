@@ -4,12 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreGalleryPageRequest;
-use App\Http\Requests\StoreMeetingPageRequest;
-use App\Http\Requests\UpdateGalleryPageRequest;
-use App\Http\Requests\UpdateMeetingPageRequest;
 use App\Http\Requests\UpdatePressPageRequest;
-use App\Models\GalleryPage;
-use App\Models\MeetingPage;
 use App\Models\Number;
 use App\Models\PressPage;
 use Illuminate\Http\Request;

@@ -258,6 +258,9 @@ return [
     'Contact'  => 'Contact',
     'Contact_page'  => 'Contact page',
 
+    'About'  => 'About',
+    'About_page'  => 'About page',
+    'About_page_items'  => 'About page items',
 
     'Numbers'  => 'Numbers',
     'Number'  => 'Number',
