@@ -233,4 +233,59 @@ return [
     'role_permission'  => 'Role permission',
     'role_menus'  => 'Menus',
 
+
+//    ift translates
+    'SocialMedia'  => 'Social Media',
+    'Pages'  => 'Pages',
+    'Meeting'  => 'Meeting',
+    'Meeting_page'  => 'Meeting page',
+    'Meeting_items'  => 'Meeting items',
+    'Meeting_companies'  => 'Meeting companies',
+
+    'Gallery'  => 'Gallery',
+    'Gallery_page'  => 'Gallery page',
+    'Gallery_items'  => 'Gallery items',
+
+    'Agenda'  => 'Agenda',
+    'Agenda_page'  => 'Agenda page',
+
+    'Press'  => 'Press',
+    'Press_page'  => 'Press page',
+
+    'News'  => 'News',
+    'News_page'  => 'News page',
+
+    'Contact'  => 'Contact',
+    'Contact_page'  => 'Contact page',
+
+
+    'Numbers'  => 'Numbers',
+    'Number'  => 'Number',
+    'link'  => 'Link',
+    'icon'  => 'Icon',
+    'image'  => 'Image',
+    'position'  => 'Position',
+    'status'  => 'Status',
+
+    'title_tm'  => 'Title in turkmen',
+    'title_ru'  => 'Title in russian',
+    'title_en'  => 'Title in english',
+
+    'text_tm'  => 'Text in turkmen',
+    'text_ru'  => 'Text in russian',
+    'text_en'  => 'Text in english',
+
+    'file_tm'  => 'File in turkmen',
+    'file_ru'  => 'File in russian',
+    'file_en'  => 'File in english',
+
+    'main_breadcrumb_title_tm'  => 'Breadcrumb title in turkmen',
+    'main_breadcrumb_title_ru'  => 'Breadcrumb title in russian',
+    'main_breadcrumb_title_en'  => 'Breadcrumb title in english',
+
+    'list_section_title_tm'  => 'List section title in turkmen',
+    'list_section_title_ru'  => 'List section title in russian',
+    'list_section_title_en'  => 'List section title in english',
+
 ];
+

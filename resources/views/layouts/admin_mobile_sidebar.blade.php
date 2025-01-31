@@ -66,6 +66,63 @@
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a href="javascript:;" class="menu @if (isset($page) && in_array('Gallery', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.Gallery')}}
+                                <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                            </div>
+                        </a>
+                        <ul class="@if (isset($page) && in_array('Gallery', $page)) menu__sub-open @endif">
+                            <li>
+                                <a href="{{ route('gallery-page.edit') }}" class="menu @if (isset($page) && in_array('Gallery_page', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Gallery_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu @if (isset($page) && in_array('Gallery_items', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Gallery_items')}}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="menu @if (isset($page) && in_array('Agenda', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.Agenda')}}
+                                <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                            </div>
+                        </a>
+                        <ul class="@if (isset($page) && in_array('Agenda', $page)) menu__sub-open @endif">
+                            <li>
+                                <a href="{{ route('agenda-page.edit') }}" class="menu @if (isset($page) && in_array('Agenda_page', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Agenda_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" class="menu @if (isset($page) && in_array('Press', $page)) menu--active @endif">
+                            <div class="menu__icon"><i data-lucide="globe"></i></div>
+                            <div class="menu__title"> {{__('translates.Press')}}
+                                <i data-lucide="chevron-down" class="menu__sub-icon "></i>
+                            </div>
+                        </a>
+                        <ul class="@if (isset($page) && in_array('Press', $page)) menu__sub-open @endif">
+                            <li>
+                                <a href="{{ route('press-page.edit') }}" class="menu @if (isset($page) && in_array('Press_page', $page)) menu--active @endif">
+                                    <div class="menu__icon"><i data-lucide="globe"></i></div>
+                                    <div class="menu__title"> {{__('translates.Press_page')}}
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </li>

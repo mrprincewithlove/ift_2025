@@ -67,8 +67,14 @@ class DataSeeder extends Seeder
 //        ]);
 //        $this->call(SocialMediaPermissionAndMenuSeeder::class);
 //        $this->call(NumberPermissionAndMenuSeeder::class);
-        $this->call(MeetingPagePermissionAndMenuSeeder::class);
-        $this->call(MeetingPageItemPermissionAndMenuSeeder::class);
+//        $this->call(MeetingPagePermissionAndMenuSeeder::class);
+//        $this->call(MeetingPageItemPermissionAndMenuSeeder::class);
+
+//        $this->call(GalleryPagePermissionAndMenuSeeder::class);
+//        $this->call(AgendaPagePermissionAndMenuSeeder::class);
+//        $this->call(PressPagePermissionAndMenuSeeder::class);
+//        $this->call(NewsPagePermissionAndMenuSeeder::class);
+
     }
 
 }

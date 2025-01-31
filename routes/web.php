@@ -71,10 +71,30 @@ Route::middleware(['auth', 'admin.auth'])->prefix('tif')->group(function () {
         Route::resource('socialMedias', \App\Http\Controllers\Admin\SocialMediaController::class);
         Route::resource('numbers', \App\Http\Controllers\Admin\NumberController::class);
 
+//        meeting page
         Route::get('meeting-page/edit', [App\Http\Controllers\Admin\MeetingPageController::class, 'edit'])->name('meeting-page.edit');
         Route::post('meeting-page/update', [App\Http\Controllers\Admin\MeetingPageController::class, 'update'])->name('meeting-page.update');
 
         Route::resource('meeting-page-items', \App\Http\Controllers\Admin\MeetingPageItemController::class);
+
+//        gallery page
+        Route::get('gallery-page/edit', [App\Http\Controllers\Admin\GalleryPageController::class, 'edit'])->name('gallery-page.edit');
+        Route::post('gallery-page/update', [App\Http\Controllers\Admin\GalleryPageController::class, 'update'])->name('gallery-page.update');
+
+
+//        agenda page
+        Route::get('agenda-page/edit', [App\Http\Controllers\Admin\AgendaPageController::class, 'edit'])->name('agenda-page.edit');
+        Route::post('agenda-page/update', [App\Http\Controllers\Admin\AgendaPageController::class, 'update'])->name('agenda-page.update');
+
+//        press page
+        Route::get('press-page/edit', [App\Http\Controllers\Admin\PressPageController::class, 'edit'])->name('press-page.edit');
+        Route::post('press-page/update', [App\Http\Controllers\Admin\PressPageController::class, 'update'])->name('press-page.update');
+
+//        news page
+        Route::get('news-page/edit', [App\Http\Controllers\Admin\NewsPageController::class, 'edit'])->name('news-page.edit');
+        Route::post('news-page/update', [App\Http\Controllers\Admin\NewsPageController::class, 'update'])->name('news-page.update');
+
+
 
         // Role
         Route::get('/roles', [App\Http\Controllers\Admin\RoleController::class, 'index'])->name('roles.index');
