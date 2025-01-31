@@ -79,7 +79,7 @@
                                 {{ __('ift.Official support') }}
                                 {{--Official support--}}
                             </a>
-                            <a href="{{ asset('/assets/files/Program_for_IFT_2025_'.app()->currentLocale().'.pdf') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
+                            <a href="{{ asset('/assets/files/Program_For_IFT_30_01_2025_'.app()->currentLocale().'.pdf') }}" target="_blank" class="text-center border-2 border-white px-10 py-2 rounded-xl bg-primary text-white text-base md:text-lg font-semibold active:bg-secondary md:hover:bg-secondary transition-all">
                                 {{ __('ift.Agenda') }}
                                 {{--Agenda--}}
                             </a>
