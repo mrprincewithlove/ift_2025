@@ -5,6 +5,8 @@ return [
     'project_address'               => 'ift.com.tm',
     'project_name'               => 'IFT 2025',
     'menu'               => 'Menýu',
+    'meta1'               => 'Halkara maýa goýum forumy 2025, Türkmenistan maýa goýumlary 2025',
+    'meta2'               => 'Maýa goýum forumy, Aşgabadyň forumy, Aşgabadyň forumy 2025',
 
     'about_ift'               => 'IFT 2025 barada',
     'guide_investor'               => 'Maýadarlar üçin',

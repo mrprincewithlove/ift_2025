@@ -94,9 +94,7 @@ html {
     color: #1fc9e8;
 }
 
-.front input,
-select,
-.input {
+.front input, .front select, .front .input {
     height: 56px !important;
 }
 

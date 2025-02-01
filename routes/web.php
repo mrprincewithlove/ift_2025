@@ -74,8 +74,9 @@ Route::middleware(['auth', 'admin.auth'])->prefix('tif')->group(function () {
 //        meeting page
         Route::get('meeting-page/edit', [App\Http\Controllers\Admin\MeetingPageController::class, 'edit'])->name('meeting-page.edit');
         Route::post('meeting-page/update', [App\Http\Controllers\Admin\MeetingPageController::class, 'update'])->name('meeting-page.update');
-
+        Route::resource('meeting-companies', \App\Http\Controllers\Admin\MeetingCompanyController::class);
         Route::resource('meeting-page-items', \App\Http\Controllers\Admin\MeetingPageItemController::class);
+
 
 //        gallery page
         Route::get('gallery-page/edit', [App\Http\Controllers\Admin\GalleryPageController::class, 'edit'])->name('gallery-page.edit');
@@ -102,7 +103,40 @@ Route::middleware(['auth', 'admin.auth'])->prefix('tif')->group(function () {
         Route::get('about-page/edit', [App\Http\Controllers\Admin\AboutPageController::class, 'edit'])->name('about-page.edit');
         Route::post('about-page/update', [App\Http\Controllers\Admin\AboutPageController::class, 'update'])->name('about-page.update');
 
+//        invest-project page
+        Route::get('invest-project-page/edit', [App\Http\Controllers\Admin\InvestProjectPageController::class, 'edit'])->name('invest-project-page.edit');
+        Route::post('invest-project-page/update', [App\Http\Controllers\Admin\InvestProjectPageController::class, 'update'])->name('invest-project-page.update');
+        Route::resource('invest-projects', App\Http\Controllers\Admin\InvestProjectController::class);
 
+//        sponsor page
+        Route::get('sponsor-page/edit', [App\Http\Controllers\Admin\SponsorPageController::class, 'edit'])->name('sponsor-page.edit');
+        Route::post('sponsor-page/update', [App\Http\Controllers\Admin\SponsorPageController::class, 'update'])->name('sponsor-page.update');
+        Route::resource('sponsor-companies', \App\Http\Controllers\Admin\SponsorCompanyController::class);
+
+
+//        speaker page
+        Route::get('speaker-page/edit', [App\Http\Controllers\Admin\SpeakerPageController::class, 'edit'])->name('speaker-page.edit');
+        Route::post('speaker-page/update', [App\Http\Controllers\Admin\SpeakerPageController::class, 'update'])->name('speaker-page.update');
+
+//        invest page
+        Route::get('invest-page/edit', [App\Http\Controllers\Admin\InvestPageController::class, 'edit'])->name('invest-page.edit');
+        Route::post('invest-page/update', [App\Http\Controllers\Admin\InvestPageController::class, 'update'])->name('invest-page.update');
+
+//        media page
+        Route::get('media-page/edit', [App\Http\Controllers\Admin\MediaPageController::class, 'edit'])->name('media-page.edit');
+        Route::post('media-page/update', [App\Http\Controllers\Admin\MediaPageController::class, 'update'])->name('media-page.update');
+
+//        exibition page
+        Route::get('exibition-page/edit', [App\Http\Controllers\Admin\ExibitionPageController::class, 'edit'])->name('exibition-page.edit');
+        Route::post('exibition-page/update', [App\Http\Controllers\Admin\ExibitionPageController::class, 'update'])->name('exibition-page.update');
+
+//        index page
+        Route::resource('why-choose-us-section-items', \App\Http\Controllers\Admin\WhyChooseUsSectionItemController::class);
+        Route::resource('index-partners', \App\Http\Controllers\Admin\IndexPartnerController::class);
+
+
+        Route::resource('labels', \App\Http\Controllers\Admin\LabelController::class);
+        Route::resource('types', \App\Http\Controllers\Admin\TypeController::class);
 
         // Role
         Route::get('/roles', [App\Http\Controllers\Admin\RoleController::class, 'index'])->name('roles.index');

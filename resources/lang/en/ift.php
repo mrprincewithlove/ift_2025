@@ -6,6 +6,9 @@ return [
     'project_name'               => 'IFT 2025',
     'menu'               => 'Menu',
 
+    'meta1'               => 'International Investment Forum 2025, Ashgabat Investment Forum, Turkmenistan Investments 2025',
+    'meta2'               => 'Investment Forum, Forum in Ashgabat, Forum in Ashagabat 2025, Investment conference Ashgabat, Business opportunities Ashgabat, Forum for investors',
+
     'about_ift'               => 'About IFT 2025',
     'guide_investor'               => 'Guide for investors',
     'meetings'               => 'Meetings',
@@ -221,7 +224,7 @@ return [
                       immigration officer upon arrival in Turkmenistan.',
     'visa-text-7' => 'For further information, you can contact- email address a.atabaev@tmt.tm, phone
                       +99365033447.
-                      We look forward to your participation in IFT 2025! 
+                      We look forward to your participation in IFT 2025!
                       Attention! Once the visa application and relevant documents are received by
                       the State Migration Service of Turkmenistan, they will be processed within 10
                       working days.',

@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="author" content="TMT Consulting" />
+    <meta name="description" content="{{ __('ift.meta1') }}"/>
+    <meta name="keywords" content="{{ __('ift.meta2') }}"/>
     <link rel="stylesheet" href="{{ asset('assets/plugins/swiper/swiper.css') }}" />
     {{--<link rel="stylesheet" href="{{ asset('assets/plugins/select2/select2.css') }} " />--}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])

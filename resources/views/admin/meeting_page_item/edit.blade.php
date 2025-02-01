@@ -31,7 +31,6 @@
 @endsection
 
 @section('my_own_js')
-    <script src="{{asset('/ucp/dist/js/app.js')}}"></script>
     <!-- END: JS Assets-->
     <script src="{{asset('/ucp/dist/js/ckeditor-classic.js')}}"></script>
     <script type="text/javascript">

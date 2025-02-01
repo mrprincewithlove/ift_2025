@@ -242,6 +242,18 @@ return [
     'Meeting_items'  => 'Meeting items',
     'Meeting_companies'  => 'Meeting companies',
 
+    'Sponsor'  => 'Sponsor',
+    'Sponsor_page'  => 'Sponsor page',
+    'Sponsor_items'  => 'Sponsor items',
+    'Sponsor_companies'  => 'Sponsor companies',
+
+    'Speaker'  => 'Speaker',
+    'Speaker_page'  => 'Speaker_page',
+
+    'Invest'  => 'Invest',
+    'Invest_page'  => 'Invest page',
+
+
     'Gallery'  => 'Gallery',
     'Gallery_page'  => 'Gallery page',
     'Gallery_items'  => 'Gallery items',
@@ -255,6 +267,23 @@ return [
     'News'  => 'News',
     'News_page'  => 'News page',
 
+    'Media'  => 'Media',
+    'Media_page'  => 'Media page',
+
+    'Exibition'  => 'Exibition',
+    'Exibition_page'  => 'Exibition page',
+
+    'Index'  => 'Index',
+    'Index_partner'  => 'Index partner',
+    'WhyChooseUsSection_items'  => 'Why choose us section items',
+
+    'label'  => 'Label',
+    'labels'  => 'Labels',
+    'Type'  => 'Type',
+    'types'  => 'Types',
+    'type'  => 'Type',
+    'color'  => 'color',
+
     'Contact'  => 'Contact',
     'Contact_page'  => 'Contact page',
 
@@ -262,13 +291,26 @@ return [
     'About_page'  => 'About page',
     'About_page_items'  => 'About page items',
 
+    'InvestProjects'  => 'InvestProjects',
+    'InvestProjects_page'  => 'InvestProjects page',
+    'InvestProjects_types'  => 'InvestProjects types',
+    'InvestProjects_items'  => 'InvestProjects items',
+
+
     'Numbers'  => 'Numbers',
     'Number'  => 'Number',
     'link'  => 'Link',
     'icon'  => 'Icon',
     'image'  => 'Image',
+    'image_tm'  => 'Image in turkmen',
+    'image_ru'  => 'Image in russian',
+    'image_en'  => 'Image in english',
     'position'  => 'Position',
     'status'  => 'Status',
+    'main_breadcrumb_image'  => 'Main breadcrumb image',
+    'image'  => 'Image',
+    'menus'  => 'Menus',
+    'add_new_menu'  => 'Add new',
 
     'title_tm'  => 'Title in turkmen',
     'title_ru'  => 'Title in russian',

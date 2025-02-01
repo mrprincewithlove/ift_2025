@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\FormCount;
+use App\Models\Label;
 use App\Models\Permission;
 use App\Models\RolePermission;
 use App\Models\Visa;
@@ -77,6 +78,20 @@ class DataSeeder extends Seeder
 
 //        $this->call(ContactPagePermissionAndMenuSeeder::class);
 //        $this->call(AboutPagePermissionAndMenuSeeder::class);
+
+//        $this->call(InvestProjectPagePermissionAndMenuSeeder::class);
+//        $this->call(SponsorPagePermissionAndMenuSeeder::class);
+//        $this->call(SpeakerPagePermissionAndMenuSeeder::class);
+//        $this->call(InvestPagePermissionAndMenuSeeder::class);
+//        $this->call(MediaPagePermissionAndMenuSeeder::class);
+//        $this->call(ExibitionPagePermissionAndMenuSeeder::class);
+//        $this->call(WhyChooseUsSectionItemPermissionAndMenuSeeder::class);
+//        $this->call(LabelPermissionAndMenuSeeder::class);
+//        $this->call(MeetingCompanyPermissionAndMenuSeeder::class);
+//        $this->call(IndexPartnerPermissionAndMenuSeeder::class);
+//        $this->call(SponsorCompanyPermissionAndMenuSeeder::class);
+//        $this->call(TypePermissionAndMenuSeeder::class);
+//        $this->call(InvestProjectPermissionAndMenuSeeder::class);
 
     }
 

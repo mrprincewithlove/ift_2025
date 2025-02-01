@@ -193,7 +193,7 @@ class MeetingPageItemController extends Controller
             $file_tm = $this->storeFile($request->file_tm);
         }
         else {
-            $file_tm = null;
+            $file_tm = $meeting_page_item->file_tm;
         }
         if ( $request->hasFile('file_ru') ) {
             if ($meeting_page_item->file_ru && File::exists(public_path($meeting_page_item->file_ru))) {
@@ -202,7 +202,7 @@ class MeetingPageItemController extends Controller
             $file_ru = $this->storeFile($request->file_ru);
         }
         else {
-            $file_ru = null;
+            $file_ru = $meeting_page_item->file_ru;
         }
         if ( $request->hasFile('file_en') ) {
             if ($meeting_page_item->file_en && File::exists(public_path($meeting_page_item->file_en))) {
@@ -211,7 +211,7 @@ class MeetingPageItemController extends Controller
             $file_en = $this->storeFile($request->file_en);
         }
         else {
-            $file_en = null;
+            $file_en = $meeting_page_item->file_en;
         }
 
         $data = $request->validated();
