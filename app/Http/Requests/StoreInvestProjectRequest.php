@@ -46,9 +46,9 @@ class StoreInvestProjectRequest extends FormRequest
             'text_ru' => 'required|string',
             'text_en' => 'required|string',
 
-            'file_tm' => 'nullable|file|mimes:pdf,pptx,docx|max:4096',
-            'file_ru' => 'nullable|file|mimes:pdf,pptx,docx|max:4096',
-            'file_en' => 'nullable|file|mimes:pdf,pptx,docx|max:4096',
+            'file_tm' => 'nullable|file|mimes:pdf,pptx,docx,doc|max:4096',
+            'file_ru' => 'nullable|file|mimes:pdf,pptx,docx,doc|max:4096',
+            'file_en' => 'nullable|file|mimes:pdf,pptx,docx,doc|max:4096',
 
             'type_id'                       => 'nullable|exists:types,id',
 

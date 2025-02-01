@@ -11,7 +11,7 @@
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 lg:col-span-12">
             <!-- BEGIN: Form Layout -->
-            <form action="{{route('invest-projects.store')}}" method="POST" enctype="multipart/form-data" class="intro-y box p-5">
+            <form action="{{route('meeting-companies.store')}}" method="POST" enctype="multipart/form-data" class="intro-y box p-5">
                 @csrf
 
                 @include('admin.meeting_company.form')

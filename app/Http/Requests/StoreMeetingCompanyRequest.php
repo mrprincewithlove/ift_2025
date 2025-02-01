@@ -43,7 +43,7 @@ class StoreMeetingCompanyRequest extends FormRequest
             'name_ru' => 'required|string|max:255',
             'name_en' => 'required|string|max:255',
 
-            'link'                       => 'required|url|max:255',
+            'link'                       => 'nullable|url|max:255',
             'label_id'                       => 'nullable|exists:labels,id',
 
             'status'                     => 'required|in:0,1',

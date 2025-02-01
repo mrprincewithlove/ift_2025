@@ -64,7 +64,7 @@
         <label for="link" class="form-label w-full flex flex-col sm:flex-row-label">{{__('translates.link')}}
             <span class="h-4 sm:ml-auto mt-1 sm:mt-0 text-xs text-slate-500">{{__('translates.required')}}</span></label>
 
-        <input id="link" type="url" class="form-control w-full" name="link" required
+        <input id="link" type="url" class="form-control w-full" name="link"
                value="{{old('link' , $sponsorCompany->link)}}">
     </div>
     <div>
